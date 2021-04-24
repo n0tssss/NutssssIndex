@@ -57,7 +57,8 @@ html,
 
 /* 统一定位居中 */
 .emoji .smile,
-.emoji .smile div:nth-child(2) {
+.emoji .smile div:nth-child(2),
+.iceCreamToXHJ::after {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -589,6 +590,73 @@ html,
     min-height: 100%;
 }
 
+/* 冰激凌 */
+.iceCreamToXHJ {
+    width: 300px;
+    height: 500px;
+    border: 15px solid #4B1A1D;
+    border-radius: 200px 200px 50px 50px;
+    -webkit-border-radius: 200px 200px 50px 50px;
+    -moz-border-radius: 200px 200px 50px 50px;
+    -ms-border-radius: 200px 200px 50px 50px;
+    -o-border-radius: 200px 200px 50px 50px;
+    position: relative;
+}
+
+.iceCream {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    overflow: hidden;
+    border-radius: 200px 200px 30px 30px;
+    -webkit-border-radius: 200px 200px 30px 30px;
+    -moz-border-radius: 200px 200px 30px 30px;
+    -ms-border-radius: 200px 200px 30px 30px;
+    -o-border-radius: 200px 200px 30px 30px;
+    position: relative;
+}
+
+.iceCream>div {
+    height: 100%;
+}
+
+.iceCream>div:nth-child(1) {
+    background: #ffc5aa;
+}
+
+.iceCream>div:nth-child(2) {
+    background: #f3a683;
+}
+
+.iceCream>div:nth-child(3) {
+    background: #f39a71;
+}
+
+
+.iceCream>div:nth-child(4) {
+    background: #fd8b56;
+}
+
+
+/* 冰棍 */
+.iceCreamToXHJ::after {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 200px;
+    border: 15px solid #4B1A1D;
+    background-color: #FFD081;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    bottom: -40%;
+    z-index: -1;
+}
+
 /* emoji 表情 */
 .emoji {
     width: 200px;
@@ -598,8 +666,13 @@ html,
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    position: relative;
-    background: linear-gradient(135deg, rgb(255, 233, 25) 0%, rgb(251, 192, 0) 100%);
+    position: absolute;
+    top: 23%;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
 }
 
 /* 眼睛主体 */
@@ -633,7 +706,7 @@ html,
     display: block;
     width: 100%;
     height: 100%;
-    background: rgb(255, 186, 59);
+    background: #FCA486;
     position: absolute;
     z-index: 1;
     animation: eyes 2s ease-in-out infinite;
@@ -731,7 +804,7 @@ html,
     bottom: 10%;
     width: 100px;
     height: 50px;
-    background: rgb(240, 176, 57);
+    background: #f7d794;
     border-radius: 100px 100px 0 0;
     -webkit-border-radius: 0 0 100px 100px;
     -moz-border-radius: 100px 100px 0 0;

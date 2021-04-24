@@ -22,6 +22,11 @@
                 "name": "QQ",
                 "icon": "fa-qq",
                 "link": "https://wpa.qq.com/msgrd?v=3&uin=1656071287&site=qq&menu=yes"
+            },
+            {
+                "name": "坚果小栈 - 技术交流",
+                "icon": "fa-code",
+                "link": "https://jq.qq.com/?_wv=1027&k=qMNJqj3F"
             }
         ]
     }
