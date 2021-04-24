@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这里是网站标题</title>
+    <meta name="description" content="这里是网站介绍">
+    <meta name="keywords" content="这里是网站关键词">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/theme-chalk/index.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/lovexhj.css">
+</head>
+
+<body>
+    <div id="lovexhj">
+        <!-- 首页 -->
+        <div class="lovexhj1" v-if="lovexhjData">
+            <div class="lovexhj1Box">
+                <div class="sunlightOrMoon"></div>
+                <div class="hill1"></div>
+                <div class="hill2"></div>
+                <div class="earth">
+                    <div class="house"></div>
+                </div>
+                <div class="lovexhj1Text">
+                    <p>{{lovexhjData.lovexhj1.title}}</p>
+                    <p>{{lovexhjData.lovexhj1.subTitle}}</p>
+                    <ul>
+                        <li v-for="(item, index) in lovexhjData.lovexhj1.menu" :key="index">
+                            <a :href="item.link" target="_blank">
+                                <el-tooltip :content="item.name" placement="bottom" effect="light">
+                                    <i :class="'fa ' + item.icon"></i>
+                                </el-tooltip>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- 介绍 -->
+        <div class="lovexhj2" @mousemove="emoji($event)">
+            <div class="emoji">
+                <div class="eyes">
+                    <div class="eye">
+                        <div></div>
+                    </div>
+                    <div class="eye">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="chins"></div>
+                <div class="smile">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js 引用 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
+    <script src="./js/lovexhj.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,843 @@
+@font-face {
+    font-family: 'wdnmd';
+    src: url('../fonts/1.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'wdnmd';
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+body,
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+html {
+    background-color: white;
+    background-color: rgb(255, 165, 92);
+}
+
+/* 滚动条 */
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+/* 统一过渡 */
+body,
+html,
+.lovexhj1Text>ul i {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+
+/* 统一定位居中 */
+.emoji .smile,
+.emoji .smile div:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+/* 全局盒子定义 */
+#lovexhj,
+.lovexhj1,
+.lovexhj2,
+.lovexhj3,
+.lovexhj4 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* 首页 */
+.lovexhj1 {
+    overflow: hidden;
+    height: 750px;
+    min-height: 100%;
+    background: linear-gradient(to top, rgb(255, 165, 92), rgb(255, 159, 49));
+}
+
+/* 首页云朵 */
+.lovexhj1>div:nth-child(2),
+.lovexhj1>div:nth-child(3),
+.lovexhj1>div:nth-child(4),
+.lovexhj1>div:nth-child(5) {
+    width: 20%;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50px;
+    position: absolute;
+    z-index: 1;
+    animation: cloud 3s ease-in-out infinite;
+    -webkit-animation: cloud 3s ease-in-out infinite;
+}
+
+.lovexhj1>div:nth-child(2) {
+    height: 50px;
+    top: 6%;
+    left: -3%;
+}
+
+.lovexhj1>div:nth-child(3) {
+    height: 25px;
+    top: 26%;
+    left: 25%;
+    animation-delay: .5s;
+}
+
+.lovexhj1>div:nth-child(4) {
+    height: 40px;
+    top: 11%;
+    right: 20%;
+    animation-delay: .3s;
+}
+
+.lovexhj1>div:nth-child(5) {
+    height: 30px;
+    top: 20%;
+    right: -2%;
+    animation-delay: .8s;
+}
+
+/* 云朵动画 */
+@keyframes cloud {
+    0% {
+        transform: translateX(15px);
+        -webkit-transform: translateX(15px);
+        -moz-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+        -o-transform: translateX(15px);
+    }
+
+    50% {
+        transform: translateX(-15px);
+        -webkit-transform: translateX(-15px);
+        -moz-transform: translateX(-15px);
+        -ms-transform: translateX(-15px);
+        -o-transform: translateX(-15px);
+    }
+
+    100% {
+        transform: translateX(15px);
+        -webkit-transform: translateX(15px);
+        -moz-transform: translateX(15px);
+        -ms-transform: translateX(15px);
+        -o-transform: translateX(15px);
+    }
+}
+
+.lovexhj1Box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* 太阳 */
+.sunlightOrMoon {
+    position: absolute;
+    animation: sunlightOrMoon 1s ease-in-out infinite;
+    -webkit-animation: sunlightOrMoon 1s ease-in-out infinite;
+}
+
+@keyframes sunlightOrMoon {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+.sunlightOrMoon div {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.sunlightOrMoon div:nth-child(1) {
+    background-color: rgb(255, 110, 81);
+    z-index: 4;
+}
+
+.sunlightOrMoon div:nth-child(2) {
+    background-color: rgba(255, 124, 98, .5);
+    transform: scale(1.2);
+    z-index: 3;
+}
+
+.sunlightOrMoon div:nth-child(3) {
+    background-color: rgba(255, 137, 113, 0.3);
+    transform: scale(1.5);
+    z-index: 2;
+}
+
+.sunlightOrMoon div:nth-child(4) {
+    background-color: rgba(255, 208, 208, 0.1);
+    transform: scale(1.8);
+    z-index: 1;
+}
+
+/* 山峰 */
+.hill1,
+.hill2 {
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    transform: rotate(-45deg);
+    z-index: 3;
+}
+
+.hill1 div,
+.hill2 div {
+    width: 70%;
+    height: 70%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.hill1 div:nth-child(1),
+.hill2 div:nth-child(1) {
+    background-color: rgb(115, 49, 54);
+}
+
+.hill1 div:nth-child(2),
+.hill2 div:nth-child(2) {
+    background-color: rgb(131, 55, 59);
+    bottom: 20%;
+    right: 20%;
+}
+
+.hill1 div:nth-child(3),
+.hill2 div:nth-child(3) {
+    background-color: rgb(162, 72, 80);
+    top: 20%;
+    left: 20%;
+}
+
+.hill1 div:nth-child(4),
+.hill2 div:nth-child(4) {
+    background-color: rgb(221, 102, 107);
+    bottom: 0;
+    right: 0;
+}
+
+.hill1 {
+    left: -10%;
+    bottom: -500px;
+}
+
+.hill2 {
+    width: 700px;
+    height: 700px;
+    right: -5%;
+    bottom: -450px;
+}
+
+/* 大地 */
+.earth {
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top right, rgb(202, 112, 117), rgb(126, 50, 53));
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.earth>div:nth-child(2),
+.earth>div:nth-child(3),
+.earth>div:nth-child(4),
+.earth>div:nth-child(5) {
+    position: absolute;
+}
+
+.earth>div:nth-child(5),
+.earth>div:nth-child(2)::after,
+.earth>div:nth-child(2)::before,
+.earth>div:nth-child(3)::after,
+.earth>div:nth-child(3)::before,
+.earth>div:nth-child(4)::after,
+.earth>div:nth-child(4)::before,
+.earth>div:nth-child(5)::after,
+.earth>div:nth-child(5)::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 35px;
+    background: linear-gradient(to top, rgb(202, 112, 117), rgb(126, 50, 53));
+    position: absolute;
+    bottom: 0;
+}
+
+.earth>div:nth-child(2)::before,
+.earth>div:nth-child(3)::before,
+.earth>div:nth-child(4)::before,
+.earth>div:nth-child(5)::before {
+    left: 15px;
+}
+
+.earth>div:nth-child(2) {
+    top: 10px;
+    left: 25%;
+}
+
+.earth>div:nth-child(2)::before {
+    height: 30px;
+}
+
+.earth>div:nth-child(3) {
+    right: 35%;
+}
+
+.earth>div:nth-child(3)::before {
+    height: 40px;
+}
+
+.earth>div:nth-child(4) {
+    top: 50%;
+    right: 20%;
+}
+
+.earth>div:nth-child(4)::before {
+    height: 50px;
+}
+
+.earth>div:nth-child(5) {
+    top: 40%;
+    left: 40%;
+}
+
+.earth>div:nth-child(5)::after {
+    left: -20px;
+    height: 50px;
+}
+
+.earth>div:nth-child(5)::before {
+    height: 55px;
+}
+
+.sunlightOrMoon {
+    right: 30%;
+    top: 25%;
+    z-index: 1;
+}
+
+/* 标题文字 */
+.lovexhj1Text {
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgb(255, 69, 32);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    text-shadow: 2px 2px 0px rgba(255, 255, 255, .8),
+        0 0 5px rgba(0, 0, 0, .5);
+}
+
+.lovexhj1Text p:nth-child(2) {
+    font-size: 2rem;
+}
+
+/* 图标菜单 */
+.lovexhj1Text>ul {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.lovexhj1Text>ul li {
+    margin: 0 5px;
+}
+
+.lovexhj1Text>ul li::marker {
+    color: rgba(255, 255, 255, 0);
+}
+
+.lovexhj1Text>ul a {
+    color: rgb(255, 69, 32);
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px white;
+}
+
+.lovexhj1Text>ul i:hover {
+    transform: scale(1.2) rotate(5deg);
+    -webkit-transform: scale(1.2) rotate(5deg);
+    -moz-transform: scale(1.2) rotate(5deg);
+    -ms-transform: scale(1.2) rotate(5deg);
+    -o-transform: scale(1.2) rotate(5deg);
+}
+
+/* 标题文字提示 */
+.el-tooltip__popper.is-light {
+    background: rgb(255, 69, 32);
+    border: none;
+    color: white;
+    font-size: .8rem;
+    box-shadow: 0 0 5px white;
+}
+
+.el-tooltip__popper .popper__arrow {
+    display: none;
+}
+
+/* 房屋 */
+.house {
+    position: absolute;
+    top: -10%;
+    left: 55%;
+}
+
+.house>div:nth-child(1) {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, rgb(155, 70, 0), rgb(197, 89, 0));
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.house>div:nth-child(1)::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 35px solid rgb(155, 70, 0);
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+.house>div:nth-child(1)::before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 30px;
+    background: rgb(155, 70, 0);
+    position: absolute;
+    top: -30px;
+    right: 5px;
+}
+
+/* 烟囱 */
+@keyframes houseCloudRight {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+        -webkit-transform: translateX(0) translateY(0) scale(1);
+        -moz-transform: translateX(0) translateY(0) scale(1);
+        -ms-transform: translateX(0) translateY(0) scale(1);
+        -o-transform: translateX(0) translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(45px) translateY(-330px) scale(4.3);
+        -webkit-transform: translateX(45px) translateY(-330px) scale(4.3);
+        -moz-transform: translateX(45px) translateY(-330px) scale(4.3);
+        -ms-transform: translateX(45px) translateY(-330px) scale(4.3);
+        -o-transform: translateX(45px) translateY(-330px) scale(4.3);
+        opacity: .1;
+    }
+}
+
+@keyframes houseCloudLeft {
+    0% {
+        transform: translateX(0) translateY(0) scale(1);
+        -webkit-transform: translateX(0) translateY(0) scale(1);
+        -moz-transform: translateX(0) translateY(0) scale(1);
+        -ms-transform: translateX(0) translateY(0) scale(1);
+        -o-transform: translateX(0) translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-45px) translateY(-330px) scale(4.3);
+        -webkit-transform: translateX(-45px) translateY(-330px) scale(4.3);
+        -moz-transform: translateX(-45px) translateY(-330px) scale(4.3);
+        -ms-transform: translateX(-45px) translateY(-330px) scale(4.3);
+        -o-transform: translateX(-45px) translateY(-330px) scale(4.3);
+        opacity: 0;
+    }
+}
+
+.house>div:nth-child(2),
+.house>div:nth-child(3),
+.house>div:nth-child(4),
+.house>div:nth-child(5),
+.house>div:nth-child(6),
+.house>div:nth-child(7),
+.house>div:nth-child(8),
+.house>div:nth-child(9) {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    left: 35px;
+    bottom: 20px;
+    z-index: -1;
+    animation: houseCloudLeft 5s ease-in-out infinite;
+    -webkit-animation: houseCloudLeft 5s ease-in-out infinite;
+}
+
+.house>div:nth-child(2),
+.house>div:nth-child(3),
+.house>div:nth-child(4),
+.house>div:nth-child(5) {
+    animation: houseCloudRight 5s ease-in-out infinite;
+    -webkit-animation: houseCloudRight 5s ease-in-out infinite;
+}
+
+.house>div:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.house>div:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.house>div:nth-child(4) {
+    animation-delay: .7s;
+}
+
+.house>div:nth-child(5) {
+    animation-delay: 1.9s;
+}
+
+.house>div:nth-child(6) {
+    animation-delay: .2s;
+}
+
+.house>div:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.house>div:nth-child(8) {
+    animation-delay: .6s;
+}
+
+.house>div:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+/* 介绍 */
+.lovexhj2 {
+    overflow: hidden;
+    min-height: 100%;
+}
+
+/* emoji 表情 */
+.emoji {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+    background: linear-gradient(135deg, rgb(255, 233, 25) 0%, rgb(251, 192, 0) 100%);
+}
+
+/* 眼睛主体 */
+.emoji .eyes {
+    width: 100%;
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 眼睛 */
+.emoji .eye {
+    width: 50px;
+    height: 50px;
+    background: white;
+    margin: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.emoji .eye::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 186, 59);
+    position: absolute;
+    z-index: 1;
+    animation: eyes 2s ease-in-out infinite;
+    -webkit-animation: eyes 2s ease-in-out infinite;
+}
+
+@keyframes eyes {
+    0% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+
+    80% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+
+    90% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+}
+
+/* 眼球 */
+.emoji .eye>div {
+    width: 30px;
+    height: 30px;
+    background: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+/* 红晕 */
+.emoji .chins {
+    width: 100%;
+    position: relative;
+    top: 10%;
+}
+
+.emoji .chins::after,
+.emoji .chins::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: pink;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+.emoji .chins::after {
+    left: 10%;
+}
+
+.emoji .chins::before {
+    right: 10%;
+}
+
+/* 嘴巴 */
+.emoji .smile {
+    bottom: 10%;
+    width: 100px;
+    height: 50px;
+    background: rgb(240, 176, 57);
+    border-radius: 100px 100px 0 0;
+    -webkit-border-radius: 0 0 100px 100px;
+    -moz-border-radius: 100px 100px 0 0;
+    -ms-border-radius: 100px 100px 0 0;
+    -o-border-radius: 100px 100px 0 0;
+    overflow: hidden;
+    position: absolute;
+    animation: smile 2s ease-in-out infinite;
+    -webkit-animation: smile 2s ease-in-out infinite;
+}
+
+.emoji .smile div:nth-child(1) {
+    width: 100%;
+    height: 10px;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 0;
+}
+
+.emoji .smile div:nth-child(2) {
+    width: 80px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    bottom: 0;
+}
+
+@keyframes smile {
+    0% {
+        transform: translateY(0) translateX(-50%);
+        -webkit-transform: translateY(0) translateX(-50%);
+        -moz-transform: translateY(0) translateX(-50%);
+        -ms-transform: translateY(0) translateX(-50%);
+        -o-transform: translateY(0) translateX(-50%);
+    }
+
+    35% {
+        transform: translateY(0) translateX(-50%);
+        -webkit-transform: translateY(0) translateX(-50%);
+        -moz-transform: translateY(0) translateX(-50%);
+        -ms-transform: translateY(0) translateX(-50%);
+        -o-transform: translateY(0) translateX(-50%);
+    }
+
+    40% {
+        transform: translateY(-5px) translateX(-50%);
+        -webkit-transform: translateY(-5px) translateX(-50%);
+        -moz-transform: translateY(-5px) translateX(-50%);
+        -ms-transform: translateY(-5px) translateX(-50%);
+        -o-transform: translateY(-5px) translateX(-50%);
+    }
+
+    45% {
+        transform: translateY(5px) translateX(-50%);
+        -webkit-transform: translateY(5px) translateX(-50%);
+        -moz-transform: translateY(5px) translateX(-50%);
+        -ms-transform: translateY(5px) translateX(-50%);
+        -o-transform: translateY(5px) translateX(-50%);
+    }
+
+    50% {
+        transform: translateY(-5px) translateX(-50%);
+        -webkit-transform: translateY(-5px) translateX(-50%);
+        -moz-transform: translateY(-5px) translateX(-50%);
+        -ms-transform: translateY(-5px) translateX(-50%);
+        -o-transform: translateY(-5px) translateX(-50%);
+    }
+
+    55% {
+        transform: translateY(5px) translateX(-50%);
+        -webkit-transform: translateY(5px) translateX(-50%);
+        -moz-transform: translateY(5px) translateX(-50%);
+        -ms-transform: translateY(5px) translateX(-50%);
+        -o-transform: translateY(5px) translateX(-50%);
+    }
+
+    60% {
+        transform: translateY(-5px) translateX(-50%);
+        -webkit-transform: translateY(-5px) translateX(-50%);
+        -moz-transform: translateY(-5px) translateX(-50%);
+        -ms-transform: translateY(-5px) translateX(-50%);
+        -o-transform: translateY(-5px) translateX(-50%);
+    }
+
+    65% {
+        transform: translateY(0) translateX(-50%);
+        -webkit-transform: translateY(0) translateX(-50%);
+        -moz-transform: translateY(0) translateX(-50%);
+        -ms-transform: translateY(0) translateX(-50%);
+        -o-transform: translateY(0) translateX(-50%);
+    }
+
+    100% {
+        transform: translateY(0) translateX(-50%);
+        -webkit-transform: translateY(0) translateX(-50%);
+        -moz-transform: translateY(0) translateX(-50%);
+        -ms-transform: translateY(0) translateX(-50%);
+        -o-transform: translateY(0) translateX(-50%);
+    }
+}
