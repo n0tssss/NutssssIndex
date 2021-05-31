@@ -968,7 +968,21 @@ h2 {
 }
 
 /* 自适应 */
+@media screen and (max-width: 1180px) {
+    #menuUL {
+        display: none;
+    }
+
+    #leftBar-ButtomMenu {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 1080px) {
+    #menuPages {
+        display: block;
+    }
+
     .pages {
         width: 100%;
     }

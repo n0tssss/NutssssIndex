@@ -68,7 +68,7 @@ new Vue({
             let sunlightOrMoon = document.querySelector(".sunlightOrMoon");
             let hill1 = document.querySelector(".hill1");
             let hill2 = document.querySelector(".hill2");
-            let earth = document.querySelector(".earth");   
+            let earth = document.querySelector(".earth");
             // 当前滚动高度
             let Y = window.scrollY;
             sunlightOrMoon.style.top = 25 - Y * 0.05 + '%';
@@ -77,40 +77,5 @@ new Vue({
             hill2.style.bottom = -450 + Y * 0.6 + 'px';
             earth.style.height = 20 + Y * 0.05 + '%';
         },
-        // emoji1
-        emoji(e) {
-            // 鼠标位置
-            let rect = e.currentTarget.getBoundingClientRect();
-            let x = e.clientX - rect.left;
-            let y = e.clientY - rect.top;
-            // 眼睛与眼球
-            let eyes = document.querySelector(".emoji");
-            let eye = document.querySelectorAll(".emoji .eye div");
-            // 人物位置
-            let top = eyes.offsetTop + eyes.clientHeight / 2;
-            let left = eyes.offsetLeft + eyes.clientWidth / 2;
-            // 眼球运动
-            let resultX = (x - left) * .1;
-            let resultY = (y - top) * .1;
-            if (resultX >= 20) {
-                resultX = 20;
-            } else if (resultX <= -20) {
-                resultX = -20;
-            }
-            if (resultY >= 20) {
-                resultY = 20;
-            } else if (resultY <= -20) {
-                resultY = -20;
-            }
-            // 调试
-            // console.log(`鼠标位置：x：${x}，y：${y}`);
-            // console.log(`人物位置：left：${left}，top：${top}`);
-            // console.log(`眼球结果：resultX：${resultX}，resultY：${resultY}`);
-            // 赋值
-            eye[0].style.left = 50 + resultX + "%";
-            eye[1].style.left = 50 + resultX + "%";
-            eye[0].style.top = 50 + resultY + "%";
-            eye[1].style.top = 50 + resultY + "%";
-        }
     },
 })

@@ -16,6 +16,8 @@
 
 + [NutssssIndex3](https://gitee.com/n0ts/NutssssIndex/tree/master/nutssss-index3)：开发中！
 
++ [个人简历](https://gitee.com/n0ts/NutssssIndex/tree/master/resume)：开发中！
+
 
 
 ## QQ群讨论

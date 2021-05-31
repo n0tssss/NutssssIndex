@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 田琪扬</title>
+    <meta name="keywords" content="关键词">
+    <meta name="description" content="介绍">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.9.0/viewer.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/theme-chalk/index.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/lovexhj.css">
+</head>
+
+<body>
+    <div id="lovexhj" v-if="lovexhj" v-cloak>
+        <!-- 首页 -->
+        <div class="lovexhj lovexhj1">
+            <!-- 内容 -->
+            <div class="lovexhj1Content">
+                <div>
+                    <div class="ContentTitle">
+                        <span>{{lovexhj.index.title}}</span>
+                        <span class="lovexhj1Typet"></span>
+                    </div>
+                    <div class="ContentSubTitle">{{lovexhj.index.subTitle}}</div>
+                    <ul class="ContentContact">
+                        <li v-for="(item, index) in lovexhj.index.contact" :key="index">
+                            <a :href="item.link" target="_blank">
+                                <el-tooltip :content="item.name" placement="bottom" effect="light">
+                                    <i :class="'fa ' + item.icon"></i>
+                                </el-tooltip>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 壁纸 -->
+            <div class="lovexhj1Bg">
+                <img :src="lovexhj.index.bg" :alt="lovexhj.index.bg">
+            </div>
+        </div>
+    </div>
+
+    <!-- js 引用 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.9.0/viewer.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
+    <script src="./js//lovexhj.js"></script>
+</body>
+
+</html>

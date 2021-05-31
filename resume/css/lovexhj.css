@@ -1,0 +1,136 @@
+/* 萌神手写体字体 */
+@font-face {
+    font-family: lovexhj;
+    src: url("../fonts//lovexhj.ttf");
+}
+
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: lovexhj;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#lovexhj {
+    height: 100%;
+    min-height: 700px;
+}
+
+/* 未渲染则不显示 */
+[v-cloak] {
+    display: none;
+}
+
+/* 打字光标 */
+.typed-cursor {
+    opacity: 1;
+    animation: typedjsBlink 0.7s infinite;
+    -webkit-animation: typedjsBlink 0.7s infinite;
+    animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink {
+    50% {
+        opacity: 0.0;
+    }
+}
+
+@-webkit-keyframes typedjsBlink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.typed-fade-out {
+    opacity: 0;
+    transition: opacity .25s;
+    -webkit-animation: 0;
+    animation: 0;
+    -webkit-transition: opacity .25s;
+    -moz-transition: opacity .25s;
+    -ms-transition: opacity .25s;
+    -o-transition: opacity .25s;
+}
+
+/* 主框架 */
+.lovexhj {
+    height: 100%;
+    position: relative;
+}
+
+/* 首页 */
+.lovexhj1 {
+
+}
+
+/* 首页内容 */
+.lovexhj1Content {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+.ContentTitle {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.ContentSubTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.ContentContact {
+    display: flex;
+    list-style: none;
+}
+
+.ContentContact li {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.ContentContact i {
+    color: black;
+}
+
+.el-tooltip__popper {
+    font-size: 1rem;
+}
+
+/* 首页背景 */
+.lovexhj1Bg {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+
+.lovexhj1Bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

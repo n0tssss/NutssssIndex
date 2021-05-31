@@ -1,9 +1,8 @@
 {
-    "lovexhj1": { 
+    "lovexhj1": {
         "title": "你好，我是 N0ts",
         "subTitle": "爱好编程，运动，旅行，摄影与冰激凌",
-        "menu": [
-            {
+        "menu": [{
                 "name": "Blog",
                 "icon": "fa-wordpress",
                 "link": "https://blog.n0ts.cn/"
