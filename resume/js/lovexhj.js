@@ -39,6 +39,13 @@ new Vue({
                 backSpeed: 50,
                 loop: true
             })
+        },
+        // 平滑跳转
+        scrollGoTo(text) {
+            window.scrollTo({
+                top: document.querySelector(`.${text}`).getBoundingClientRect().top,
+                behavior: "smooth"
+            });
         }
     },
 })

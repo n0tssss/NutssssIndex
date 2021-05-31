@@ -29,6 +29,13 @@
                 "icon": "fa-qq",
                 "link": "https://wpa.qq.com/msgrd?v=3&uin=1656071287&site=qq&menu=yes"
             }
-        ]
+        ],
+        "loadMore": {
+            "text": "了解更多",
+            "class": "lovexhj2"
+        }
+    },
+    "about": {
+        "title": "关于我"
     }
 }
