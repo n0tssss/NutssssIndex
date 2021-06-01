@@ -3,13 +3,12 @@
         "title": "你好，我是",
         "me": [
             "田琪扬",
-            ".NET开发工程师",
-            "前端爱好者"
+            ".NET开发实习生",
+            "前端狂热粉"
         ],
         "bg": "./images/bg.jpg",
         "subTitle": "即使前方的路看似绝境，也要有硬生生给自己开出一条路的勇气",
-        "contact": [
-            {
+        "contact": [{
                 "name": "Blog",
                 "icon": "fa-wordpress",
                 "link": "https://blog.n0ts.cn/"
@@ -36,6 +35,43 @@
         }
     },
     "about": {
-        "title": "关于我"
+        "title": "关于我",
+        "laozi": {
+            "img": "./images/laozi.jpg",
+            "content": "<span></span>我叫<b>田琪扬</b>，今年19岁，是岳阳职业技术学院的一名大二在读生，所学专业是<b>软件技术</b>；<br /><span></span>我个人对于网站开发我有着<b>浓厚的兴趣</b>，用学习到的知识去设计与编写一些独特的网站，兴趣才是我最好的老师。即将面临毕业，于是我设计制作了这个网站，来帮助我更好的介绍我自己！"
+        },
+        "ability": [{
+                "icon": "fa-html5",
+                "title": "前端",
+                "subTitle": "HTML，CSS，Js，Vue...",
+                "color": "#ff4757",
+                "bfb": "80%"
+            },
+            {
+                "icon": "fa-bar-chart",
+                "title": "后端",
+                "subTitle": "ASP.NET，.NET Core，Node.js...",
+                "color": "#ffa502",
+                "bfb": "80%"
+            },
+            {
+                "icon": "fa-linux",
+                "title": "Linux",
+                "subTitle": "Nginx，Apache，基础操作...",
+                "color": "#1e90ff",
+                "bfb": "50%"
+            },
+            {
+                "icon": "fa-code",
+                "title": "前端",
+                "subTitle": "",
+                "color": "#2ed573",
+                "bfb": "80%"
+            }
+        ],
+        "loadMore": {
+            "text": "下滑",
+            "class": "lovexhj3"
+        }
     }
 }

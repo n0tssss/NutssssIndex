@@ -19,7 +19,7 @@
         <!-- 首页 -->
         <div class="lovexhj lovexhj1">
             <!-- 内容 -->
-            <div class="lovexhj1Content">
+            <div class="lovexhjContent lovexhj1Content">
                 <div>
                     <div class="ContentTitle">
                         <span>{{lovexhj.index.title}}</span>
@@ -39,16 +39,37 @@
                 </div>
             </div>
             <!-- 壁纸 -->
-            <div class="lovexhj1Bg"></div>
+            <div class="lovexhjBg lovexhj1Bg"></div>
         </div>
         <!-- 个人简介 -->
         <div class="lovexhj lovexhj2">
             <!-- 内容 -->
-            <div class="lovexhj1Content">
+            <div class="lovexhjContent lovexhj2Content">
                 <div>
-                    
+                    <p class="lovexhj2ContentTitle">{{lovexhj.about.title}}</p>
+                    <div class="lovexhj2ContentMe">
+                        <div class="lovexhj2ContentImg">
+                            <img :src="lovexhj.about.laozi.img" :alt="lovexhj.about.laozi.img">
+                        </div>
+                        <div class="lovexhj2ContentText">
+                            <div v-html="lovexhj.about.laozi.content" class="lovexhj2ContentTextBox"></div>
+                            <ul>
+                                <li v-for="(item, index) in lovexhj.about.ability" :style="'border-top: 5px solid ' + item.color">
+                                    <i :class="'fa ' + item.icon "></i>
+                                    <span :style="'color:' + item.color">{{item.bfb}}</span>
+                                    <p>{{item.title}}</p>
+                                    <p>{{item.subTitle}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="loadMore" @click="scrollGoTo(lovexhj.about.loadMore.class)">{{lovexhj.about.loadMore.text}}</div>
                 </div>
             </div>
+        </div>
+        <!-- 项目介绍 -->
+        <div class="lovexhj lovexhj3">
+
         </div>
     </div>
 

@@ -43,7 +43,7 @@ new Vue({
         // 平滑跳转
         scrollGoTo(text) {
             window.scrollTo({
-                top: document.querySelector(`.${text}`).getBoundingClientRect().top,
+                top: document.querySelector(`.${text}`).offsetTop,
                 behavior: "smooth"
             });
         }

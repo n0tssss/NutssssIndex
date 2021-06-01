@@ -17,6 +17,9 @@
     -o-user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
+    /* 标题文字大小 */
+    --titleSize: 3.5rem;
+    --contextSize: 1.5rem;
 }
 
 html,
@@ -27,6 +30,10 @@ body,
     background: #f1f2f6;
 }
 
+ul {
+    list-style-type: none;
+}
+
 /* 滚动条 */
 body::-webkit-scrollbar {
     width: 5px;
@@ -35,11 +42,6 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     background: black;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 
 /* 统一过渡 */
@@ -103,40 +105,45 @@ body::-webkit-scrollbar-thumb {
 
 /* 首页 */
 .lovexhj1 {
-
+    overflow: hidden;
 }
 
 /* 首页内容 */
-.lovexhj1Content {
+.lovexhjContent {
     position: absolute;
     left: 0;
     width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 80px;
     box-sizing: border-box;
 }
 
+.lovexhj1Content {
+    box-shadow: 10px 0 30px black;
+    z-index: 2;
+}
+
 .ContentTitle {
-    font-size: 3.5rem;
+    font-size: var(--titleSize);
     margin-bottom: 20px;
 }
 
 .ContentSubTitle {
-    font-size: 1.5rem;
+    font-size: var(--contextSize);
     margin-bottom: 20px;
 }
 
 .ContentContact {
     display: flex;
-    list-style: none;
     margin-bottom: 20px;
 }
 
 .ContentContact li {
     margin-right: 20px;
-    font-size: 1.5rem;
+    font-size: var(--contextSize);
 }
 
 .ContentContact i {
@@ -161,10 +168,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* 首页背景 */
-.lovexhj1Bg {
+.lovexhjBg {
     width: 50%;
     height: 100%;
     position: absolute;
+}
+
+.lovexhj1Bg {
     right: 0;
     background: url("../images/bg.jpg");
     background-size: cover;
@@ -172,7 +182,113 @@ body::-webkit-scrollbar-thumb {
 }
 
 .lovexhj2Bg {
+    left: 0;
     background: url("../images/bg2.jpg");
     background-size: cover;
     background-attachment: fixed;
+}
+
+/* 内容 */
+.lovexhj2Content {
+    width: 100%;
+}
+
+.lovexhj2Content>div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lovexhj2ContentTitle {
+    font-size: var(--titleSize);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lovexhj2ContentMe {
+    display: flex;
+    justify-content: center;
+    padding: 0 10%;
+    margin-bottom: 30px;
+}
+
+.lovexhj2ContentImg {
+    width: 200px;
+    height: 300px;
+    min-width: 200px;
+    min-height: 300px;
+    overflow: hidden;
+    color: black;
+    border: 10px solid white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-right: 5%;
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+}
+
+.lovexhj2ContentImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lovexhj2ContentText {
+    font-size: var(--contextSize);
+}
+
+.lovexhj2ContentTextBox {
+    line-height: 2rem;
+}
+
+.lovexhj2ContentTextBox b {
+    padding: 0 5px;
+}
+
+.lovexhj2ContentTextBox span {
+    padding: 0 1rem;
+}
+
+.lovexhj2ContentTextBox span::after {
+    content: '>';
+}
+
+.lovexhj2ContentText ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.lovexhj2ContentText li {
+    width: 100%;
+    height: 150px;
+    margin: 0 15px;
+    background: white;
+    position: relative;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.lovexhj2ContentText li i {
+    position: absolute;
+    font-size: 5rem;
+    color: rgba(128, 128, 128, .15);
+    bottom: 10px;
+    right: 10px;
+}
+
+.lovexhj2ContentText li span {
+    font-size: 2rem;
+}
+
+.lovexhj2ContentText li p {
+    font-size: var(--contextSize);
+}
+
+.lovexhj2ContentText li p:nth-child(4) {
+    font-size: 1.1rem;
 }
