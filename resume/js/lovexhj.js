@@ -1,35 +1,18 @@
+import data from './data.js'
+
 new Vue({
     el: "#lovexhj",
-    data() {
-        return {
-            lovexhj: null, // 网站文案数据
-        }
+    data: {
+        lovexhj: data, // 网站文案数据
     },
     mounted() {
-        // Json 配置获取
-        this.getJsonConfig();
+        console.log(this.lovexhj);
+        // 打字开启
+        this.startTyping();
+        // 动画加载
+        this.animationLoad();
     },
     methods: {
-        // Json 配置获取
-        getJsonConfig() {
-            let json = "../data/lovexhj.json";
-            let request = new XMLHttpRequest();
-            request.open("get", json);
-            request.send(null);
-            request.onload = () => {
-                if (request.status == 200) {
-                    this.lovexhj = JSON.parse(request.responseText);
-                    // 调试
-                    console.log(this.lovexhj);
-                    // 同步处理
-                    setTimeout(() => {
-                        lock3 = true;
-                        // 打字开启
-                        this.startTyping();
-                    }, 0);
-                }
-            }
-        },
         // 打字开启
         startTyping() {
             new Typed(".lovexhj1Typet", {
@@ -45,6 +28,30 @@ new Vue({
             window.scrollTo({
                 top: document.querySelector(`.${text}`).offsetTop,
                 behavior: "smooth"
+            });
+        },
+        // 动画加载
+        animationLoad() {
+            let animationDom = [
+                [".ContentTitle", 0],
+                [".ContentSubTitle", 500],
+                [".ContentContact", 1000],
+                [".lovexhj1LoadMore", 1500],
+                [".lovexhj2ContentTitle", 0],
+                [".lovexhj2ContentMe", 500],
+                [".lovexhj2LoadMore", 1000],
+            ];
+            let a = ScrollReveal();
+            animationDom.forEach(item => {
+                a.reveal(item[0], {
+                    duration: 1500,
+                    delay: item[1],
+                    origin: "bottom",
+                    mobile: true,
+                    distance: "2rem",
+                    opacity: 0.001,
+                    easing: "cubic-bezier(.98,0,.04,1)"
+                });
             });
         }
     },

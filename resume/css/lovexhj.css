@@ -45,7 +45,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* 统一过渡 */
-.loadMore {
+.loadMore,
+.lovexhj2ContentText li {
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -193,7 +194,8 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
-.lovexhj2Content>div {
+.lovexhj2Content>div,
+.lovexhj3Content>div {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -273,6 +275,14 @@ body::-webkit-scrollbar-thumb {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+.lovexhj2ContentText li:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
 .lovexhj2ContentText li i {
     position: absolute;
     font-size: 5rem;
@@ -291,4 +301,9 @@ body::-webkit-scrollbar-thumb {
 
 .lovexhj2ContentText li p:nth-child(4) {
     font-size: 1.1rem;
+}
+
+/* 项目介绍 */
+.lovexhj3Content {
+    width: 100%;
 }

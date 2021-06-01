@@ -35,7 +35,10 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="loadMore" @click="scrollGoTo(lovexhj.index.loadMore.class)">{{lovexhj.index.loadMore.text}}</div>
+                    <div class="lovexhj1LoadMore">
+                        <div class="loadMore" @click="scrollGoTo(lovexhj.index.loadMore.class)">
+                            {{lovexhj.index.loadMore.text}}</div>
+                    </div>
                 </div>
             </div>
             <!-- 壁纸 -->
@@ -54,7 +57,8 @@
                         <div class="lovexhj2ContentText">
                             <div v-html="lovexhj.about.laozi.content" class="lovexhj2ContentTextBox"></div>
                             <ul>
-                                <li v-for="(item, index) in lovexhj.about.ability" :style="'border-top: 5px solid ' + item.color">
+                                <li v-for="(item, index) in lovexhj.about.ability"
+                                    :style="'border-top: 5px solid ' + item.color">
                                     <i :class="'fa ' + item.icon "></i>
                                     <span :style="'color:' + item.color">{{item.bfb}}</span>
                                     <p>{{item.title}}</p>
@@ -63,13 +67,27 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="loadMore" @click="scrollGoTo(lovexhj.about.loadMore.class)">{{lovexhj.about.loadMore.text}}</div>
+                    <div class="lovexhj2LoadMore">
+                        <div class="loadMore" @click="scrollGoTo(lovexhj.about.loadMore.class)">
+                            {{lovexhj.about.loadMore.text}}</div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- 项目介绍 -->
         <div class="lovexhj lovexhj3">
-
+            <div>
+                <div class="lovexhjContent lovexhj3Content">
+                    <div>
+                        <p class="lovexhj2ContentTitle">{{lovexhj.project.title}}</p>
+                        <div class="lovexhj3ContentList">
+                            <div class="lovexhj3ContentBox">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -79,7 +97,7 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
-    <script src="./js//lovexhj.js"></script>
+    <script src="./js/lovexhj.js" type="module"></script>
 </body>
 
 </html>
