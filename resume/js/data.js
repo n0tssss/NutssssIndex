@@ -109,7 +109,7 @@ export default {
                 nb: [
                     "Vue", "Linux", "SEO", "CDN"
                 ],
-                url: "https://gitee.com/n0ts/yytl",
+                url: "https://xxgcteam.com/",
                 img: "./images/xxgc.png",
             },
             {
@@ -149,6 +149,10 @@ export default {
                 img: "./images/xhj.png",
             }
         ],
-        loadMore: "查看"
+        listLoadMore: "查看",
+        loadMore: {
+            text: "继续浏览",
+            class: "lovexhj4"
+        }
     }
 }

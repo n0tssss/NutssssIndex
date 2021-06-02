@@ -317,6 +317,12 @@ body::-webkit-scrollbar-thumb {
 /* 项目介绍 */
 .lovexhj3 {
     height: auto;
+    background: white;
+    border-radius: 200px 200px 0 0;
+    -webkit-border-radius: 200px 200px 0 0;
+    -moz-border-radius: 200px 200px 0 0;
+    -ms-border-radius: 200px 200px 0 0;
+    -o-border-radius: 200px 200px 0 0;
 }
 
 .lovexhj3Content {
@@ -360,18 +366,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .lovexhj3ContentBox:hover img {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+    transform: scale(1.5) rotate(5deg);
+    -webkit-transform: scale(1.5) rotate(5deg);
+    -moz-transform: scale(1.5) rotate(5deg);
+    -ms-transform: scale(1.5) rotate(5deg);
+    -o-transform: scale(1.5) rotate(5deg);
 }
 
 .lovexhj3ContentBoxText {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, .9);
+    background: rgba(255, 255, 255, .7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -423,6 +429,19 @@ body::-webkit-scrollbar-thumb {
 .lovexhj3ContentBtn:hover {
     color: white;
     box-shadow: inset 0 -100px 0 black;
+}
+
+.lovexhj3LoadMore {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fg {
+    height: 500px;
+    background: url("../images/bg2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* 自适应 */

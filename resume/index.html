@@ -92,22 +92,32 @@
                                         </li>
                                     </ul>
                                     <p class="lovexhj3ContentText">{{item.text}}</p>
-                                    <a class="lovexhj3ContentBtn" :href="item.url" target="_blank">{{lovexhj.project.loadMore}}</a>
+                                    <a class="lovexhj3ContentBtn" :href="item.url" target="_blank">{{lovexhj.project.listLoadMore}}</a>
                                 </div>
                             </div>
                         </div>
                         <div class="lovexhj3ContentBoxTc"></div>
                         <div class="lovexhj3ContentBoxTc"></div>
                     </div>
+                    <div class="lovexhj3LoadMore">
+                        <div class="loadMore" @click="scrollGoTo(lovexhj.project.loadMore.class)">
+                            {{lovexhj.project.loadMore.text}}</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="lovexhj">123</div>
+        <div class="fg"></div>
+        <div class="lovexhj lovexhj4">
+            <div class="lovexhjContent lovexhj4Content">
+
+            </div>
+        </div>
     </div>
 
     <!-- js 引用 -->
     <script src="https://cdn.bootcdn.net/ajax/libs/viewerjs/1.9.0/viewer.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
