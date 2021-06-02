@@ -3,7 +3,7 @@ export default {
         title: "你好，我是",
         me: [
             "田琪扬",
-            ".NET开发实习生",
+            "Web前端开发实习生",
             "前端狂热粉"
         ],
         bg: "./images/bg.jpg",
@@ -76,50 +76,77 @@ export default {
     },
     project: {
         title: "我的项目",
-        list: [
-            {
+        list: [{
                 name: "吐槽网",
                 text: "类似于论坛，面向青年群众的吐槽网站！",
                 nb: [
                     "Vue", "ElementUI", ".NET Core", "Redis", "SQLServer"
                 ],
                 url: "https://gitee.com/n0ts/tucao",
-                img: [
-                    "./images/bg.jpg"
-                ],
+                img: "./images/tucao.png",
             },
             {
-                name: "吐槽网",
-                text: "类似于论坛，面向青年群众的吐槽网站！",
+                name: "小黑屋商城",
+                text: "类似于淘宝，实现了电商该有的功能",
                 nb: [
-                    "Vue", "ElementUI", ".NET Core", "Redis", "SQLServer"
+                    "Vue", "ElementUI", "MinitUI", "Redis", "SSM", "JAVA", "Mysql"
                 ],
-                url: "https://gitee.com/n0ts/tucao",
-                img: [
-                    "./images/bg.jpg"
-                ],
+                url: "https://gitee.com/lu_chengwei/pc/",
+                img: "./images/bg.jpg",
             },
             {
-                name: "吐槽网",
-                text: "类似于论坛，面向青年群众的吐槽网站！",
+                name: "极客之眼官网",
+                text: "GeekEyes极客之眼官方网站",
                 nb: [
-                    "Vue", "ElementUI", ".NET Core", "Redis", "SQLServer"
+                    "Vue", "Linux", "SEO", "CDN"
                 ],
-                url: "https://gitee.com/n0ts/tucao",
-                img: [
-                    "./images/bg.jpg"
-                ],
+                url: "https://www.geekeyes.cn/",
+                img: "./images/geekeyes.png",
             },
             {
-                name: "吐槽网",
-                text: "类似于论坛，面向青年群众的吐槽网站！",
+                name: "计算机协会官网",
+                text: "给岳阳职院计算机协会写的官网",
                 nb: [
-                    "Vue", "ElementUI", ".NET Core", "Redis", "SQLServer"
+                    "Vue", "Linux", "SEO", "CDN"
                 ],
-                url: "https://gitee.com/n0ts/tucao",
-                img: [
-                    "./images/bg.jpg"
+                url: "https://gitee.com/n0ts/yytl",
+                img: "./images/xxgc.png",
+            },
+            {
+                name: "NutssssIndex",
+                text: "自己的个人主页的系列",
+                nb: [
+                    "HTML", "CSS", "JS", "Vue", "Vue", "Linux", "SEO", "CDN"
                 ],
+                url: "https://gitee.com/n0ts/NutssssIndex",
+                img: "./images/nuts.png",
+            },
+            {
+                name: "记仇小本本",
+                text: "简约到极致的日记记录",
+                nb: [
+                    "Gitee Issues", "Vue", "Vue", "Linux", "SEO", "CDN"
+                ],
+                url: "https://heng.n0ts.cn/",
+                img: "./images/heng.png",
+            },
+            {
+                name: "IceCreem搜索导航",
+                text: "好看的导航搜索页",
+                nb: [
+                    "Vue", "Vue", "Linux", "SEO", "CDN"
+                ],
+                url: "https://n0ts.gitee.io/icecreamsearch/",
+                img: "./images/so.png",
+            },
+            {
+                name: "lovexhj",
+                text: "送给另一半的",
+                nb: [
+                    "HTML", "CSS", "Js"
+                ],
+                url: "https://lovexhj.cn/",
+                img: "./images/xhj.png",
             }
         ],
         loadMore: "查看"
