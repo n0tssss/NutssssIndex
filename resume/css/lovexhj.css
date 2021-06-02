@@ -35,6 +35,10 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* 滚动条 */
 body::-webkit-scrollbar {
     width: 5px;
@@ -49,7 +53,8 @@ body::-webkit-scrollbar-thumb {
 .loadMore,
 .lovexhj2ContentText li,
 .lovexhj3ContentBoxText,
-.lovexhj3ContentBox img {
+.lovexhj3ContentBox img,
+.lovexhj3ContentBtn {
     transition: all .3s ease-in-out;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -398,10 +403,26 @@ body::-webkit-scrollbar-thumb {
 .lovexhj3ContentBoxText ul {
     display: flex;
     flex-wrap: wrap;
+    margin: 3px 0 10px;
 }
 
 .lovexhj3ContentBoxText li {
     margin-right: 10px;
+}
+
+.lovexhj3ContentBtn {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 30px 8px;
+    border: 1px solid black;
+    font-size: 1.3rem;
+    color: black;
+    margin-top: 20px;
+}
+
+.lovexhj3ContentBtn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 black;
 }
 
 /* 自适应 */

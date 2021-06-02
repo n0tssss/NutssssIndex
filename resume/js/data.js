@@ -121,6 +121,7 @@ export default {
                     "./images/bg.jpg"
                 ],
             }
-        ]
+        ],
+        loadMore: "查看"
     }
 }
