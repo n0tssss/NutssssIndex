@@ -14,7 +14,7 @@
 
     ![](https://cdn.nutssss.cn/wp-content/uploads/2020/09/1600416929-2.png)
 
-+ [NutssssIndex3](https://gitee.com/n0ts/NutssssIndex/tree/master/nutssss-index3)：开发中！
++ [NutssssIndex3](https://gitee.com/n0ts/NutssssIndex/tree/master/NutssssIndex3)：开发中！
 
 + [个人简历](https://gitee.com/n0ts/NutssssIndex/tree/master/resume)：开发中！
 
