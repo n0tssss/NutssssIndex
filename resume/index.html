@@ -76,19 +76,32 @@
         </div>
         <!-- 项目介绍 -->
         <div class="lovexhj lovexhj3">
-            <div>
-                <div class="lovexhjContent lovexhj3Content">
-                    <div>
-                        <p class="lovexhj2ContentTitle">{{lovexhj.project.title}}</p>
-                        <div class="lovexhj3ContentList">
-                            <div class="lovexhj3ContentBox">
-                                <img src="" alt="">
+            <div class="lovexhjContent lovexhj3Content">
+                <div>
+                    <p class="lovexhj2ContentTitle">{{lovexhj.project.title}}</p>
+                    <div class="lovexhj3ContentList">
+                        <div class="lovexhj3ContentBox" v-for="(item, index) in lovexhj.project.list" :key="index">
+                            <img :src="item.img[0]" :alt="item.img[0]">
+                            <div class="lovexhj3ContentBoxText">
+                                <div>
+                                    <p class="lovexhj3ContentTitle">{{item.name}}</p>
+                                    <ul>
+                                        <li v-for="(nb, index) in item.nb" :key="index">
+                                            {{nb}}
+                                            <span v-if="index != item.nb.length - 1">+</span>
+                                        </li>
+                                    </ul>
+                                    <p class="lovexhj3ContentText">{{item.text}}</p>
+                                </div>
                             </div>
                         </div>
+                        <div class="lovexhj3ContentBoxTc"></div>
+                        <div class="lovexhj3ContentBoxTc"></div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="lovexhj">123</div>
     </div>
 
     <!-- js 引用 -->

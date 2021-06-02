@@ -98,6 +98,28 @@ export default {
                 img: [
                     "./images/bg.jpg"
                 ],
+            },
+            {
+                name: "吐槽网",
+                text: "类似于论坛，面向青年群众的吐槽网站！",
+                nb: [
+                    "Vue", "ElementUI", ".NET Core", "Redis", "SQLServer"
+                ],
+                url: "https://gitee.com/n0ts/tucao",
+                img: [
+                    "./images/bg.jpg"
+                ],
+            },
+            {
+                name: "吐槽网",
+                text: "类似于论坛，面向青年群众的吐槽网站！",
+                nb: [
+                    "Vue", "ElementUI", ".NET Core", "Redis", "SQLServer"
+                ],
+                url: "https://gitee.com/n0ts/tucao",
+                img: [
+                    "./images/bg.jpg"
+                ],
             }
         ]
     }
