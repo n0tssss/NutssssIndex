@@ -41,6 +41,7 @@ new Vue({
                 [".lovexhj2ContentMe", 500],
                 [".lovexhj2LoadMore", 1000],
                 [".lovexhj3ContentBox", 500],
+                [".lovexhj4Content li", 500],
             ];
             let a = ScrollReveal();
             animationDom.forEach(item => {
