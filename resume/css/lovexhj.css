@@ -657,4 +657,16 @@ body::-webkit-scrollbar-thumb {
     .lovexhj4Bg {
         width: 35%;
     }
+
+    .el-dialog {
+        width: 90%;
+    }
+
+    .el-dialog__body ul {
+        text-align: center;
+    }
+
+    .el-dialog__body ul img {
+        width: 80%;
+    }
 }

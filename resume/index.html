@@ -81,7 +81,7 @@
                     <p class="lovexhj2ContentTitle">{{lovexhj.project.title}}</p>
                     <div class="lovexhj3ContentList">
                         <div class="lovexhj3ContentBox" v-for="(item, index) in lovexhj.project.list" :key="index">
-                            <img :src="item.img[0]" :alt="item.img[0]">
+                            <img :src="item.img" :alt="item.img">
                             <div class="lovexhj3ContentBoxText">
                                 <div>
                                     <p class="lovexhj3ContentTitle">{{item.name}}</p>
@@ -108,9 +108,11 @@
             </div>
             <el-dialog :title="lovexhj.project.list[projectIndex].name" :visible.sync="projectDialog"
                 append-to-body="true" modal-append-to-body="true">
-                <a :href="lovexhj.project.list[projectIndex].url" class="lovexhj3ContentBtn"
-                target="_blank">点我查看</a>
+                <a :href="lovexhj.project.list[projectIndex].url" class="lovexhj3ContentBtn" target="_blank">点我查看</a>
                 <div v-html="lovexhj.project.list[projectIndex].content"></div>
+                <div>
+                    
+                </div>
             </el-dialog>
         </div>
         <!-- 联系我 -->
