@@ -4,6 +4,8 @@ new Vue({
     el: "#lovexhj",
     data: {
         lovexhj: data, // 网站文案数据
+        projectDialog: false, // 项目演示窗口打开
+        projectIndex: 0, // 当前展示项目索引
     },
     mounted() {
         console.log(this.lovexhj);
@@ -39,6 +41,7 @@ new Vue({
                 [".lovexhj1LoadMore", 1500],
                 [".lovexhj2ContentTitle", 0],
                 [".lovexhj2ContentMe", 500],
+                [".lovexhj2ContentText li", 500],
                 [".lovexhj2LoadMore", 1000],
                 [".lovexhj3ContentBox", 500],
                 [".lovexhj4Content li", 500],
@@ -47,7 +50,7 @@ new Vue({
             animationDom.forEach(item => {
                 a.reveal(item[0], {
                     duration: 1500,
-                    delay: item[1],
+                    delay: 100,
                     origin: "bottom",
                     mobile: true,
                     distance: "2rem",
@@ -55,6 +58,19 @@ new Vue({
                     easing: "cubic-bezier(.98,0,.04,1)"
                 });
             });
+        },
+        // 项目展示
+        showProject(i) {
+            this.projectIndex = i;
+            this.projectDialog = true;
+            setTimeout(() => {
+                let dom = document.querySelector(".el-dialog__body ul");
+                if(!dom) {
+                    return;
+                }
+                let Viewer = window.Viewer;
+                new Viewer(dom);
+            }, 0);
         },
     },
 })
