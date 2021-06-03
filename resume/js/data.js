@@ -154,5 +154,26 @@ export default {
             text: "继续浏览",
             class: "lovexhj4"
         }
+    },
+    contact: {
+        title: "联系我",
+        list: [
+            {
+                name: "博客",
+                context: "blog.n0ts.cn"
+            },
+            {
+                name: "邮箱",
+                context: "mail@n0ts.cn"
+            },
+            {
+                name: "QQ",
+                context: "1656071287"
+            },
+            {
+                name: "微信",
+                context: "N0ts"
+            }
+        ]
     }
 }

@@ -10,11 +10,6 @@
     padding: 0;
     outline: none;
     font-family: lovexhj;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
     /* 标题文字大小 */
@@ -437,26 +432,69 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
-.fg {
-    height: 500px;
-    background: url("../images/bg2.jpg");
+/* 联系我 */
+.lovexhj4 {
+    height: 800px;
+}
+
+.lovexhj4Content {
+    left: 50%;
+    flex-wrap: wrap;
+}
+
+.lovexhj4Bg {
+    left: 0;
+    background: url("../images/bg.jpg");
     background-size: cover;
     background-attachment: fixed;
+}
+
+.lovexhj4ItemTitle {
+    font-size: 2rem;
+}
+
+.lovexhj4ItemContext {
+    font-size: 1.2rem;
+}
+
+.lovexhj4Content li {
+    margin: 20px 0;
 }
 
 /* 自适应 */
 @media(max-width:1920px) {}
 
-@media(max-width:1680px) {}
+@media(max-width:1680px) {
+    .lovexhj1,
+    .lovexhj2,
+    .lovexhj4 {
+        height: 1000px;
+    }
+}
 
 @media(max-width:1600px) {
-    .lovexhj1 {
-        height: 800px;
-    }
-
-    .lovexhj2 {
+    .lovexhj1,
+    .lovexhj2,
+    .lovexhj4 {
         height: 800px;
     }
 }
 
-@media(max-width:1440px) {}
+@media(max-width:1400px) {
+    .lovexhj2 {
+        height: 1200px;
+    }
+
+    .lovexhj2ContentText ul {
+        flex-wrap: wrap;
+    }
+
+    .lovexhj2ContentText li {
+        width: 46%;
+        margin: 0 0 30px;
+    }
+
+    .lovexhj2ContentMe {
+        padding: 0 5%;
+    }
+}

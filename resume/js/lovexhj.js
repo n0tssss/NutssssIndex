@@ -4,7 +4,6 @@ new Vue({
     el: "#lovexhj",
     data: {
         lovexhj: data, // 网站文案数据
-        blogData: null, // 博客最新4篇文章
     },
     mounted() {
         console.log(this.lovexhj);
@@ -12,8 +11,6 @@ new Vue({
         this.startTyping();
         // 动画加载
         this.animationLoad();
-        // 博客数据加载
-        this.getBlog();
     },
     methods: {
         // 打字开启
@@ -58,13 +55,5 @@ new Vue({
                 });
             });
         },
-        // 博客数据加载
-        async getBlog() {
-            let {
-                data
-            } = await axios.get("https://blog.n0ts.cn/wp-json/wp/v2/posts?per_page=4");
-            this.blogData = data;
-            console.log(data);
-        }
     },
 })

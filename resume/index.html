@@ -92,7 +92,8 @@
                                         </li>
                                     </ul>
                                     <p class="lovexhj3ContentText">{{item.text}}</p>
-                                    <a class="lovexhj3ContentBtn" :href="item.url" target="_blank">{{lovexhj.project.listLoadMore}}</a>
+                                    <a class="lovexhj3ContentBtn" :href="item.url"
+                                        target="_blank">{{lovexhj.project.listLoadMore}}</a>
                                 </div>
                             </div>
                         </div>
@@ -106,10 +107,21 @@
                 </div>
             </div>
         </div>
-        <div class="fg"></div>
+        <!-- 联系我 -->
         <div class="lovexhj lovexhj4">
+            <!-- 壁纸 -->
+            <div class="lovexhjBg lovexhj4Bg"></div>
+            <!-- 内容 -->
             <div class="lovexhjContent lovexhj4Content">
-
+                <div>
+                    <p class="lovexhj2ContentTitle">{{lovexhj.contact.title}}</p>
+                    <ul>
+                        <li v-for="(item, index) in lovexhj.contact.list">
+                            <p class="lovexhj4ItemTitle">{{item.name}}</p>
+                            <p class="lovexhj4ItemContext">{{item.context}}</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
