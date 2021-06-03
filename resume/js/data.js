@@ -264,12 +264,13 @@ export default {
                 <p>5、	背景图获取 bing 每日壁纸或自定义壁纸；</p>
                 <p>6、	搜索结果数量自定义；</p>
                 <h2>项目技术</h2>
-                <p>1、	百度搜索结果实时回调；</p>
-                <p>2、	bing 每日壁纸回调；</p>
-                <p>3、	本地配置存储；</p>
-                <p>4、	实用网站分类预览；</p>
-                <p>5、	全端响应式自适应；</p>
-                <p>6、	采用CDN加速网站；</p>
+                <p>1、	前端采用 Vue + ElementUI 制作，后端采用 Node + Mysql 制作；</p>
+                <p>2、	百度搜索结果实时回调；</p>
+                <p>3、	bing 每日壁纸回调；</p>
+                <p>4、	本地配置存储；</p>
+                <p>5、	实用网站分类预览；</p>
+                <p>6、	全端响应式自适应；</p>
+                <p>7、	采用CDN加速网站；</p>
                 <h2>项目预览</h2>
                 <p>暂无</p>`,
             },
@@ -318,8 +319,32 @@ export default {
                     "Vue", "Linux", "SEO", "CDN"
                 ],
                 url: "https://xxgcteam.com/",
-                img: "./images/xxgc.png",
-                content: ``,
+                img: "./images/xxgc1.png",
+                content: `<h2>项目类型</h2>
+                <p>官网</p>
+                <h2>开发周期</h2>
+                <p>1人/4天</p>
+                <h2>开发工具</h2>
+                <p>Visual Code、Git、Postman</p>
+                <h2>项目背景</h2>
+                <p>给好朋友会长做一个计协官网</p>
+                <h2>模块介绍</h2>
+                <p>1、	首页；</p>
+                <p>2、	关于我们；</p>
+                <p>3、	历程发展；</p>
+                <p>4、	计协干部；</p>
+                <p>5、	日常一览；</p>
+                <p>6、	加入我们；</p>
+                <h2>项目技术</h2>
+                <p>1、	前端采用 Vue + ElementUI 制作，后端采用 Node + Mysql 制作；</p>
+                <p>2、	轮播图，轮播图的放大效果动效；</p>
+                <p>3、	关于我们点击文章功能；</p>
+                <h2>项目预览</h2>
+                <ul>
+                    <li><img src="./images/xxgc1.png"></li>
+                    <li><img src="./images/xxgc2.png"></li>
+                    <li><img src="./images/xxgc3.png"></li>
+                </ul>`,
             },
             {
                 name: "NutssssIndex",
@@ -328,8 +353,23 @@ export default {
                     "HTML", "CSS", "JS", "Vue", "Vue", "Linux", "SEO", "CDN"
                 ],
                 url: "https://gitee.com/n0ts/NutssssIndex",
-                img: "./images/nuts.png",
-                content: ``,
+                img: "./images/nuts1.png",
+                content: `<h2>项目类型</h2>
+                <p>练手单页</p>
+                <h2>开发周期</h2>
+                <p>1人/？天</p>
+                <h2>开发工具</h2>
+                <p>Visual Code、Git、Postman</p>
+                <h2>项目背景</h2>
+                <p>个人练手设计作品</p>
+                <h2>项目技术</h2>
+                <p>1、	全端响应式自适应；</p>
+                <p>2、	简约风格，与众不同；</p>
+                <h2>项目预览</h2>
+                <ul>
+                    <li><img src="./images/nuts1.png"></li>
+                    <li><img src="./images/nuts2.png"></li>
+                </ul>`,
             },
             {
                 name: "lovexhj",
@@ -338,8 +378,27 @@ export default {
                     "HTML", "CSS", "Js"
                 ],
                 url: "https://lovexhj.cn/",
-                img: "./images/xhj.png",
-                content: ``,
+                img: "./images/xhj1.png",
+                content: `<h2>项目类型</h2>
+                <p>练手单页</p>
+                <h2>开发周期</h2>
+                <p>1人/10天</p>
+                <h2>开发工具</h2>
+                <p>Visual Code、Git</p>
+                <h2>项目背景</h2>
+                <p>第一个练手作品</p>
+                <h2>项目技术</h2>
+                <p>1、	全端响应式自适应；</p>
+                <p>2、	简约风格，与众不同；</p>
+                <p>3、	背景视差滚动；</p>
+                <p>4、	打字机效果；</p>
+                <h2>项目预览</h2>
+                <ul>
+                    <li><img src="./images/xhj1.png"></li>
+                    <li><img src="./images/xhj2.png"></li>
+                    <li><img src="./images/xhj3.png"></li>
+                    <li><img src="./images/xhj4.png"></li>
+                </ul>`,
             }
         ],
         listLoadMore: "查看",
@@ -364,7 +423,7 @@ export default {
             },
             {
                 name: "微信",
-                context: "N0ts"
+                context: "n0tssss"
             }
         ]
     }

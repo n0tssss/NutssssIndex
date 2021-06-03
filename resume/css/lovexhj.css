@@ -108,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 
 /* 首页 */
 .lovexhj1 {
-    height: 900px;
+    height: 800px;
     overflow: hidden;
 }
 
@@ -194,6 +194,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* 内容 */
+.lovexhj2 {
+    height: 1000px;
+}
+
 .lovexhj2Content {
     width: 100%;
 }
@@ -511,26 +515,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* 自适应 */
-@media(max-width:1920px) {}
-
-@media(max-width:1680px) {
-
-    .lovexhj1,
-    .lovexhj2,
-    .lovexhj4 {
-        height: 1000px;
-    }
-}
-
-@media(max-width:1600px) {
-
-    .lovexhj1,
-    .lovexhj2,
-    .lovexhj4 {
-        height: 800px;
-    }
-}
-
 @media(max-width:1400px) {
     .lovexhj2 {
         height: 1200px;

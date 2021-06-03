@@ -65,7 +65,7 @@ new Vue({
             this.projectDialog = true;
             setTimeout(() => {
                 let dom = document.querySelector(".el-dialog__body ul");
-                if(!dom) {
+                if (!dom) {
                     return;
                 }
                 let Viewer = window.Viewer;
