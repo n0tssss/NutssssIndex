@@ -498,3 +498,31 @@ body::-webkit-scrollbar-thumb {
         padding: 0 5%;
     }
 }
+
+@media(max-width: 930px) {
+    .lovexhj2ContentMe {
+        padding: 0;
+    }
+
+    .lovexhj2ContentText li {
+        width: 100%;
+    }
+
+    .lovexhj2 {
+        height: 1500px;
+    }
+}
+/* TODO 第二板块自适应未完成 */
+@media(max-width: 930px) {
+    .lovexhj2ContentMe {
+        padding: 0;
+    }
+
+    .lovexhj2ContentText li {
+        width: 100%;
+    }
+
+    .lovexhj2 {
+        height: 1500px;
+    }
+}
