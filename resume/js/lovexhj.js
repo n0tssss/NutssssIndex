@@ -8,7 +8,7 @@ new Vue({
         projectIndex: 0, // 当前展示项目索引
     },
     mounted() {
-        console.log(this.lovexhj);
+        // console.log(this.lovexhj);
         // 打字开启
         this.startTyping();
         // 动画加载
