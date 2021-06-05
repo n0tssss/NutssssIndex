@@ -399,6 +399,34 @@ export default {
                     <li><img src="./images/xhj3.png"></li>
                     <li><img src="./images/xhj4.png"></li>
                 </ul>`,
+            },
+            {
+                name: "1905no1",
+                text: "给大学班级做的博客网站",
+                nb: [
+                    "HTML", "CSS", "Js", "PHP", "Wordpress"
+                ],
+                url: "https://1905no1.cn/",
+                img: "./images/no1.png",
+                content: `<h2>项目类型</h2>
+                <p>班级官网</p>
+                <h2>开发周期</h2>
+                <p>1人/4天</p>
+                <h2>开发工具</h2>
+                <p>Visual Code、Git、WordPress</p>
+                <h2>项目背景</h2>
+                <p>给班级做一个官网，基于WordPress实现文章发送等功能</p>
+                <h2>项目技术</h2>
+                <p>1、 全端响应式自适应；</p>
+                <p>2、 简约风格，与众不同；</p>
+                <p>3、 背景视差滚动；</p>
+                <p>4、 打字机效果；</p>
+                <h2>项目预览</h2>
+                <ul>
+                    <li><img src="./images/no1.png"></li>
+                    <li><img src="./images/no2.png"></li>
+                    <li><img src="./images/no3.png"></li>
+                </ul>`,
             }
         ],
         listLoadMore: "查看",
