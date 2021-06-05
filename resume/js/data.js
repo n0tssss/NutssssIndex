@@ -37,7 +37,7 @@ export default {
     about: {
         title: "关于我",
         laozi: {
-            img: "https://n0ts.gitee.io/nutssss-index2/images/me2.jpg",
+            img: "./images/me.jpg",
             content: "<span></span>我叫<b>田琪扬</b>，今年19岁，是岳阳职业技术学院的一名大二在读生，所学专业是<b>软件技术</b>；<br /><span></span>我个人对于网站开发我有着<b>浓厚的兴趣</b>，喜欢用学习到的知识去设计与编写一些独特的网站，毕竟兴趣才是我最好的老师。<br /><span></span>曾在<b>WEB省赛荣获三等奖</b>，获得过<b>国家励志奖学金</b>，在学校中也获得过<b>优秀青年志愿者</b>，<b>学习之星称号</b>，<b>优秀班委</b>等荣誉。"
         },
         ability: [{
