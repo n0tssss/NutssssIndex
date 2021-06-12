@@ -68,6 +68,16 @@ html,
     -o-transform: translateX(-50%);
 }
 
+/* elementui修改 */
+.el-tooltip__popper.is-light {
+    font-size: 1rem !important;
+}
+
+/* v-clock */
+[v-cloak] {
+    display: none;
+}
+
 /* 全局盒子定义 */
 #lovexhj,
 .lovexhj1,
@@ -398,7 +408,7 @@ html,
 
 /* 图标菜单 */
 .lovexhj1Text>ul {
-    font-size: 2rem;
+    font-size: 2.3rem;
     display: flex;
     justify-content: center;
 }

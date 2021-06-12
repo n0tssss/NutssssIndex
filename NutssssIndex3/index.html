@@ -13,15 +13,15 @@
 </head>
 
 <body>
-    <div id="lovexhj">
+    <div id="lovexhj" v-clock>
         <!-- 首页 -->
-        <div class="lovexhj1" v-if="lovexhjData">
+        <div class="lovexhj1" v-if="lovexhjData" ref="lovexhj1">
             <div class="lovexhj1Box">
-                <div class="sunlightOrMoon"></div>
-                <div class="hill1"></div>
-                <div class="hill2"></div>
-                <div class="earth">
-                    <div class="house"></div>
+                <div class="sunlightOrMoon" ref="sunlightOrMoon"></div>
+                <div class="hill1" ref="hill1"></div>
+                <div class="hill2" ref="hill2"></div>
+                <div class="earth" ref="earth">
+                    <div class="house" ref="house"></div>
                 </div>
                 <div class="lovexhj1Text">
                     <p>{{lovexhjData.lovexhj1.title}}</p>

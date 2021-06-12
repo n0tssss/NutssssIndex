@@ -1,53 +1,40 @@
 // 引用 api
 import $api from './api.js'
+import lovexhjData from './data.js'
 
 new Vue({
     el: "#lovexhj",
     // 组件创建时
-    created() {
-        this.lovexhjGetData();
-    },
+    created() {},
     // 当模板被挂载
     mounted() {
+        // 太阳&&月亮&&山峰&&云&&房子生成
+        this.lovexhj1DomCreate();
+        // 注册滚动事件
         setTimeout(() => {
             document.addEventListener('scroll', this.lovexhj1Animation, true);
         }, 0);
     },
     // 实例销毁前
     beforeDestroy() {
+        // 销毁滚动事件
         document.removeEventListener('scroll', this.lovexhj1Animation);
     },
     // 数据
     data: {
-        lovexhjData: null,
+        lovexhjData, // 网站数据
     },
     // 方法
     methods: {
-        // 获取网页数据
-        lovexhjGetData() {
-            let json = "../data/lovexhj.json";
-            let request = new XMLHttpRequest();
-            request.open("get", json);
-            request.send(null);
-            request.onload = () => {
-                if (request.status == 200) {
-                    this.lovexhjData = JSON.parse(request.responseText);
-                    console.log(this.lovexhjData);
-                    setTimeout(() => {
-                        this.lovexhj1DomCreate();
-                    }, 0);
-                }
-            }
-        },
         // 太阳&&月亮&&山峰&&云&&房子生成
         lovexhj1DomCreate() {
             // 获取元素
-            let lovexhj1 = document.querySelector(".lovexhj1");
-            let sunlightOrMoon = document.querySelector(".sunlightOrMoon");
-            let hill1 = document.querySelector(".hill1");
-            let hill2 = document.querySelector(".hill2");
-            let earth = document.querySelector(".earth");
-            let house = document.querySelector(".house");
+            let lovexhj1 = this.$refs.lovexhj1;
+            let sunlightOrMoon = this.$refs.sunlightOrMoon;
+            let hill1 = this.$refs.hill1;
+            let hill2 = this.$refs.hill2;
+            let earth = this.$refs.earth;
+            let house = this.$refs.house;
 
             // 生成 4 个 div
             for (let i = 0; i < 4; i++) {
@@ -65,10 +52,10 @@ new Vue({
         },
         // 首页动画
         lovexhj1Animation() {
-            let sunlightOrMoon = document.querySelector(".sunlightOrMoon");
-            let hill1 = document.querySelector(".hill1");
-            let hill2 = document.querySelector(".hill2");
-            let earth = document.querySelector(".earth");
+            let sunlightOrMoon = this.$refs.sunlightOrMoon;
+            let hill1 = this.$refs.hill1;
+            let hill2 = this.$refs.hill2;
+            let earth = this.$refs.earth;
             // 当前滚动高度
             let Y = window.scrollY;
             sunlightOrMoon.style.top = 25 - Y * 0.05 + '%';
