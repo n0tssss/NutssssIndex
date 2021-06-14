@@ -102,8 +102,8 @@ html,
 .lovexhj1>div:nth-child(3),
 .lovexhj1>div:nth-child(4),
 .lovexhj1>div:nth-child(5) {
-    width: 20%;
-    background-color: rgba(255, 255, 255, .5);
+    width: 10%;
+    background-color: rgb(255, 255, 255);
     border-radius: 50px;
     position: absolute;
     z-index: 1;
@@ -115,6 +115,22 @@ html,
     height: 50px;
     top: 6%;
     left: -3%;
+}
+
+.lovexhj1>div:nth-child(3)::before,
+.lovexhj1>div:nth-child(3)::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    bottom: 0;
 }
 
 .lovexhj1>div:nth-child(3) {
@@ -404,6 +420,7 @@ html,
 
 .lovexhj1Text p:nth-child(2) {
     font-size: 2rem;
+    margin: 20px 0 10px;
 }
 
 /* 图标菜单 */
@@ -414,7 +431,7 @@ html,
 }
 
 .lovexhj1Text>ul li {
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .lovexhj1Text>ul li::marker {
@@ -423,7 +440,7 @@ html,
 
 .lovexhj1Text>ul a {
     color: rgb(255, 69, 32);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-shadow: 0 0 10px white;
 }
 

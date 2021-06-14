@@ -15,7 +15,7 @@ export default {
             {
                 name: "Gitee",
                 icon: "fa-github",
-                icon: "https://gitee.com/n0ts"
+                link: "https://gitee.com/n0ts"
             },
             {
                 name: "QQ",

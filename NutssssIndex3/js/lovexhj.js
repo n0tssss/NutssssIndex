@@ -11,9 +11,7 @@ new Vue({
         // 太阳&&月亮&&山峰&&云&&房子生成
         this.lovexhj1DomCreate();
         // 注册滚动事件
-        setTimeout(() => {
-            document.addEventListener('scroll', this.lovexhj1Animation, true);
-        }, 0);
+        document.addEventListener('scroll', this.lovexhj1Animation, true);
     },
     // 实例销毁前
     beforeDestroy() {
