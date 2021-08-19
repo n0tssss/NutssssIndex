@@ -102,54 +102,79 @@ html,
 .lovexhj1>div:nth-child(3),
 .lovexhj1>div:nth-child(4),
 .lovexhj1>div:nth-child(5) {
-    width: 10%;
+    min-width: 120px;
+    width: 200px;
+    height: 50px;
     background-color: rgb(255, 255, 255);
     border-radius: 50px;
     position: absolute;
     z-index: 1;
     animation: cloud 3s ease-in-out infinite;
     -webkit-animation: cloud 3s ease-in-out infinite;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
 }
 
-.lovexhj1>div:nth-child(2) {
-    height: 50px;
-    top: 6%;
-    left: -3%;
-}
-
+.lovexhj1>div:nth-child(2)::after,
+.lovexhj1>div:nth-child(2)::before,
+.lovexhj1>div:nth-child(3)::after,
 .lovexhj1>div:nth-child(3)::before,
-.lovexhj1>div:nth-child(3)::after {
+.lovexhj1>div:nth-child(4)::after,
+.lovexhj1>div:nth-child(4)::before,
+.lovexhj1>div:nth-child(5)::after,
+.lovexhj1>div:nth-child(5)::before {
     content: '';
     display: block;
-    width: 50px;
-    height: 50px;
-    background: white;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: white;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    position: absolute;
+}
+
+.lovexhj1>div:nth-child(2)::after,
+.lovexhj1>div:nth-child(3)::after,
+.lovexhj1>div:nth-child(4)::after,
+.lovexhj1>div:nth-child(5)::after {
+    width: 100px;
+    height: 100px;
+    left: 10%;
     bottom: 0;
 }
 
+.lovexhj1>div:nth-child(2)::before,
+.lovexhj1>div:nth-child(3)::before,
+.lovexhj1>div:nth-child(4)::before,
+.lovexhj1>div:nth-child(5)::before {
+    right: 10%;
+    bottom: 0;
+}
+
+.lovexhj1>div:nth-child(2) {
+    top: 10%;
+    left: -3%;
+}
+
 .lovexhj1>div:nth-child(3) {
-    height: 25px;
     top: 26%;
     left: 25%;
     animation-delay: .5s;
 }
 
 .lovexhj1>div:nth-child(4) {
-    height: 40px;
-    top: 11%;
+    top: 13%;
     right: 20%;
     animation-delay: .3s;
 }
 
 .lovexhj1>div:nth-child(5) {
-    height: 30px;
-    top: 20%;
+    top: 35%;
     right: -2%;
     animation-delay: .8s;
 }

@@ -1,30 +1,61 @@
-// 引用 api
+/*
+ * @Author: N0ts
+ * @Date: 2020-12-25 10:39:42
+ * @LastEditTime: 2021-08-19 23:00:12
+ * @Description: 我的第三个个人主页
+ * @FilePath: \NutssssIndex3\js\lovexhj.js
+ * @Mail：mail@n0ts.cn
+ */
+
+
+/**
+ * 一些引用
+ */
 import $api from './api.js'
 import lovexhjData from './data.js'
 
+/**
+ * Vue 实例
+ */
 new Vue({
     el: "#lovexhj",
-    // 组件创建时
+    /**
+     * 组件创建时
+     */
     created() {},
-    // 当模板被挂载
+
+    /**
+     * 当模板被挂载
+     */
     mounted() {
         // 太阳&&月亮&&山峰&&云&&房子生成
         this.lovexhj1DomCreate();
         // 注册滚动事件
         document.addEventListener('scroll', this.lovexhj1Animation, true);
     },
-    // 实例销毁前
+
+    /**
+     * 实例销毁前
+     */
     beforeDestroy() {
         // 销毁滚动事件
         document.removeEventListener('scroll', this.lovexhj1Animation);
     },
-    // 数据
+
+    /**
+     * 初始化数据
+     */
     data: {
         lovexhjData, // 网站数据
     },
-    // 方法
+
+    /**
+     * 方法
+     */
     methods: {
-        // 太阳&&月亮&&山峰&&云&&房子生成
+        /**
+         * 太阳&&月亮&&山峰&&云&&房子生成
+         */
         lovexhj1DomCreate() {
             // 获取元素
             let lovexhj1 = this.$refs.lovexhj1;
@@ -48,7 +79,10 @@ new Vue({
                 house.appendChild(document.createElement('div'));
             }
         },
-        // 首页动画
+
+        /**
+         * 首页动画
+         */
         lovexhj1Animation() {
             let sunlightOrMoon = this.$refs.sunlightOrMoon;
             let hill1 = this.$refs.hill1;
