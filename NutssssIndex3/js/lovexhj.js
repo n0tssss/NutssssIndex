@@ -1,12 +1,11 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-08-19 23:00:12
+ * @LastEditTime: 2021-08-23 00:38:17
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\js\lovexhj.js
  * @Mail：mail@n0ts.cn
  */
-
 
 /**
  * 一些引用
@@ -32,6 +31,8 @@ new Vue({
         this.lovexhj1DomCreate();
         // 注册滚动事件
         document.addEventListener('scroll', this.lovexhj1Animation, true);
+        // 主题修改
+        this.changeTheme();
     },
 
     /**
@@ -96,5 +97,32 @@ new Vue({
             hill2.style.bottom = -450 + Y * 0.6 + 'px';
             earth.style.height = 20 + Y * 0.05 + '%';
         },
+
+        /**
+         * 主题修改
+         */
+        changeTheme() {
+            // 获取主题配置
+            let theme = window.localStorage.getItem("theme");
+
+            // 没有配置则初始化
+            if (theme == null) {
+                window.localStorage.setItem("theme", "white");
+                this.changeTheme();
+            }
+
+            // 循环修改配色
+            this.lovexhjData.themes[theme].forEach(item => {
+                document.documentElement.style.setProperty(item[0], item[1]);
+            });
+        },
+
+        /**
+         * 点击切换主题
+         */
+        clickChangeTheme() {
+            window.localStorage.setItem("theme", window.localStorage.getItem("theme") == "white" ? "dark" : "white");
+            this.changeTheme();
+        }
     },
 })

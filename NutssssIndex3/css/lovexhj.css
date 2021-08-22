@@ -26,7 +26,7 @@ html {
 
 html {
     background-color: white;
-    background-color: rgb(255, 165, 92);
+    background-color: var(--bgColor);
 }
 
 /* 滚动条 */
@@ -259,20 +259,32 @@ html,
 
 .sunlightOrMoon div:nth-child(2) {
     background-color: rgba(255, 124, 98, .5);
-    transform: scale(1.2);
     z-index: 3;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
 }
 
 .sunlightOrMoon div:nth-child(3) {
     background-color: rgba(255, 137, 113, 0.3);
-    transform: scale(1.5);
     z-index: 2;
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
 }
 
 .sunlightOrMoon div:nth-child(4) {
     background-color: rgba(255, 208, 208, 0.1);
-    transform: scale(1.8);
     z-index: 1;
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
 }
 
 /* 山峰 */
@@ -588,7 +600,7 @@ html,
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(75, 75, 75, 0.4);
     left: 35px;
     bottom: 20px;
     z-index: -1;
