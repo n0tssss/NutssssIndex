@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-08-23 00:38:17
+ * @LastEditTime: 2021-08-23 20:31:04
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\js\lovexhj.js
  * @Mail：mail@n0ts.cn
@@ -27,6 +27,7 @@ new Vue({
      * 当模板被挂载
      */
     mounted() {
+        window.lovexhj = this;
         // 太阳&&月亮&&山峰&&云&&房子生成
         this.lovexhj1DomCreate();
         // 注册滚动事件

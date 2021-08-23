@@ -47,7 +47,15 @@ body::-webkit-scrollbar-thumb {
 /* 统一过渡 */
 body,
 html,
-.lovexhj1Text>ul i {
+.lovexhj1Text>ul i,
+.lovexhj1,
+.sunlightOrMoon div,
+.hill1 div,
+.earth,
+.earth>div,
+.lovexhj1Text,
+.lovexhj1Text>ul a,
+.el-tooltip__popper.is-light {
     transition: all .3s;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
@@ -94,7 +102,7 @@ html,
     overflow: hidden;
     height: 750px;
     min-height: 100%;
-    background: linear-gradient(to top, rgb(255, 165, 92), rgb(255, 159, 49));
+    background: var(--firstBgColor);
 }
 
 /* 首页云朵 */
@@ -105,7 +113,7 @@ html,
     min-width: 120px;
     width: 200px;
     height: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     border-radius: 50px;
     position: absolute;
     z-index: 1;
@@ -115,6 +123,7 @@ html,
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
+    opacity: .5;
 }
 
 .lovexhj1>div:nth-child(2)::after,
@@ -246,19 +255,19 @@ html,
 }
 
 .sunlightOrMoon div {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     position: absolute;
 }
 
 .sunlightOrMoon div:nth-child(1) {
-    background-color: rgb(255, 110, 81);
+    background-color: var(--sunColor1);
     z-index: 4;
 }
 
 .sunlightOrMoon div:nth-child(2) {
-    background-color: rgba(255, 124, 98, .5);
+    background-color: var(--sunColor2);
     z-index: 3;
     transform: scale(1.3);
     -webkit-transform: scale(1.3);
@@ -268,7 +277,7 @@ html,
 }
 
 .sunlightOrMoon div:nth-child(3) {
-    background-color: rgba(255, 137, 113, 0.3);
+    background-color: var(--sunColor3);
     z-index: 2;
     transform: scale(1.6);
     -webkit-transform: scale(1.6);
@@ -278,13 +287,13 @@ html,
 }
 
 .sunlightOrMoon div:nth-child(4) {
-    background-color: rgba(255, 208, 208, 0.1);
     z-index: 1;
-    transform: scale(2);
-    -webkit-transform: scale(2);
-    -moz-transform: scale(2);
-    -ms-transform: scale(2);
-    -o-transform: scale(2);
+    transform: scale(1.6);
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    -o-transform: scale(1.6);
+    box-shadow: var(--sunColor4);
 }
 
 /* 山峰 */
@@ -315,26 +324,26 @@ html,
 
 .hill1 div:nth-child(1),
 .hill2 div:nth-child(1) {
-    background-color: rgb(115, 49, 54);
+    background-color: var(--hillColor1);
 }
 
 .hill1 div:nth-child(2),
 .hill2 div:nth-child(2) {
-    background-color: rgb(131, 55, 59);
+    background-color: var(--hillColor2);
     bottom: 20%;
     right: 20%;
 }
 
 .hill1 div:nth-child(3),
 .hill2 div:nth-child(3) {
-    background-color: rgb(162, 72, 80);
+    background-color: var(--hillColor3);
     top: 20%;
     left: 20%;
 }
 
 .hill1 div:nth-child(4),
 .hill2 div:nth-child(4) {
-    background-color: rgb(221, 102, 107);
+    background-color: var(--hillColor4);
     bottom: 0;
     right: 0;
 }
@@ -355,7 +364,7 @@ html,
 .earth {
     width: 100%;
     height: 20%;
-    background: linear-gradient(to top right, rgb(202, 112, 117), rgb(126, 50, 53));
+    background: var(--earth);
     position: absolute;
     bottom: 0;
     z-index: 3;
@@ -382,7 +391,7 @@ html,
     display: block;
     width: 10px;
     height: 35px;
-    background: linear-gradient(to top, rgb(202, 112, 117), rgb(126, 50, 53));
+    background: var(--cao);
     position: absolute;
     bottom: 0;
 }
@@ -446,13 +455,12 @@ html,
     text-align: center;
     font-size: 5rem;
     font-weight: bold;
-    color: rgb(255, 69, 32);
+    color: var(--titleColor);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
-    text-shadow: 2px 2px 0px rgba(255, 255, 255, .8),
-        0 0 5px rgba(0, 0, 0, .5);
+    text-shadow: var(--titleShadow);
 }
 
 .lovexhj1Text p:nth-child(2) {
@@ -476,9 +484,9 @@ html,
 }
 
 .lovexhj1Text>ul a {
-    color: rgb(255, 69, 32);
+    color: var(--titleColor);
     font-size: 1.8rem;
-    text-shadow: 0 0 10px white;
+    text-shadow: var(--iconShadow);
 }
 
 .lovexhj1Text>ul i:hover {
@@ -491,7 +499,7 @@ html,
 
 /* 标题文字提示 */
 .el-tooltip__popper.is-light {
-    background: rgb(255, 69, 32);
+    background: var(--titleColor);
     border: none;
     color: white;
     font-size: .8rem;
@@ -505,14 +513,19 @@ html,
 /* 房屋 */
 .house {
     position: absolute;
-    top: -10%;
+    top: -40px;
     left: 55%;
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
 }
 
 .house>div:nth-child(1) {
     width: 50px;
     height: 50px;
-    background: linear-gradient(45deg, rgb(155, 70, 0), rgb(197, 89, 0));
+    background: linear-gradient(45deg, rgb(155, 70, 0), rgb(201, 114, 43));
     position: absolute;
     top: 0;
     left: 0;
@@ -600,7 +613,7 @@ html,
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: rgba(75, 75, 75, 0.4);
+    background: rgba(75, 75, 75, 0.8);
     left: 35px;
     bottom: 20px;
     z-index: -1;
