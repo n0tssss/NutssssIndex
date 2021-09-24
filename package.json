@@ -1,0 +1,87 @@
+{
+    "name": "NutssssIndex",
+    "version": "1.0.0",
+    "description": "这里是我个人主页的系列，我喜欢设计一下奇奇怪怪的东西练手，主打简约风格，并且独一无二，喜欢的欢迎点个 Star！有问题或者建议请留言 Issues！",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "commit": "git-cz"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "cz-conventional-changelog": "^3.3.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog-zh",
+            "defaultType": "✨[Feat]",
+            "types": {
+                "✨[Feat]": {
+                    "description": "新功能",
+                    "title": "Features"
+                },
+                "🐛[Bug]": {
+                    "description": "修复bug",
+                    "title": "Bug Fixes"
+                },
+                "📝[Docs]": {
+                    "description": "文档增删改",
+                    "title": "Documentation"
+                },
+                "🎨[Style]": {
+                    "description": "样式修改",
+                    "title": "Styles"
+                },
+                "♻️[Refactoring]": {
+                    "description": "重构代码",
+                    "title": "Code Refactoring"
+                },
+                "⚡️[Pref]": {
+                    "description": "性能优化",
+                    "title": "Performance Improvements"
+                },
+                "✅[Test]": {
+                    "description": "增加测试",
+                    "title": "Tests"
+                },
+                "💚[Build]": {
+                    "description": "构建系统外部修改",
+                    "title": "Builds"
+                },
+                "👷[CI]": {
+                    "description": "对CI配置文件和脚本的更改",
+                    "title": "Continuous Integrations"
+                },
+                "🔧[Chore]": {
+                    "description": "除src目录或测试文件以外的修改",
+                    "title": "Chores"
+                },
+                "⏪[Revert]": {
+                    "description": "回退历史版本",
+                    "title": "Reverts"
+                },
+                "💥[Conflict]": {
+                    "description": "修改冲突",
+                    "title": "Conflict"
+                },
+                "💬[Font]": {
+                    "description": "字体文件更新",
+                    "title": "Fonts"
+                },
+                "🗑️[Delete]": {
+                    "description": "删除文件",
+                    "title": "Delete Files"
+                },
+                "🚨[Stash]": {
+                    "description": "暂存文件",
+                    "title": "Stash Files"
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "cz-conventional-changelog-zh": "^0.0.2"
+    }
+}

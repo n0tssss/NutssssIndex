@@ -51,7 +51,6 @@ html,
 .lovexhj1,
 .sunlightOrMoon div,
 .hill1 div,
-.earth,
 .earth>div,
 .lovexhj1Text,
 .lovexhj1Text>ul a,
@@ -487,6 +486,7 @@ html,
     color: var(--titleColor);
     font-size: 1.8rem;
     text-shadow: var(--iconShadow);
+    position: relative;
 }
 
 .lovexhj1Text>ul i:hover {
@@ -495,6 +495,13 @@ html,
     -moz-transform: scale(1.2) rotate(5deg);
     -ms-transform: scale(1.2) rotate(5deg);
     -o-transform: scale(1.2) rotate(5deg);
+}
+
+.lovexhj1Text>ul li span {
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 /* 标题文字提示 */

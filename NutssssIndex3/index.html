@@ -1,7 +1,7 @@
 <!--
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-08-22 22:25:59
+ * @LastEditTime: 2021-09-08 20:10:34
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\index.html
  * @Mail：mail@n0ts.cn
@@ -32,14 +32,13 @@
                     <div class="house" ref="house"></div>
                 </div>
                 <div class="lovexhj1Text">
-                    <p>{{lovexhjData.lovexhj1.title}}</p>
-                    <p>{{lovexhjData.lovexhj1.subTitle}}</p>
+                    <p>{{ lovexhjData.lovexhj1.title }}</p>
+                    <p>{{ lovexhjData.lovexhj1.subTitle }}</p>
                     <ul>
                         <li v-for="(item, index) in lovexhjData.lovexhj1.menu" :key="index">
                             <a :href="item.link" target="_blank">
-                                <el-tooltip :content="item.name" placement="bottom" effect="light">
-                                    <i :class="'fa ' + item.icon"></i>
-                                </el-tooltip>
+                                <i :class="'fa ' + item.icon"></i>
+                                <span>{{ item.name }}</span>
                             </a>
                         </li>
                     </ul>
