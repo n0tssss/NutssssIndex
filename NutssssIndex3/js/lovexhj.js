@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-08-23 20:31:04
+ * @LastEditTime: 2021-09-29 01:00:56
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\js\lovexhj.js
  * @Mail：mail@n0ts.cn
@@ -61,7 +61,8 @@ new Vue({
         lovexhj1DomCreate() {
             // 获取元素
             let lovexhj1 = this.$refs.lovexhj1;
-            let sunlightOrMoon = this.$refs.sunlightOrMoon;
+            let sun = this.$refs.sun;
+            let Moon = this.$refs.Moon;
             let hill1 = this.$refs.hill1;
             let hill2 = this.$refs.hill2;
             let earth = this.$refs.earth;
@@ -69,7 +70,8 @@ new Vue({
 
             // 生成 4 个 div
             for (let i = 0; i < 4; i++) {
-                sunlightOrMoon.appendChild(document.createElement('div'));
+                sun.appendChild(document.createElement('div'));
+                Moon.appendChild(document.createElement('div'));
                 hill1.appendChild(document.createElement('div'));
                 hill2.appendChild(document.createElement('div'));
                 earth.appendChild(document.createElement('div'));
@@ -86,14 +88,17 @@ new Vue({
          * 首页动画
          */
         lovexhj1Animation() {
-            let sunlightOrMoon = this.$refs.sunlightOrMoon;
+            let sun = this.$refs.sun;
+            let Moon = this.$refs.Moon;
             let hill1 = this.$refs.hill1;
             let hill2 = this.$refs.hill2;
             let earth = this.$refs.earth;
             // 当前滚动高度
             let Y = window.scrollY;
-            sunlightOrMoon.style.top = 25 - Y * 0.05 + '%';
-            sunlightOrMoon.style.right = 30 + Y * 0.08 + '%';
+            sun.style.top = 25 - Y * 0.05 + '%';
+            Moon.style.top = 25 - Y * 0.05 + '%';
+            sun.style.right = 30 + Y * 0.08 + '%';
+            Moon.style.right = 30 + Y * 0.08 + '%';
             hill1.style.bottom = -500 + Y * 0.6 + 'px';
             hill2.style.bottom = -450 + Y * 0.6 + 'px';
             earth.style.height = 20 + Y * 0.05 + '%';
@@ -111,6 +116,9 @@ new Vue({
                 window.localStorage.setItem("theme", "white");
                 this.changeTheme();
             }
+
+            // 图标修改
+            this.lovexhjData.themeSelect = theme;
 
             // 循环修改配色
             this.lovexhjData.themes[theme].forEach(item => {

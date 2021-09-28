@@ -1,23 +1,21 @@
 /*
  * @Author: N0ts
  * @Date: 2021-06-12 20:02:41
- * @LastEditTime: 2021-08-23 21:29:04
+ * @LastEditTime: 2021-09-29 01:15:16
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\js\data.js
  * @Mail：mail@n0ts.cn
  */
+
 export default {
+    themeSelect: "white",
+    // 主题
     themes: {
         white: [
             // 背景颜色
             ["--bgColor", "rgb(255, 165, 92)"],
             // 第一屏背景颜色
             ["--firstBgColor", "linear-gradient(to top, rgb(255, 165, 92), rgb(255, 159, 49))"],
-            // 太阳颜色
-            ["--sunColor1", "rgb(255, 110, 81)"],
-            ["--sunColor2", "rgba(255, 110, 81, .5)"],
-            ["--sunColor3", "rgba(255, 110, 81, 0.3)"],
-            ["--sunColor4", "0 0 50px rgba(255, 110, 81, 0.5)"],
             // 山颜色
             ["--hillColor1", "rgb(115, 49, 54)"],
             ["--hillColor2", "rgb(131, 55, 59)"],
@@ -39,11 +37,6 @@ export default {
             ["--bgColor", "rgb(48, 37, 95)"],
             // 第一屏背景颜色
             ["--firstBgColor", "linear-gradient(to top, rgb(78, 36, 88), rgb(13, 18, 51))"],
-            // 太阳颜色
-            ["--sunColor1", "rgb(253, 253, 253)"],
-            ["--sunColor2", "rgba(253, 253, 253, .5)"],
-            ["--sunColor3", "rgba(253, 253, 253, 0.3)"],
-            ["--sunColor4", "0 0 50px rgba(255, 255, 255, 0.5)"],
             // 山颜色
             ["--hillColor1", "rgb(36, 32, 74)"],
             ["--hillColor2", "rgb(41, 35, 94)"],
