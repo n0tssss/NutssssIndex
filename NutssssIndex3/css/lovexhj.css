@@ -29,6 +29,14 @@ html {
     background-color: var(--bgColor);
 }
 
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
 /* 滚动条 */
 body::-webkit-scrollbar {
     width: 8px;
@@ -58,7 +66,8 @@ html,
 .lovexhj1Text > ul li span,
 .sidebar > div span,
 .lovexhj1Box,
-.lovexhj2TextBox b::after {
+.lovexhj2TextBox b::after,
+.lovexhj2TextBox a::after {
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
@@ -99,15 +108,15 @@ html,
 
 .sidebar > div {
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background: var(--hillColor4);
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -143,7 +152,7 @@ html,
     position: absolute;
     right: 120%;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 1.2rem;
     visibility: hidden;
     opacity: 0;
     font-weight: bold;
@@ -155,6 +164,20 @@ html,
     text-shadow: 0 0 5px black;
 }
 
+.sidebar b {
+    margin: 0 2px;
+}
+
+.sidebarDarkText {
+    color: rgb(136, 65, 167);
+    text-shadow: var(--titleShadow);
+}
+
+.sidebarWhiteText {
+    color: rgb(255, 69, 32);
+    text-shadow: var(--titleShadow);
+}
+
 /* 全局盒子定义 */
 #lovexhj,
 .lovexhj1,
@@ -163,14 +186,13 @@ html,
 .lovexhj4 {
     width: 100%;
     height: 100%;
+    min-height: 750px;
     position: relative;
 }
 
 /* 首页 */
 .lovexhj1 {
     overflow: hidden;
-    height: 750px;
-    min-height: 100%;
     background: var(--firstBgColor);
 }
 
@@ -562,7 +584,7 @@ html,
 .lovexhj1Text {
     width: 100%;
     text-align: center;
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: bold;
     color: var(--titleColor);
     position: absolute;
@@ -573,13 +595,13 @@ html,
 }
 
 .lovexhj1Text p:nth-child(2) {
-    font-size: 2rem;
-    margin: 20px 0 10px;
+    font-size: 2.8rem;
+    margin: 10px 0;
 }
 
 /* 图标菜单 */
 .lovexhj1Text > ul {
-    font-size: 2.3rem;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
 }
@@ -588,13 +610,9 @@ html,
     margin: 0 10px;
 }
 
-.lovexhj1Text > ul li::marker {
-    color: rgba(255, 255, 255, 0);
-}
-
 .lovexhj1Text > ul a {
     color: var(--titleColor);
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     text-shadow: var(--iconShadow);
     position: relative;
 }
@@ -613,7 +631,7 @@ html,
     position: absolute;
     left: 50%;
     top: 50%;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: bold;
     white-space: nowrap;
     background: var(--titleColor);
@@ -809,7 +827,8 @@ html,
 /* 介绍 */
 .lovexhj2 {
     overflow: hidden;
-    min-height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 /* 介绍 - 文案 */
@@ -817,39 +836,53 @@ html,
 .lovexhj2TextBox h2,
 .lovexhj2TextBox p,
 .lovexhj2TextBox b {
-    font-size: 5rem;
+    font-size: 5.5rem;
     color: white;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .lovexhj2TextBox h2 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     margin: 20px 0 12px;
 }
 
 .lovexhj2TextBox p,
-.lovexhj2TextBox b {
-    font-size: 1.5rem;
+.lovexhj2TextBox b,
+.lovexhj2TextBox a {
+    font-size: 1.8rem;
+    margin: 8px 0;
 }
 
-.lovexhj2TextBox b {
+.lovexhj2TextBox b,
+.lovexhj2TextBox a {
     padding: 0 5px;
     margin: 0 3px;
     position: relative;
 }
 
-.lovexhj2TextBox b::after {
+.lovexhj2TextBox b::after,
+.lovexhj2TextBox a::after {
     content: "";
     display: block;
     width: 100%;
     height: 20%;
-    background: red;
+    background: #ff4757;
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: -1;
 }
 
-.lovexhj2TextBox b:hover::after {
+.lovexhj2TextBox b:hover::after,
+.lovexhj2TextBox a:hover::after {
     height: 100%;
+}
+
+.lovexhj2TextBox a {
+    color: white;
+    font-weight: bold;
+}
+
+.lovexhj2TextBox a::after {
+    background: #1e90ff;
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2021-06-12 20:02:41
- * @LastEditTime: 2021-09-29 01:15:16
+ * @LastEditTime: 2021-09-30 00:13:01
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\js\data.js
  * @Mail：mail@n0ts.cn
@@ -28,7 +28,7 @@ export default {
             // 标题文字颜色
             ["--titleColor", "rgb(255, 69, 32)"],
             // 标题文字阴影
-            ["--titleShadow", "2px 2px 0px rgba(255, 255, 255, .8), 0 0 5px rgba(0, 0, 0, .5)"],
+            ["--titleShadow", "2px 2px 0px rgba(255, 255, 255, .8), 0 0 10px rgba(0, 0, 0, .5)"],
             // 图标菜单阴影
             ["--iconShadow", "0 0 5px white"],
         ],
@@ -49,13 +49,13 @@ export default {
             // 标题文字颜色
             ["--titleColor", "rgb(136, 65, 167)"],
             // 标题文字阴影
-            ["--titleShadow", "2px 2px 0px rgba(255, 255, 255, .8), 0 0 5px rgba(0, 0, 0, .5)"],
+            ["--titleShadow", "2px 2px 0px rgba(255, 255, 255, .8), 0 0 10px rgba(0, 0, 0, .5)"],
             // 图标菜单阴影
             ["--iconShadow", "0 0 2px white"],
         ]
     },
     lovexhj1: {
-        title: "你好，我是 N0ts",
+        title: "咸鱼 N0ts",
         subTitle: "爱好编程，运动，旅行，摄影与冰激凌",
         menu: [{
                 name: "Blog",
