@@ -840,20 +840,20 @@ html,
 .lovexhj2TextBox h2,
 .lovexhj2TextBox p,
 .lovexhj2TextBox b {
-    font-size: 5.5rem;
+    font-size: 5rem;
     color: white;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 .lovexhj2TextBox h2 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     margin: 20px 0 12px;
 }
 
 .lovexhj2TextBox p,
 .lovexhj2TextBox b,
 .lovexhj2TextBox a {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin: 8px 0;
 }
 
@@ -893,8 +893,8 @@ html,
 
 /* 介绍 - 图片 */
 .lovexhj2Img {
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
     overflow: hidden;
     display: flex;
     align-items: center;
