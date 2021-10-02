@@ -1,7 +1,7 @@
 <!--
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-09-30 00:58:04
+ * @LastEditTime: 2021-10-02 18:05:48
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\index.html
  * @Mail：mail@n0ts.cn
@@ -61,14 +61,10 @@
         <!-- 介绍 -->
         <div class="lovexhj2">
             <!-- 介绍 - 文案 -->
-            <div class="lovexhj2TextBox">
-                <h1>你好！</h1>
-                <h2>我是 N0ts，</h2>
-                <p>一名<b>💻前端开发者</b>，现就职于🌏上海，最爱🍦。</p>
-                <p>用#️⃣代码去与计算机进行沟通，🔋是我最喜欢做的事。</p>
-                <p>我也开源的一些小作品<a href="https://gitee.com/n0ts">📁Gitee</a>，去提升自己的开发能力⭐；</p>
-                <p>当然，我也很乐意与志同道合的朋友🤙一起学习，可在上方来找我哦。</p>
-                <p>即使前方的路看似绝境🌋，也要有硬生生为自己开辟出一条道路的勇气💪</p>
+            <div class="lovexhj2TextBox" v-html="lovexhjData.lovexhj2.content"></div>
+            <!-- 介绍 - 图片 -->
+            <div class="lovexhj2Img">
+                <img :src="lovexhjData.lovexhj2.img" :alt="lovexhjData.lovexhj2.img">
             </div>
         </div>
     </div>
