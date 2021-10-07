@@ -1,7 +1,7 @@
 <!--
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-10-02 18:17:20
+ * @LastEditTime: 2021-10-07 18:53:18
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\index.html
  * @Mail：mail@n0ts.cn
@@ -9,74 +9,78 @@
 
 <!DOCTYPE html>
 <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>这里是网站标题</title>
+        <meta name="description" content="这里是网站介绍" />
+        <meta name="keywords" content="这里是网站关键词" />
+        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/theme-chalk/index.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./css/lovexhj.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>这里是网站标题</title>
-    <meta name="description" content="这里是网站介绍">
-    <meta name="keywords" content="这里是网站关键词">
-    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/theme-chalk/index.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/lovexhj.css">
-</head>
-
-<body>
-    <div id="lovexhj" v-clock>
-        <!-- 侧栏按钮 -->
-        <div class="sidebar">
-            <!-- 主题切换 -->
-            <div @click="clickChangeTheme">
-                <i class="fa fa-moon-o" v-if="lovexhjData.themeSelect == 'white'"></i>
-                <i class="fa fa-sun-o" v-else></i>
-                <span v-if="lovexhjData.themeSelect == 'white'">切换<b class="sidebarDarkText">暗</b>色</span>
-                <span v-else>切换<b class="sidebarWhiteText">亮</b>色</span>
-            </div>
-        </div>
-
-        <!-- 首页 -->
-        <div class="lovexhj1" v-if="lovexhjData" ref="lovexhj1">
-            <div class="lovexhj1Box">
-                <div :class="{'sunlightOrMoon': true, 'sun': true, 'sunOrMoonHide': lovexhjData.themeSelect == 'dark'}" ref="sun"></div>
-                <div :class="{'sunlightOrMoon': true, 'moon': true, 'sunOrMoonHide': lovexhjData.themeSelect == 'white'}" ref="Moon"></div>
-                <div class="hill1" ref="hill1"></div>
-                <div class="hill2" ref="hill2"></div>
-                <div class="earth" ref="earth">
-                    <div class="house" ref="house"></div>
-                </div>
-                <div class="lovexhj1Text">
-                    <p>{{ lovexhjData.lovexhj1.title }}</p>
-                    <p>{{ lovexhjData.lovexhj1.subTitle }}</p>
-                    <ul>
-                        <li v-for="(item, index) in lovexhjData.lovexhj1.menu" :key="index">
-                            <a :href="item.link" target="_blank">
-                                <i :class="'fa ' + item.icon"></i>
-                                <span>{{ item.name }}</span>
-                            </a>
-                        </li>
-                    </ul>
+    <body>
+        <div id="lovexhj" v-clock>
+            <!-- 侧栏按钮 -->
+            <div class="sidebar">
+                <!-- 主题切换 -->
+                <div @click="clickChangeTheme">
+                    <i class="fa fa-moon-o" v-if="lovexhjData.themeSelect == 'white'"></i>
+                    <i class="fa fa-sun-o" v-else></i>
+                    <span v-if="lovexhjData.themeSelect == 'white'">切换<b class="sidebarDarkText">暗</b>色</span>
+                    <span v-else>切换<b class="sidebarWhiteText">亮</b>色</span>
                 </div>
             </div>
-        </div>
-        <!-- 介绍 -->
-        <div class="lovexhj2">
-            <!-- 介绍 - 文案 -->
-            <div class="lovexhj2TextBox" v-html="lovexhjData.lovexhj2.content"></div>
-            <!-- 介绍 - 图片 -->
-            <div class="lovexhj2Img">
-                <img :src="lovexhjData.lovexhj2.img" :alt="lovexhjData.lovexhj2.img">
+
+            <!-- 首页 -->
+            <div class="lovexhj1" v-if="lovexhjData" ref="lovexhj1">
+                <div class="lovexhj1Box">
+                    <div
+                        :class="{'sunlightOrMoon': true, 'sun': true, 'sunOrMoonHide': lovexhjData.themeSelect == 'dark'}"
+                        ref="sun"
+                    ></div>
+                    <div
+                        :class="{'sunlightOrMoon': true, 'moon': true, 'sunOrMoonHide': lovexhjData.themeSelect == 'white'}"
+                        ref="Moon"
+                    ></div>
+                    <div class="hill1" ref="hill1"></div>
+                    <div class="hill2" ref="hill2"></div>
+                    <div class="earth" ref="earth">
+                        <div class="house" ref="house"></div>
+                    </div>
+                    <div class="lovexhj1Text">
+                        <p>{{ lovexhjData.lovexhj1.title }}</p>
+                        <p>{{ lovexhjData.lovexhj1.subTitle }}</p>
+                        <ul>
+                            <li v-for="(item, index) in lovexhjData.lovexhj1.menu" :key="index">
+                                <a :href="item.link" target="_blank">
+                                    <i :class="'fa ' + item.icon"></i>
+                                    <span>{{ item.name }}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <!-- 介绍 -->
+            <div class="lovexhj2">
+                <!-- 介绍 - 文案 -->
+                <div class="lovexhj2TextBox" v-html="lovexhjData.lovexhj2.content"></div>
+                <!-- 介绍 - 图片 -->
+                <div class="lovexhj2Img">
+                    <img :src="lovexhjData.lovexhj2.img" :alt="lovexhjData.lovexhj2.img" />
+                </div>
+            </div>
+            <!--  -->
+            <div class="lovexhj3"></div>
         </div>
-        <!--  -->
-        <div class="lovexhj3"></div>
-    </div>
 
-    <!-- js 引用 -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
-    <script src="./js/lovexhj.js" type="module"></script>
-</body>
-
+        <!-- js 引用 -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+        <script src="./js/lovexhj.js" type="module"></script>
+    </body>
 </html>

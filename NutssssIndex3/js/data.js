@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2021-06-12 20:02:41
- * @LastEditTime: 2021-10-02 18:05:15
+ * @LastEditTime: 2021-10-07 18:53:31
  * @Description: 我的第三个个人主页
  * @FilePath: \NutssssIndex3\js\data.js
  * @Mail：mail@n0ts.cn
@@ -85,13 +85,20 @@ export default {
         ]
     },
     lovexhj2: {
-        content: `                <h1>你好！</h1>
+        content: `                    <h1>你好！</h1>
         <h2>我是 N0ts，</h2>
-        <p>一名<b>💻前端开发者</b>，现就职于🌏上海，最爱🍦。</p>
-        <p>用#️⃣代码去与计算机进行沟通，🔋是我最喜欢做的事。</p>
-        <p>我也开源的一些小作品<a href="https://gitee.com/n0ts" target="_blank">📁Gitee</a>，去提升自己的开发能力⭐；</p>
+        <p>一名<b>💻前端开发者</b>，19级大学生，现就职于🌏上海，最爱🍦；</p>
+        <p>用#️⃣代码去与计算机进行沟通，🔋是我最喜欢做的事；</p>
+        <p>我也开源的一些小作品，去提升自己的开发能力⭐；</p>
         <p>当然，我也很乐意与志同道合的朋友🤙一起学习，可在上方来找我哦。</p>
-        <p>即使前方的路看似绝境🌋，也要有硬生生为自己开辟出一条道路的勇气💪</p>`,
+        <p>即使前方的路看似绝境🌋，也要有硬生生为自己开辟出一条道路的勇气！💪</p>
+        <p>
+            我的开源：<a href="https://gitee.com/n0ts" target="_blank">📁Gitee</a>；我的博客：<a
+                href="https://blog.n0ts.cn/"
+                target="_blank"
+                >📚Blog</a
+            >。
+        </p>`,
         img: "https://lovexhj.oss-cn-beijing.aliyuncs.com/me/images/me.jpg"
     }
 }
