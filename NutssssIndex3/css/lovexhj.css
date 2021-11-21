@@ -79,7 +79,8 @@ html,
 /* 统一定位居中 */
 .emoji .smile,
 .emoji .smile div:nth-child(2),
-.iceCreamToXHJ::after {
+.iceCreamToXHJ::after,
+.house > div:nth-child(1)::after {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -703,14 +704,7 @@ html,
     border-bottom: 35px solid rgb(155, 70, 0);
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
-    position: absolute;
     top: -50%;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
 }
 
 .house > div:nth-child(1)::before {

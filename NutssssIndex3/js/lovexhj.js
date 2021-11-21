@@ -1,9 +1,9 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-09-29 01:00:56
+ * @LastEditTime: 2021-11-22 10:27:49
  * @Description: 我的第三个个人主页
- * @FilePath: \NutssssIndex3\js\lovexhj.js
+ * @FilePath: /NutssssIndex3/js/lovexhj.js
  * @Mail：mail@n0ts.cn
  */
 
@@ -56,7 +56,7 @@ new Vue({
      */
     methods: {
         /**
-         * 太阳&&月亮&&山峰&&云&&房子生成
+         * 太阳 && 月亮 && 山峰 && 云 && 房子生成
          */
         lovexhj1DomCreate() {
             // 获取元素
@@ -90,18 +90,18 @@ new Vue({
         lovexhj1Animation() {
             let sun = this.$refs.sun;
             let Moon = this.$refs.Moon;
-            let hill1 = this.$refs.hill1;
-            let hill2 = this.$refs.hill2;
-            let earth = this.$refs.earth;
+            // let hill1 = this.$refs.hill1;
+            // let hill2 = this.$refs.hill2;
+            // let earth = this.$refs.earth;
             // 当前滚动高度
             let Y = window.scrollY;
             sun.style.top = 25 - Y * 0.05 + '%';
             Moon.style.top = 25 - Y * 0.05 + '%';
             sun.style.right = 30 + Y * 0.08 + '%';
             Moon.style.right = 30 + Y * 0.08 + '%';
-            hill1.style.bottom = -500 + Y * 0.6 + 'px';
-            hill2.style.bottom = -450 + Y * 0.6 + 'px';
-            earth.style.height = 20 + Y * 0.05 + '%';
+            // hill1.style.bottom = -500 + Y * 0.6 + 'px';
+            // hill2.style.bottom = -450 + Y * 0.6 + 'px';
+            // earth.style.height = 20 + Y * 0.05 + '%';
         },
 
         /**
