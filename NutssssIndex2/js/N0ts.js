@@ -1,146 +1,95 @@
 window.onload = function () {
-    document.getElementsByClassName("load")[0].style.display = "none";
-    document.getElementsByClassName("Box")[0].classList.add("BoxLoad");
-}
+    document.querySelector(".load").style.display = "none";
+    document.querySelector(".Box").classList.add("BoxLoad");
+};
 
-// 侧栏菜单 && 打开模糊背景
-function MeClick(a) {
+new Vue({
+    el: "#app",
+    data: {
+        tabState: false, // 侧边栏菜单是否展开
+        menuTabState: false, // 侧边栏顶部菜单是否展开
+        pagesTabState: false, // 侧边栏页面菜单是否展开
+        pageIndex: 0, // 当前页面索引
+        timeText: "" // 计时文案
+    },
+    created() {},
+    mounted() {
+        setInterval(() => {
+            this.lovetime();
+        }, 1000);
+    },
+    methods: {
+        /**
+         * 侧边菜单打开关闭
+         */
+        changeTab() {
+            this.tabState = !this.tabState;
+        },
 
-    if (a) {
-        var a = document.getElementById("leftBar-Me");
-        a.classList.add("leftBar-Me-Click");
-        var b = document.getElementById("pages");
-        b.classList.add("blur");
-        var c = document.getElementById("menu");
-        c.classList.add("blur");
-        var d = document.getElementById("pages2");
-        d.classList.add("blur");
-        var e = document.getElementById("footer");
-        e.classList.add("blur");
-    } else {
-        var a = document.getElementById("leftBar-Me");
-        a.classList.remove("leftBar-Me-Click");
-        var b = document.getElementById("pages");
-        b.classList.remove("blur");
-        var c = document.getElementById("menu");
-        c.classList.remove("blur");
-        var d = document.getElementById("pages2");
-        d.classList.remove("blur");
-        var e = document.getElementById("footer");
-        e.classList.remove("blur");
-    }
-}
+        /**
+         * 侧边栏顶部菜单打开关闭
+         */
+        changeMenuTab() {
+            this.menuTabState = !this.menuTabState;
+        },
 
-function MenuClick(a) {
-    if (a) {
-        var a = document.getElementById("leftBar-titleMenu");
-        a.classList.add("leftBar-titleMenu-Click");
-        var b = document.getElementById("pages");
-        b.classList.add("blur");
-        var c = document.getElementById("menu");
-        c.classList.add("blur");
-        var d = document.getElementById("pages2");
-        d.classList.add("blur");
-        var e = document.getElementById("footer");
-        e.classList.add("blur");
-    } else {
-        var a = document.getElementById("leftBar-titleMenu");
-        a.classList.remove("leftBar-titleMenu-Click");
-        var b = document.getElementById("pages");
-        b.classList.remove("blur");
-        var c = document.getElementById("menu");
-        c.classList.remove("blur");
-        var d = document.getElementById("pages2");
-        d.classList.remove("blur");
-        var e = document.getElementById("footer");
-        e.classList.remove("blur");
-    }
-}
+        /**
+         * 侧边栏页面菜单打开关闭
+         */
+        changePagesTab() {
+            this.pagesTabState = !this.pagesTabState;
+        },
 
-function PagesClick(a) {
-    if (a) {
-        var a = document.getElementById("leftBar-Pages");
-        a.classList.add("leftBar-Pages-Click");
-        var b = document.getElementById("pages");
-        b.classList.add("blur");
-        var c = document.getElementById("menu");
-        c.classList.add("blur");
-        var d = document.getElementById("pages2");
-        d.classList.add("blur");
-        var e = document.getElementById("footer");
-        e.classList.add("blur");
-    } else {
-        var a = document.getElementById("leftBar-Pages");
-        a.classList.remove("leftBar-Pages-Click");
-        var b = document.getElementById("pages");
-        b.classList.remove("blur");
-        var c = document.getElementById("menu");
-        c.classList.remove("blur");
-        var d = document.getElementById("pages2");
-        d.classList.remove("blur");
-        var e = document.getElementById("footer");
-        e.classList.remove("blur");
-    }
-}
+        /**
+         * 侧边菜单收起
+         */
+        closeBlackWindow() {
+            this.tabState = this.menuTabState = this.pagesTabState = false;
+        },
 
-// 页面切换
-var pages_title_option = 1;
+        /**
+         * 切换页面
+         * @param {*} i 索引
+         */
+        changePageIndex(i) {
+            this.pageIndex = i;
+        },
 
-function pages_title_option_click(a, b) {
-    if (a != pages_title_option) {
-        var option1 = document.getElementById("pages-title-option" + a);
-        option1.classList.add("pages-title-option-click");
-        var option2 = document.getElementById("pages-title-option" + pages_title_option);
-        option2.classList.remove("pages-title-option-click");
-
-        var pages_text1 = document.getElementById("pages-text" + a);
-        pages_text1.classList.add("pages-text-show");
-        var pages_text2 = document.getElementById("pages-text" + pages_title_option);
-        pages_text2.classList.remove("pages-text-show");
-    } else {
-        if (b) {
-            var option1 = document.getElementById("pages-title-option1" + a);
-            option1.classList.add("pages-title-option-click");
-            var option2 = document.getElementById("pages-title-option1" + pages_title_option);
-            option2.classList.remove("pages-title-option-click1");
-
-            var pages_text1 = document.getElementById("pages-text1" + a);
-            pages_text1.classList.add("pages-text-show1");
-            var pages_text2 = document.getElementById("pages-text1" + pages_title_option);
-            pages_text2.classList.remove("pages-text-show1");
+        lovetime() {
+            let seconds = 1000;
+            let minutes = seconds * 60;
+            let hours = minutes * 60;
+            let days = hours * 24;
+            let years = days * 365;
+            let today = new Date();
+            let todayYear = today.getFullYear();
+            let todayMonth = today.getMonth() + 1;
+            let todayDate = today.getDate();
+            let todayHour = today.getHours();
+            let todayMinute = today.getMinutes();
+            let todaySecond = today.getSeconds();
+            let t1 = Date.UTC(2018, 11, 19, 00, 00, 00);
+            let t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+            let diff = t2 - t1;
+            let diffYears = Math.floor(diff / years);
+            let diffDays = Math.floor(diff / days - diffYears * 365);
+            let diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+            let diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+            let diffSeconds = Math.floor(
+                (diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds
+            );
+            this.timeText =
+                "我们已经在一起 " +
+                diffYears +
+                "年" +
+                diffDays +
+                "天" +
+                diffHours +
+                "小时" +
+                diffMinutes +
+                "分钟" +
+                diffSeconds +
+                "秒啦";
         }
     }
-
-    pages_title_option = a;
-}
-
-//计时
-function lovetime() {
-    window.setTimeout("lovetime()", 1000);
-    var seconds = 1000
-    var minutes = seconds * 60
-    var hours = minutes * 60
-    var days = hours * 24
-    var years = days * 365
-    var today = new Date()
-    var todayYear = today.getFullYear()
-    var todayMonth = today.getMonth() + 1
-    var todayDate = today.getDate()
-    var todayHour = today.getHours()
-    var todayMinute = today.getMinutes()
-    var todaySecond = today.getSeconds()
-    var t1 = Date.UTC(2018, 11, 19, 00, 00, 00)
-    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
-    var diff = t2 - t1
-    var diffYears = Math.floor(diff / years)
-    var diffDays = Math.floor((diff / days) - diffYears * 365)
-    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
-    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
-    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
-        minutes) / seconds)
-    document.getElementById("lovetime1").innerHTML = "我们已经在一起 " + diffYears + "年" + diffDays + "天" +
-        diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒啦"
-    document.getElementById("lovetime2").innerHTML = "我们已经在一起 " + diffYears + "年" + diffDays + "天" +
-        diffHours + "小时" + diffMinutes + "分钟" + diffSeconds + "秒啦"
-}
-lovetime();
+});

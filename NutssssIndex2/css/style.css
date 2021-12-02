@@ -2,12 +2,14 @@
     margin: 0;
     padding: 0;
     color: rgb(159, 178, 191);
-    font-family: "Source Serif Pro", "Noto Serif SC", -apple-system, "SF UI Text", "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: "Source Serif Pro", "Noto Serif SC", -apple-system, "SF UI Text", "PingFang SC", "Microsoft YaHei",
+        "WenQuanYi Micro Hei", sans-serif;
     font-weight: 400;
 }
 
 html,
-body {
+body,
+#app {
     height: 100%;
     background-color: rgb(33, 37, 43);
 }
@@ -34,26 +36,31 @@ h2 {
     cursor: default;
 }
 
-.n0ts-img {
+.n0tsImg {
     cursor: pointer;
-}
-
-.blur {
-    filter: blur(5px);
-    -o-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -webkit-filter: blur(5px);
 }
 
 .Box {
     width: 100%;
     height: 100%;
     transform: scale(0);
-    transition: all .5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
 }
 
 .BoxLoad {
     transform: scale(1) !important;
+    -webkit-transform: scale(1) !important;
+    -moz-transform: scale(1) !important;
+    -ms-transform: scale(1) !important;
+    -o-transform: scale(1) !important;
 }
 
 .load {
@@ -78,7 +85,8 @@ h2 {
     animation: load 3s ease-in-out infinite;
 }
 
-.loadLeft, .loadRight {
+.loadLeft,
+.loadRight {
     width: 50px;
     height: 50px;
     background-color: red;
@@ -96,7 +104,7 @@ h2 {
 
 @keyframes load {
     0% {
-        transform: rotate(-45deg) scale(.5);
+        transform: rotate(-45deg) scale(0.5);
     }
 
     50% {
@@ -104,7 +112,7 @@ h2 {
     }
 
     100% {
-        transform: rotate(-45deg) scale(.5);
+        transform: rotate(-45deg) scale(0.5);
     }
 }
 
@@ -126,10 +134,10 @@ h2 {
     font-size: 0.7rem;
     text-align: center;
     color: white;
-    transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     overflow: hidden;
 }
 
@@ -153,10 +161,10 @@ h2 {
     height: 35px;
     line-height: 35px;
     text-align: center;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
 .menu ul li a:hover {
@@ -179,9 +187,9 @@ h2 {
 }
 
 /* 三个按钮 */
-.leftBar-ButtomMe,
-.leftBar-ButtomMenu,
-.leftBar-ButtomPages {
+.leftBarButtomMe,
+.leftBarButtomMenu,
+.leftBarButtomPages {
     width: 100%;
     height: 30px;
     cursor: pointer;
@@ -190,14 +198,14 @@ h2 {
 }
 
 /* 关于我按钮 */
-.leftBar-ButtomMe {
+.leftBarButtomMe {
     overflow: hidden;
     margin: 10px 0;
     padding: 10px 0 0;
 }
 
-.leftBar-ButtomMe::before {
-    content: '';
+.leftBarButtomMe::before {
+    content: "";
     display: block;
     width: 12px;
     height: 12px;
@@ -209,8 +217,8 @@ h2 {
     margin-left: -6px;
 }
 
-.leftBar-ButtomMe::after {
-    content: '';
+.leftBarButtomMe::after {
+    content: "";
     display: block;
     width: 25px;
     height: 25px;
@@ -222,79 +230,79 @@ h2 {
     margin-left: -12.5px;
 }
 
-.leftBar-ButtomMe::before,
-.leftBar-ButtomMe::after {
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+.leftBarButtomMe::before,
+.leftBarButtomMe::after {
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-ButtomMe:hover::before,
-.leftBar-ButtomMe:hover::after {
+.leftBarButtomMe:hover::before,
+.leftBarButtomMe:hover::after {
     background-color: white;
 }
 
 /* 顶部菜单按钮 */
-.leftBar-ButtomMenu {
+.leftBarButtomMenu {
     margin: 10px 0;
     padding: 10px 0 0;
     display: none;
 }
 
-.leftBar-ButtomMenu .div1,
-.leftBar-ButtomMenu .div2,
-.leftBar-ButtomMenu .div3 {
+.leftBarButtomMenu .div1,
+.leftBarButtomMenu .div2,
+.leftBarButtomMenu .div3 {
     width: 50%;
     height: 3px;
     border-radius: 10px;
     margin: 0 auto 5px;
     background-color: rgba(255, 255, 255, 0.5);
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-ButtomMenu:hover .div1 {
+.leftBarButtomMenu:hover .div1 {
     background-color: rgba(255, 255, 255, 1);
 }
 
-.leftBar-ButtomMenu:hover .div2 {
+.leftBarButtomMenu:hover .div2 {
     background-color: rgba(255, 255, 255, 1);
 }
 
-.leftBar-ButtomMenu:hover .div3 {
+.leftBarButtomMenu:hover .div3 {
     background-color: rgba(255, 255, 255, 1);
 }
 
 /* 页面按钮 */
-.leftBar-ButtomPages {
+.leftBarButtomPages {
     display: none;
     padding: 10px 0 0;
     margin: 10px 0;
 }
 
-.leftBar-ButtomPages::before {
-    content: '';
+.leftBarButtomPages::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 13px;
 }
 
-.leftBar-ButtomPages::after {
-    content: '';
+.leftBarButtomPages::after {
+    content: "";
     position: absolute;
     top: 5px;
     left: 21px;
 }
 
-.leftBar-ButtomPages::before,
-.leftBar-ButtomPages::after {
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+.leftBarButtomPages::before,
+.leftBarButtomPages::after {
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     display: block;
     width: 10px;
     height: 15px;
@@ -302,16 +310,16 @@ h2 {
     border-radius: 2px;
 }
 
-.leftBar-ButtomPages:hover::before {
+.leftBarButtomPages:hover::before {
     border: 3px solid white;
 }
 
-.leftBar-ButtomPages:hover::after {
+.leftBarButtomPages:hover::after {
     border: 3px solid white;
 }
 
 /* 关闭菜单按钮 */
-.leftBar-ButtomClose {
+.leftBarButtomClose {
     width: 100%;
     height: 20px;
     cursor: pointer;
@@ -324,8 +332,8 @@ h2 {
     -webkit-transition: all 0.3s;
 }
 
-.leftBar-ButtomClose .div1,
-.leftBar-ButtomClose .div2 {
+.leftBarButtomClose .div1,
+.leftBarButtomClose .div2 {
     width: 10%;
     height: 3px;
     border-radius: 10px;
@@ -338,14 +346,14 @@ h2 {
     position: relative;
 }
 
-.leftBar-ButtomClose .div1 {
+.leftBarButtomClose .div1 {
     transform: rotate(45deg);
     -o-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
 
-.leftBar-ButtomClose .div2 {
+.leftBarButtomClose .div2 {
     transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
@@ -353,7 +361,7 @@ h2 {
     top: -8px;
 }
 
-.leftBar-ButtomClose:hover {
+.leftBarButtomClose:hover {
     transform: scale(1.1);
     -o-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -361,23 +369,46 @@ h2 {
 }
 
 /* 拉出菜单 我 */
-.leftBar-Me {
+.leftBarMe {
     width: 300px;
     height: 100%;
     background-color: rgb(51, 56, 66);
     position: relative;
-    transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     transform: translateX(-300px);
     -o-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
     -webkit-transform: translateX(-300px);
-    z-index: 4;
+    z-index: 5;
 }
 
-.leftBar-Me-Click {
+/* 遮罩层 */
+.blackWindow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 4;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.blackWindowShow {
+    visibility: visible;
+    opacity: 1;
+}
+
+.leftBarMeClick {
     transform: translateX(0px);
     -o-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -385,24 +416,24 @@ h2 {
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.leftBar-Me .img {
+.leftBarMe .img {
     width: 100px;
     height: 100px;
     margin: 40px auto 50px;
 }
 
-.leftBar-Me .img img {
+.leftBarMe .img img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-Me .img::after {
-    content: '';
+.leftBarMe .img::after {
+    content: "";
     display: block;
     width: 270px;
     height: 2px;
@@ -411,7 +442,7 @@ h2 {
     border-radius: 5px;
 }
 
-.leftBar-Me .img img:hover {
+.leftBarMe .img img:hover {
     transform: scale(1.1);
     -o-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -419,72 +450,73 @@ h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.leftBar-Me .introduction {
+.leftBarMe .introduction {
     width: 75%;
     margin: 0 auto;
 }
 
-.leftBar-Me .introduction h1 {
+.leftBarMe .introduction h1 {
     width: 120%;
     margin: 0 0 30px -10%;
 }
 
-.leftBar-Me .introduction p {
+.leftBarMe .introduction p {
     margin-bottom: 10px;
 }
 
-.leftBar-Me .introduction p::before {
-    content: '\00A0\00A0\00A0\00A0\00A0\00A0';
+.leftBarMe .introduction p::before {
+    content: "\00A0\00A0\00A0\00A0\00A0\00A0";
 }
 
-.leftBar-Me .icon {
+.leftBarMe .icon {
     padding: 10px 0 0 40px;
 }
 
-.leftBar-Me .icon ul li i {
+.leftBarMe .icon ul li i {
     margin: 0 5px;
     cursor: pointer;
-    transition: all .3s ease;
-    -o-transition: all .3s ease;
-    -moz-transition: all .3s ease;
-    -webkit-transition: all .3s ease;
+    transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
 }
 
-.leftBar-Me .icon ul li i:hover {
+.leftBarMe .icon ul li i:hover {
     transform: scale(1.3);
 }
 
-.leftBar-Me .connect {
+.leftBarMe .connect {
     position: absolute;
     bottom: 20px;
 }
 
-.leftBar-Me .connect a {
+.leftBarMe .connect a {
     display: block;
     float: left;
     width: 150px;
     height: 40px;
     text-align: center;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -ms-transition: all 0.3s;
 }
 
-.leftBar-Me .connect a::after {
-    content: '';
+.leftBarMe .connect a::after {
+    content: "";
     display: block;
     width: 0%;
     height: 3px;
     background-color: #74b9ff;
     margin: 10px auto 0;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-Me .connect a:hover {
+.leftBarMe .connect a:hover {
     transform: translateY(-5px);
     -o-transform: translateY(-5px);
     -moz-transform: translateY(-5px);
@@ -492,29 +524,29 @@ h2 {
     color: white;
 }
 
-.leftBar-Me .connect a:hover::after {
+.leftBarMe .connect a:hover::after {
     width: 80%;
 }
 
 /* 拉出菜单 顶部菜单 */
-.leftBar-titleMenu {
+.leftBarTitleMenu {
     width: 300px;
     height: 100%;
     position: absolute;
     top: 0;
     z-index: 4;
     background-color: rgb(51, 56, 66);
-    transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     transform: translateX(-300px);
     -o-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
     -webkit-transform: translateX(-300px);
 }
 
-.leftBar-titleMenu-Click {
+.leftBarTitleMenuClick {
     transform: translateX(0px);
     -o-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -522,52 +554,52 @@ h2 {
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.leftBar-titleMenu h1 {
+.leftBarTitleMenu h1 {
     margin: 40px 0 0 20px;
 }
 
-.leftBar-titleMenu ul {
+.leftBarTitleMenu ul {
     margin: 20px 0 0 40px;
 }
 
-.leftBar-titleMenu ul li {
+.leftBarTitleMenu ul li {
     display: block;
     padding: 10px;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-titleMenu ul li::after {
-    content: '';
+.leftBarTitleMenu ul li::after {
+    content: "";
     display: block;
     width: 0;
     height: 3px;
     background-color: #74b9ff;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-titleMenu ul li:hover::after {
+.leftBarTitleMenu ul li:hover::after {
     width: 80%;
     display: block;
 }
 
 /* 拉出菜单 页面菜单 */
-.leftBar-Pages {
+.leftBarPages {
     width: 300px;
     height: 100%;
     position: absolute;
     top: 0;
     z-index: 4;
     background-color: rgb(51, 56, 66);
-    transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     transform: translateX(-300px);
     -o-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
@@ -575,7 +607,7 @@ h2 {
     overflow: hidden;
 }
 
-.leftBar-Pages-Click {
+.leftBarPagesClick {
     opacity: 1;
     transform: translateX(0px);
     -o-transform: translateX(0px);
@@ -584,54 +616,54 @@ h2 {
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.leftBar-Pages-box {
+.leftBarPagesBox {
     width: 100%;
     height: auto;
     position: absolute;
     top: 80px;
 }
 
-.leftBar-Pages-box h1 {
+.leftBarPagesBox h1 {
     margin: 0 0 40px 20px;
 }
 
-.leftBar-Pages-optine {
+.leftBarPagesOptine {
     width: 100%;
     height: 60px;
     padding: 0 25px;
 }
 
-.leftBar-Pages-optine::after {
-    content: '';
+.leftBarPagesOptine::after {
+    content: "";
     display: block;
     margin-top: 10px;
     width: 0%;
     height: 3px;
     background-color: #74b9ff;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-Pages-optine:hover::after {
+.leftBarPagesOptine:hover::after {
     width: 80%;
 }
 
-.leftBar-Pages-optine:hover img {
+.leftBarPagesOptine:hover img {
     transform: rotate(360deg);
 }
 
-.leftBar-Pages-optine img {
+.leftBarPagesOptine img {
     width: 30px;
     vertical-align: middle;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.leftBar-Pages-optine p {
+.leftBarPagesOptine p {
     display: inline-block;
     font-size: 1.1rem;
 }
@@ -643,10 +675,10 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     background-color: rgb(40, 44, 52);
 }
 
@@ -655,24 +687,24 @@ h2 {
     width: 35%;
     border-left: 1px solid black;
     margin-left: -1px;
-    transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
-.pages-title {
+.pagesTitle {
     position: absolute;
     top: 35px;
     width: 100%;
     height: 35px;
     background-color: rgb(33, 37, 43);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
     overflow: hidden;
 }
 
-.pages-title-option {
+.pagesTitleOption {
     width: auto;
     height: 35px;
     background-color: rgb(33, 37, 43);
@@ -681,18 +713,22 @@ h2 {
     border-left: 1px solid black;
     border-right: 1px solid black;
     margin-left: -1px;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     cursor: pointer;
 }
 
-#pages-title-option1 {
+#pagesTitle2 {
+    display: none;
+}
+
+#pagesTitleOption1 {
     margin-left: 50px;
 }
 
-.pages-title-option img {
+.pagesTitleOption img {
     float: left;
     width: 20px;
     height: 20px;
@@ -700,141 +736,145 @@ h2 {
     cursor: pointer;
 }
 
-.pages-title-option p {
+.pagesTitleOption p {
     float: left;
     line-height: 35px;
-    font-size: .8rem;
+    font-size: 0.8rem;
     cursor: pointer;
 }
 
-.pages-title-option img,
-.pages-title-option p {
-    transition: all .2s;
-    -o-transition: all .2s;
-    -moz-transition: all .2s;
-    -webkit-transition: all .2s;
+.pagesTitleOption img,
+.pagesTitleOption p {
+    transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 }
 
-.pages-title-option:hover p,
-.pages-title-option:hover img {
+.pagesTitleOption:hover p,
+.pagesTitleOption:hover img {
     transform: translateY(-3px);
 }
 
-.pages-title-option-click {
+.pagesTitleOptionClick {
     background-color: rgb(40, 44, 52);
 }
 
-.pages-text {
+.pagesText {
     width: 0;
     height: 0;
     position: absolute;
     top: 0;
     left: 0;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
     transform: translateY(500px);
     overflow-x: hidden;
     opacity: 0;
 }
 
-.pages-text::-webkit-scrollbar {
+.pagesText::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
 
-.pages-text::-o-scrollbar {
+.pagesText::-o-scrollbar {
     width: 5px;
     height: 5px;
 }
 
-.pages-text::-moz-scrollbar {
+.pagesText::-moz-scrollbar {
     width: 5px;
     height: 5px;
 }
 
-.pages-text::-webkit-scrollbar-thumb {
+.pagesText::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     background: #535353;
 }
 
-.pages-text::-o-scrollbar-thumb {
+.pagesText::-o-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     background: #535353;
 }
 
-.pages-text::-moz-scrollbar-thumb {
+.pagesText::-moz-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     background: #535353;
 }
 
-.pages-text-box {
+.pagesTextBox {
     margin: 120px 0 0 100px;
     padding-bottom: 50px;
 }
 
-.pages-text-box p {
+.pagesTextBox p {
     font-size: 1.2rem;
 }
 
-.pages-text-box .aClick {
+.pagesTextBox .aClick {
     display: inline-block;
     padding: 10px 40px;
     background-color: #74b9ff;
     color: white;
     border-radius: 20px;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.pages-text-box .aClick:hover {
+.pagesTextBox .aClick:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px  #74d3ff;
+    box-shadow: 0 0 10px #74d3ff;
 }
 
-.pages-text-box-img {
+.pagesTextBoxImg {
     margin: 40px 0;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.pages-text-box-img img {
+.pagesTextBoxImg img {
     max-width: 70%;
     min-width: 300px;
     max-height: 500px;
     border-radius: 10px;
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
-.pages-text-box-img img:hover {
+.pagesTextBoxImg img:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.pages-text-box-img h6::after {
-    content: ' ↑ ';
+.pagesTextBoxImg h6::after {
+    content: " ↑ ";
 }
 
-.pages-text-box2 {
+.pagesTextBox2 {
     margin: 120px 0 0 50px;
 }
 
-.pages-text-show {
+.pagesTextShow {
     width: 100%;
     height: 100%;
     opacity: 1;
     transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
 }
 
 .giteeBoxUL {
@@ -852,14 +892,14 @@ h2 {
     border-radius: 20px;
     position: relative;
     margin: 50px 0;
-    transition: all .3s ease-out;
-    -o-transition: all .3s ease-out;
-    -moz-transition: all .3s ease-out;
-    -webkit-transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
 }
 
 .giteeBoxUL li::after {
-    content: '';
+    content: "";
     display: block;
     width: 30px;
     height: 30px;
@@ -872,7 +912,7 @@ h2 {
 
 .giteeBoxUL li:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .giteeBoxUL li a {
@@ -881,44 +921,45 @@ h2 {
 }
 
 .giteeBoxUL li a::after {
-    content: '';
+    content: "";
     display: block;
     width: 0%;
     height: 2px;
     background-color: #74b9ff;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .giteeBoxUL li a:hover::after {
     width: 100%;
 }
 
-.giteeBoxUL .giteeBox-Title {
+.giteeBoxUL .giteeBoxTitle {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.giteeBoxUL .giteeBox-Title .starBox {
+.giteeBoxUL .giteeBoxTitle .starBox {
     display: inline-block;
 }
 
-.giteeBoxUL .giteeBox-Title i {
+.giteeBoxUL .giteeBoxTitle i {
     font-size: 1rem;
     margin-left: 5px;
 }
 
-.giteeBoxUL .giteeBox-Title .star {
+.giteeBoxUL .giteeBoxTitle .star {
     font-size: 1rem;
     margin-left: -5px;
 }
 
-.giteeBoxUL .giteeBox-Text, .giteeBoxUL .giteeBox-Time {
+.giteeBoxUL .giteeBoxText,
+.giteeBoxUL .giteeBoxTime {
     font-size: 1rem;
     margin-bottom: 30px;
     padding: 0 5px;
 }
 
-.giteeBoxUL .giteeBox-Time {
+.giteeBoxUL .giteeBoxTime {
     display: block;
     position: absolute;
     right: 10px;
@@ -938,12 +979,12 @@ h2 {
     position: absolute;
     bottom: 0;
     z-index: 2;
-    font-size: .8rem;
-    box-shadow: 0 -10px 10px rgba(0, 0, 0, .1);
-    transition: all .5s;
-    -o-transition: all .5s;
-    -moz-transition: all .5s;
-    -webkit-transition: all .5s;
+    font-size: 0.8rem;
+    box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .footer p {
@@ -953,10 +994,10 @@ h2 {
 }
 
 .footer p a {
-    transition: all .3s;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
 }
 
 .footer p a:hover {
@@ -968,18 +1009,18 @@ h2 {
 }
 
 /* 自适应 */
-@media screen and (max-width: 1180px) {
-    #menuUL {
+@media screen and (max-width: 1250px) {
+    .menuUL {
         display: none;
     }
 
-    #leftBar-ButtomMenu {
+    .leftBarButtomMenu {
         display: block;
     }
 }
 
 @media screen and (max-width: 1080px) {
-    #menuPages {
+    .leftBarButtomPages {
         display: block;
     }
 
@@ -990,26 +1031,30 @@ h2 {
     .pages2 {
         display: none;
     }
+
+    #pagesTitle2 {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 575px) {
-    .pages-title {
+    .pagesTitle {
         display: none;
     }
 
-    .pages-text-box {
+    .pagesTextBox {
         margin: 80px 0 0 65px;
     }
 
-    .pages-text-box-img img {
+    .pagesTextBoxImg img {
         max-width: 85%;
         min-width: 200px;
         max-height: 99999px;
         border-radius: 10px;
-        transition: all .3s;
-        -o-transition: all .3s;
-        -moz-transition: all .3s;
-        -webkit-transition: all .3s;
+        transition: all 0.3s;
+        -o-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.3s;
     }
 
     .footer {
@@ -1027,17 +1072,17 @@ h2 {
         float: none;
     }
 
-    .leftBar-Me,
-    .leftBar-titleMenu,
-    .leftBar-Pages {
+    .leftBarMe,
+    .leftBarTitleMenu,
+    .leftBarPages {
         width: 280px;
     }
 
-    .leftBar-Me .connect a {
+    .leftBarMe .connect a {
         width: 140px;
     }
 
-    .pages-text-box {
+    .pagesTextBox {
         padding-bottom: 100px;
     }
 
@@ -1047,7 +1092,7 @@ h2 {
         padding-left: 10px;
     }
 
-    .giteeBoxUL .giteeBox-Time {
+    .giteeBoxUL .giteeBoxTime {
         position: unset;
     }
 }
