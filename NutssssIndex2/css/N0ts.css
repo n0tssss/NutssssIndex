@@ -1,3 +1,12 @@
+/*
+ * @Author: N0ts
+ * @Date: 2021-11-16 16:59:53
+ * @LastEditTime: 2021-12-03 11:03:13
+ * @Description: 样式
+ * @FilePath: /NutssssIndex2/css/N0ts.css
+ * @Mail：mail@n0ts.cn
+ */
+
 * {
     margin: 0;
     padding: 0;
@@ -40,19 +49,62 @@ h2 {
     cursor: pointer;
 }
 
+.Box,
+.menu,
+.leftBarMe,
+.blackWindow,
+.leftBarTitleMenu,
+.leftBarPages,
+.pages,
+.pages2,
+.footer {
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.menu ul li a,
+.footer p a,
+.pagesTextBoxImg img,
+.leftBarButtomMe::before,
+.leftBarButtomMe::after,
+.leftBarButtomMenu .div1,
+.leftBarButtomMenu .div2,
+.leftBarButtomMenu .div3,
+.leftBarButtomPages::before,
+.leftBarButtomPages::after,
+.leftBarButtomClose,
+.leftBarButtomClose .div1,
+.leftBarButtomClose .div2,
+.leftBarMe .img img,
+.leftBarMe .connect a,
+.leftBarMe .connect a::after,
+.leftBarTitleMenu ul li,
+.leftBarTitleMenu ul li::after,
+.leftBarPagesOptine::after,
+.leftBarPagesOptine img,
+.pagesTitleOption,
+.pagesText,
+.pagesTextBox .aClick,
+.pagesTextBoxImg,
+.pagesTextBoxImg img {
+    transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+}
+
 .Box {
     width: 100%;
     height: 100%;
     transform: scale(0);
-    transition: all 0.5s ease-out;
     -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -o-transform: scale(0);
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
 }
 
 .BoxLoad {
@@ -134,10 +186,6 @@ h2 {
     font-size: 0.7rem;
     text-align: center;
     color: white;
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     overflow: hidden;
 }
 
@@ -161,10 +209,6 @@ h2 {
     height: 35px;
     line-height: 35px;
     text-align: center;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .menu ul li a:hover {
@@ -230,14 +274,6 @@ h2 {
     margin-left: -12.5px;
 }
 
-.leftBarButtomMe::before,
-.leftBarButtomMe::after {
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-}
-
 .leftBarButtomMe:hover::before,
 .leftBarButtomMe:hover::after {
     background-color: white;
@@ -258,10 +294,6 @@ h2 {
     border-radius: 10px;
     margin: 0 auto 5px;
     background-color: rgba(255, 255, 255, 0.5);
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .leftBarButtomMenu:hover .div1 {
@@ -299,10 +331,6 @@ h2 {
 
 .leftBarButtomPages::before,
 .leftBarButtomPages::after {
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
     display: block;
     width: 10px;
     height: 15px;
@@ -326,10 +354,6 @@ h2 {
     position: relative;
     padding: 10px 0;
     top: 30px;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .leftBarButtomClose .div1,
@@ -339,10 +363,6 @@ h2 {
     border-radius: 10px;
     margin: 0 auto 5px;
     background-color: rgba(255, 255, 255, 1);
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
     position: relative;
 }
 
@@ -374,10 +394,6 @@ h2 {
     height: 100%;
     background-color: rgb(51, 56, 66);
     position: relative;
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     transform: translateX(-300px);
     -o-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
@@ -395,10 +411,6 @@ h2 {
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     z-index: 4;
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     visibility: hidden;
     opacity: 0;
 }
@@ -426,10 +438,6 @@ h2 {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .leftBarMe .img::after {
@@ -479,6 +487,7 @@ h2 {
     -o-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
 }
 
 .leftBarMe .icon ul li i:hover {
@@ -496,11 +505,6 @@ h2 {
     width: 150px;
     height: 40px;
     text-align: center;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
-    -ms-transition: all 0.3s;
 }
 
 .leftBarMe .connect a::after {
@@ -510,10 +514,6 @@ h2 {
     height: 3px;
     background-color: #74b9ff;
     margin: 10px auto 0;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .leftBarMe .connect a:hover {
@@ -522,6 +522,7 @@ h2 {
     -moz-transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     color: white;
+    -ms-transform: translateY(-5px);
 }
 
 .leftBarMe .connect a:hover::after {
@@ -536,14 +537,11 @@ h2 {
     top: 0;
     z-index: 4;
     background-color: rgb(51, 56, 66);
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     transform: translateX(-300px);
     -o-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
     -webkit-transform: translateX(-300px);
+    -ms-transform: translateX(-300px);
 }
 
 .leftBarTitleMenuClick {
@@ -552,6 +550,7 @@ h2 {
     -moz-transform: translateX(0px);
     -webkit-transform: translateX(0px);
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
+    -ms-transform: translateX(0px);
 }
 
 .leftBarTitleMenu h1 {
@@ -564,11 +563,14 @@ h2 {
 
 .leftBarTitleMenu ul li {
     display: block;
-    padding: 10px;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
+    padding: 5px 10px;
+}
+
+.leftBarTitleMenu ul li a {
+    width: 100%;
+    height: 100%;
+    padding: 5px 0;
+    display: block;
 }
 
 .leftBarTitleMenu ul li::after {
@@ -577,10 +579,6 @@ h2 {
     width: 0;
     height: 3px;
     background-color: #74b9ff;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .leftBarTitleMenu ul li:hover::after {
@@ -596,15 +594,12 @@ h2 {
     top: 0;
     z-index: 4;
     background-color: rgb(51, 56, 66);
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     transform: translateX(-300px);
     -o-transform: translateX(-300px);
     -moz-transform: translateX(-300px);
     -webkit-transform: translateX(-300px);
     overflow: hidden;
+    -ms-transform: translateX(-300px);
 }
 
 .leftBarPagesClick {
@@ -614,6 +609,7 @@ h2 {
     -moz-transform: translateX(0px);
     -webkit-transform: translateX(0px);
     box-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
+    -ms-transform: translateX(0px);
 }
 
 .leftBarPagesBox {
@@ -631,6 +627,7 @@ h2 {
     width: 100%;
     height: 60px;
     padding: 0 25px;
+    cursor: pointer;
 }
 
 .leftBarPagesOptine::after {
@@ -640,10 +637,6 @@ h2 {
     width: 0%;
     height: 3px;
     background-color: #74b9ff;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .leftBarPagesOptine:hover::after {
@@ -652,20 +645,21 @@ h2 {
 
 .leftBarPagesOptine:hover img {
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
 }
 
 .leftBarPagesOptine img {
     width: 30px;
     vertical-align: middle;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .leftBarPagesOptine p {
     display: inline-block;
     font-size: 1.1rem;
+    cursor: pointer;
 }
 
 /* 页面 */
@@ -675,22 +669,14 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
     background-color: rgb(40, 44, 52);
 }
 
 .pages2 {
     left: 65%;
     width: 35%;
-    border-left: 1px solid black;
+    border-left: 1px solid rgb(24, 24, 24);
     margin-left: -1px;
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 
 .pagesTitle {
@@ -710,13 +696,9 @@ h2 {
     background-color: rgb(33, 37, 43);
     padding: 0 10px 0 10px;
     float: left;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: 1px solid rgb(24, 24, 24);
+    border-right: 1px solid rgb(24, 24, 24);
     margin-left: -1px;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
     cursor: pointer;
 }
 
@@ -749,11 +731,16 @@ h2 {
     -o-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -webkit-transition: all 0.2s;
+    -ms-transition: all 0.2s;
 }
 
 .pagesTitleOption:hover p,
 .pagesTitleOption:hover img {
     transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
 }
 
 .pagesTitleOptionClick {
@@ -766,10 +753,6 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
     transform: translateY(500px);
     overflow-x: hidden;
     opacity: 0;
@@ -819,27 +802,28 @@ h2 {
 
 .pagesTextBox .aClick {
     display: inline-block;
-    padding: 10px 40px;
+    padding: 5px 30px;
     background-color: #74b9ff;
     color: white;
     border-radius: 20px;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
+    bottom: -15px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 .pagesTextBox .aClick:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px #74d3ff;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
 }
 
 .pagesTextBoxImg {
     margin: 40px 0;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .pagesTextBoxImg img {
@@ -847,15 +831,15 @@ h2 {
     min-width: 300px;
     max-height: 500px;
     border-radius: 10px;
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .pagesTextBoxImg img:hover {
     transform: translateY(-10px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
 }
 
 .pagesTextBoxImg h6::after {
@@ -896,18 +880,7 @@ h2 {
     -o-transition: all 0.3s ease-out;
     -moz-transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out;
-}
-
-.giteeBoxUL li::after {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: url(https://gitee.com/static/images/logo.svg);
-    background-size: cover;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    -ms-transition: all 0.3s ease-out;
 }
 
 .giteeBoxUL li:hover {
@@ -918,6 +891,7 @@ h2 {
 .giteeBoxUL li a {
     display: inline-block;
     padding: 0 5px;
+    word-break: break-word;
 }
 
 .giteeBoxUL li a::after {
@@ -957,6 +931,11 @@ h2 {
     font-size: 1rem;
     margin-bottom: 30px;
     padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /*数字是几就显示几行*/
+    -webkit-box-orient: vertical;
 }
 
 .giteeBoxUL .giteeBoxTime {
@@ -981,23 +960,12 @@ h2 {
     z-index: 2;
     font-size: 0.8rem;
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s;
-    -o-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -webkit-transition: all 0.5s;
 }
 
 .footer p {
     margin: 0 20px;
     line-height: 25px;
     display: inline-block;
-}
-
-.footer p a {
-    transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -webkit-transition: all 0.3s;
 }
 
 .footer p a:hover {
@@ -1035,6 +1003,10 @@ h2 {
     #pagesTitle2 {
         display: block;
     }
+
+    .giteeBoxUL li {
+        padding: 20px 30px;
+    }
 }
 
 @media screen and (max-width: 575px) {
@@ -1051,10 +1023,6 @@ h2 {
         min-width: 200px;
         max-height: 99999px;
         border-radius: 10px;
-        transition: all 0.3s;
-        -o-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -webkit-transition: all 0.3s;
     }
 
     .footer {
