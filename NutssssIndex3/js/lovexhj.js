@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-11-22 10:27:49
+ * @LastEditTime: 2022-03-03 22:32:31
  * @Description: 我的第三个个人主页
  * @FilePath: /NutssssIndex3/js/lovexhj.js
  * @Mail：mail@n0ts.cn
@@ -114,13 +114,14 @@ new Vue({
             // 没有配置则初始化
             if (theme == null) {
                 window.localStorage.setItem("theme", "white");
-                this.changeTheme();
+                return this.changeTheme();
             }
 
             // 图标修改
             this.lovexhjData.themeSelect = theme;
 
             // 循环修改配色
+            console.log(this.lovexhjData.themes[theme]);
             this.lovexhjData.themes[theme].forEach(item => {
                 document.documentElement.style.setProperty(item[0], item[1]);
             });
