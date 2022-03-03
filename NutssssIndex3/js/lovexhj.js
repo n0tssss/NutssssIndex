@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2022-03-03 22:32:31
+ * @LastEditTime: 2022-03-03 23:16:41
  * @Description: 我的第三个个人主页
  * @FilePath: /NutssssIndex3/js/lovexhj.js
  * @Mail：mail@n0ts.cn
@@ -49,6 +49,7 @@ new Vue({
      */
     data: {
         lovexhjData, // 网站数据
+        meImgShow: false, // 板块 2 照片是否展开
     },
 
     /**
@@ -88,13 +89,17 @@ new Vue({
          * 首页动画
          */
         lovexhj1Animation() {
+            // 获取元素
             let sun = this.$refs.sun;
             let Moon = this.$refs.Moon;
             // let hill1 = this.$refs.hill1;
             // let hill2 = this.$refs.hill2;
             // let earth = this.$refs.earth;
+
             // 当前滚动高度
             let Y = window.scrollY;
+
+            // 修改位置
             sun.style.top = 25 - Y * 0.05 + '%';
             Moon.style.top = 25 - Y * 0.05 + '%';
             sun.style.right = 30 + Y * 0.08 + '%';
@@ -102,6 +107,8 @@ new Vue({
             // hill1.style.bottom = -500 + Y * 0.6 + 'px';
             // hill2.style.bottom = -450 + Y * 0.6 + 'px';
             // earth.style.height = 20 + Y * 0.05 + '%';
+
+
         },
 
         /**

@@ -1,9 +1,9 @@
 <!--
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2021-10-07 18:53:18
+ * @LastEditTime: 2022-03-03 23:32:01
  * @Description: 我的第三个个人主页
- * @FilePath: \NutssssIndex3\index.html
+ * @FilePath: /NutssssIndex3/index.html
  * @Mail：mail@n0ts.cn
 -->
 
@@ -16,7 +16,6 @@
         <meta name="description" content="这里是网站介绍" />
         <meta name="keywords" content="这里是网站关键词" />
         <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-        <link href="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/theme-chalk/index.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="./css/lovexhj.css" />
     </head>
 
@@ -68,9 +67,15 @@
                 <!-- 介绍 - 文案 -->
                 <div class="lovexhj2TextBox" v-html="lovexhjData.lovexhj2.content"></div>
                 <!-- 介绍 - 图片 -->
-                <div class="lovexhj2Img">
+                <div class="lovexhj2Img" :class="{ lovexhj2ImgAction : meImgShow }" @click="meImgShow = !meImgShow">
                     <img :src="lovexhjData.lovexhj2.img" :alt="lovexhjData.lovexhj2.img" />
                 </div>
+                <!-- 图片打开时遮罩 -->
+                <div
+                    class="lovexhj2ImgBg"
+                    :class="{ lovexhj2ImgShowBg : meImgShow }"
+                    @click="meImgShow = !meImgShow"
+                ></div>
             </div>
             <!--  -->
             <div class="lovexhj3"></div>
@@ -79,7 +84,6 @@
         <!-- js 引用 -->
         <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
         <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/element-ui/2.15.1/index.min.js"></script>
         <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
         <script src="./js/lovexhj.js" type="module"></script>
     </body>
