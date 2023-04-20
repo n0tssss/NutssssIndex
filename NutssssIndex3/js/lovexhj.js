@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2022-03-03 23:16:41
+ * @LastEditTime: 2023-04-20 17:05:55
  * @Description: 我的第三个个人主页
  * @FilePath: /NutssssIndex3/js/lovexhj.js
  * @Mail：mail@n0ts.cn
@@ -10,8 +10,10 @@
 /**
  * 一些引用
  */
-import $api from './api.js'
-import lovexhjData from './data.js'
+import lovexhjData from "./data.js";
+import http from "./request.js";
+
+console.log(http);
 
 /**
  * Vue 实例
@@ -31,9 +33,10 @@ new Vue({
         // 太阳&&月亮&&山峰&&云&&房子生成
         this.lovexhj1DomCreate();
         // 注册滚动事件
-        document.addEventListener('scroll', this.lovexhj1Animation, true);
+        document.addEventListener("scroll", this.lovexhj1Animation, true);
         // 主题修改
         this.changeTheme();
+        this.getGiteeData();
     },
 
     /**
@@ -41,7 +44,7 @@ new Vue({
      */
     beforeDestroy() {
         // 销毁滚动事件
-        document.removeEventListener('scroll', this.lovexhj1Animation);
+        document.removeEventListener("scroll", this.lovexhj1Animation);
     },
 
     /**
@@ -49,7 +52,7 @@ new Vue({
      */
     data: {
         lovexhjData, // 网站数据
-        meImgShow: false, // 板块 2 照片是否展开
+        meImgShow: false // 板块 2 照片是否展开
     },
 
     /**
@@ -71,17 +74,17 @@ new Vue({
 
             // 生成 4 个 div
             for (let i = 0; i < 4; i++) {
-                sun.appendChild(document.createElement('div'));
-                Moon.appendChild(document.createElement('div'));
-                hill1.appendChild(document.createElement('div'));
-                hill2.appendChild(document.createElement('div'));
-                earth.appendChild(document.createElement('div'));
-                lovexhj1.appendChild(document.createElement('div'));
+                sun.appendChild(document.createElement("div"));
+                Moon.appendChild(document.createElement("div"));
+                hill1.appendChild(document.createElement("div"));
+                hill2.appendChild(document.createElement("div"));
+                earth.appendChild(document.createElement("div"));
+                lovexhj1.appendChild(document.createElement("div"));
             }
 
             // 生成 10 个 div
             for (let i = 0; i < 10; i++) {
-                house.appendChild(document.createElement('div'));
+                house.appendChild(document.createElement("div"));
             }
         },
 
@@ -100,15 +103,13 @@ new Vue({
             let Y = window.scrollY;
 
             // 修改位置
-            sun.style.top = 25 - Y * 0.05 + '%';
-            Moon.style.top = 25 - Y * 0.05 + '%';
-            sun.style.right = 30 + Y * 0.08 + '%';
-            Moon.style.right = 30 + Y * 0.08 + '%';
+            sun.style.top = 25 - Y * 0.05 + "%";
+            Moon.style.top = 25 - Y * 0.05 + "%";
+            sun.style.right = 30 + Y * 0.08 + "%";
+            Moon.style.right = 30 + Y * 0.08 + "%";
             // hill1.style.bottom = -500 + Y * 0.6 + 'px';
             // hill2.style.bottom = -450 + Y * 0.6 + 'px';
             // earth.style.height = 20 + Y * 0.05 + '%';
-
-
         },
 
         /**
@@ -127,11 +128,13 @@ new Vue({
             // 图标修改
             this.lovexhjData.themeSelect = theme;
 
-            // 循环修改配色
-            console.log(this.lovexhjData.themes[theme]);
-            this.lovexhjData.themes[theme].forEach(item => {
-                document.documentElement.style.setProperty(item[0], item[1]);
-            });
+            document.documentElement.setAttribute("theme", theme);
+
+            // // 循环修改配色
+            // console.log(this.lovexhjData.themes[theme]);
+            // this.lovexhjData.themes[theme].forEach(item => {
+            //     document.documentElement.style.setProperty(item[0], item[1]);
+            // });
         },
 
         /**
@@ -140,6 +143,18 @@ new Vue({
         clickChangeTheme() {
             window.localStorage.setItem("theme", window.localStorage.getItem("theme") == "white" ? "dark" : "white");
             this.changeTheme();
+        },
+
+        /**
+         * 获取码云数据
+         */
+        getGiteeData() {
+            http({
+                url: "https://gitee.com/api/v5/users/n0ts/repos?type=personal&sort=updated&page=1&per_page=100",
+                method: "get"
+            }).then((res) => {
+                console.log(res);
+            });
         }
-    },
-})
+    }
+});

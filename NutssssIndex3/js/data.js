@@ -1,7 +1,7 @@
 /*
  * @Author: N0ts
  * @Date: 2021-06-12 20:02:41
- * @LastEditTime: 2022-03-03 22:34:59
+ * @LastEditTime: 2023-04-20 13:51:22
  * @Description: 我的第三个个人主页
  * @FilePath: /NutssssIndex3/js/data.js
  * @Mail：mail@n0ts.cn
@@ -30,7 +30,7 @@ export default {
             // 标题文字阴影
             ["--titleShadow", "2px 2px 0px rgba(255, 255, 255, .8), 0 0 10px rgba(0, 0, 0, .5)"],
             // 图标菜单阴影
-            ["--iconShadow", "0 0 5px white"],
+            ["--iconShadow", "0 0 5px white"]
         ],
         dark: [
             // 背景颜色
@@ -51,21 +51,22 @@ export default {
             // 标题文字阴影
             ["--titleShadow", "2px 2px 0px rgba(255, 255, 255, .8), 0 0 10px rgba(0, 0, 0, .5)"],
             // 图标菜单阴影
-            ["--iconShadow", "0 0 2px white"],
+            ["--iconShadow", "0 0 2px white"]
         ]
     },
     lovexhj1: {
         title: "我是 N0ts",
         subTitle: "爱好编程，运动，旅行，摄影与冰激凌",
-        menu: [{
+        menu: [
+            {
                 name: "Blog",
                 icon: "fa-wordpress",
-                link: "https://blog.n0ts.cn/"
+                link: "https://blog.n0ts.top/"
             },
             {
                 name: "Email",
                 icon: "fa-envelope",
-                link: "mailto:nutssss@qq.com"
+                link: "mailto:mail@n0ts.top"
             },
             {
                 name: "Gitee",
@@ -85,20 +86,20 @@ export default {
         ]
     },
     lovexhj2: {
-        content: `                    <h1>你好！</h1>
+        content: `<h1>你好!</h1>
         <h2>我是 N0ts，</h2>
-        <p>一名<b>💻前端开发者</b>，19级大学生，现就职于🌏上海，最爱🍦；</p>
-        <p>用#️⃣代码去与计算机进行沟通，🔋是我最喜欢做的事；</p>
+        <p>一名<b>💻全栈开发者</b>，19级大学生，现就职于🌏上海，最爱🍦；</p>
+        <p>用#️⃣代码去与计算机进行沟通，是我最喜欢做的事；🔋</p>
         <p>我也开源的一些小作品，去提升自己的开发能力⭐；</p>
         <p>当然，我也很乐意与志同道合的朋友🤙一起学习，可在上方来找我哦。</p>
         <p>即使前方的路看似绝境🌋，也要有硬生生为自己开辟出一条道路的勇气！💪</p>
         <p>
             我的开源：<a href="https://gitee.com/n0ts" target="_blank">📁Gitee</a>；我的博客：<a
-                href="https://blog.n0ts.cn/"
+                href="https://blog.n0ts.top/"
                 target="_blank"
                 >📚Blog</a
             >。
         </p>`,
-        img: "https://lovexhj.oss-cn-beijing.aliyuncs.com/me/images/me.jpg"
+        img: "../images/me.jpg"
     }
-}
+};

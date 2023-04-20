@@ -3,16 +3,37 @@
     src: url("../fonts/1.ttf");
 }
 
+:root {
+    --bgColor: rgb(255, 165, 92);
+    --firstBgColor: linear-gradient(to top, rgb(255, 165, 92), rgb(255, 159, 49));
+    --hillColor1: rgb(115, 49, 54);
+    --hillColor2: rgb(131, 55, 59);
+    --hillColor3: rgb(162, 72, 80);
+    --hillColor4: rgb(221, 102, 107);
+    --earth: linear-gradient(to top right, rgb(202, 112, 117), rgb(126, 50, 53));
+    --cao: linear-gradient(to top, rgb(202, 112, 117), rgb(126, 50, 53));
+    --titleColor: rgb(255, 69, 32);
+    --titleShadow: 2px 2px 0px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
+    --iconShadow: 0 0 5px white;
+}
+
+:root[theme="dark"] {
+    --bgColor: rgb(48, 37, 95);
+    --firstBgColor: linear-gradient(to top, rgb(78, 36, 88), rgb(13, 18, 51));
+    --hillColor1: rgb(36, 32, 74);
+    --hillColor2: rgb(41, 35, 94);
+    --hillColor3: rgb(65, 37, 71);
+    --hillColor4: rgb(87, 50, 95);
+    --earth: linear-gradient(to top right, rgb(43, 38, 95), rgb(61, 36, 95));
+    --cao: linear-gradient(to top, rgb(85, 49, 96), rgb(78, 72, 128));
+    --titleColor: rgb(136, 65, 167);
+    --titleShadow: 2px 2px 0px rgba(255, 255, 255, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
+    --iconShadow: 0 0 2px white;
+}
+
 * {
     margin: 0;
     padding: 0;
-    -moz-user-select: -moz-none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     font-family: "wdnmd";
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
@@ -70,11 +91,11 @@ html,
 .lovexhj2TextBox a::after,
 .lovexhj2Img,
 .lovexhj2ImgShowBg {
-    transition: all .3s;
-    -webkit-transition: all .3s;
-    -moz-transition: all .3s;
-    -ms-transition: all .3s;
-    -o-transition: all .3s;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
 }
 
 /* 统一定位居中 */
@@ -634,33 +655,37 @@ html,
     position: absolute;
     left: 50%;
     top: 50%;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: bold;
     white-space: nowrap;
     background: var(--titleColor);
     color: white;
     text-shadow: none;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    transform: translate(-50%, 100%);
+    -webkit-transform: translate(-50%, 100%);
+    -moz-transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
+    -o-transform: translate(-50%, 100%);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     box-shadow: var(--iconShadow);
-    visibility: hidden;
     opacity: 0;
+    visibility: hidden;
 }
 
 .lovexhj1Text > ul li:hover span {
     opacity: 1;
-    visibility: inherit;
+    visibility: visible;
     padding: 5px;
-    left: 120%;
     z-index: 1;
+    transform: translate(-50%, 110%);
+    -webkit-transform: translate(-50%, 110%);
+    -moz-transform: translate(-50%, 110%);
+    -ms-transform: translate(-50%, 110%);
+    -o-transform: translate(-50%, 110%);
 }
 
 /* 标题文字提示 */
@@ -832,13 +857,25 @@ html,
 }
 
 /* 介绍 - 文案 */
+.lovexhj2TextBox {
+    position: relative;
+    width: 700px;
+}
+
 .lovexhj2TextBox h1,
 .lovexhj2TextBox h2,
 .lovexhj2TextBox p,
 .lovexhj2TextBox b {
-    font-size: 4rem;
     color: white;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.lovexhj2TextBox h1 {
+    font-size: 25rem;
+    position: absolute;
+    opacity: 0.1;
+    white-space: nowrap;
+    z-index: -1;
 }
 
 .lovexhj2TextBox h2 {
@@ -849,8 +886,12 @@ html,
 .lovexhj2TextBox p,
 .lovexhj2TextBox b,
 .lovexhj2TextBox a {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: 8px 0;
+}
+
+.lovexhj2TextBox p {
+    margin: 20px 0;
 }
 
 .lovexhj2TextBox b,
@@ -891,7 +932,7 @@ html,
 .lovexhj2Img {
     position: absolute;
     right: 0;
-    min-width: 300px;
+    width: 350px;
     height: 500px;
     overflow: hidden;
     display: flex;
@@ -928,9 +969,10 @@ html,
     -moz-transform: translateX(50%) rotate(0) !important;
     -ms-transform: translateX(50%) rotate(0) !important;
     -o-transform: translateX(50%) rotate(0) !important;
-    box-shadow: 50px 50px 30px rgba(0, 0, 0, .4) !important;
+    box-shadow: 50px 50px 30px rgba(0, 0, 0, 0.4) !important;
     margin-right: 50%;
     z-index: 99;
+    width: auto;
     height: 80%;
 }
 
@@ -947,8 +989,11 @@ html,
 
 .lovexhj2ImgShowBg {
     opacity: 1;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
     visibility: visible;
     z-index: 10;
+}
+
+.lovexhj3 {
 }
