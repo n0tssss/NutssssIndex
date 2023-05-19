@@ -6,4 +6,4 @@
 挑战无图片的单页
 练练手
 
-[预览](https://n0ts.cn/nutssss3/)
+[预览](https://n0ts.top/nutssss3/)

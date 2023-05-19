@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-12-03 10:12:30
  * @Description: 配置
  * @FilePath: /NutssssIndex2/js/config.js
- * @Mail：mail@n0ts.cn
+ * @Mail：mail@n0ts.top
  */
 
 export default {

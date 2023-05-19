@@ -25,14 +25,14 @@
 
 # 预览
 
-[点我预览](https://n0ts.cn)
+[点我预览](https://n0ts.top)
 
-![](https://cdn.nutssss.cn/wp-content/uploads/2020/09/1600416930-1.png)
+![](https://n0tssss.oss-cn-shanghai.aliyuncs.com/n0ts-blog/uploads/2020/09/1600416930-1.png)
 
-![](https://cdn.nutssss.cn/wp-content/uploads/2020/09/1600416929-2.png)
+![](https://n0tssss.oss-cn-shanghai.aliyuncs.com/n0ts-blog/uploads/2020/09/1600416929-2.png)
 
 # 我的其他开源
 
-[前往我的博客](https://blog.n0ts.cn/category/mywork)
+[前往我的博客](https://blog.n0ts.top/category/mywork)
 
 有问题欢迎反馈

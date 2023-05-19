@@ -1,6 +1,6 @@
 # NutssssIndex
 简约个人主页、自适应  
-[预览](https://n0ts.cn/nutssss1/)
+[预览](https://n0ts.top/nutssss1/)
 ![alt 预览图](https://images.gitee.com/uploads/images/2020/0525/000514_3cb0b6fa_2250179.png)
 
 ## 简介

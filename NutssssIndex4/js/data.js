@@ -11,12 +11,12 @@ export default {
         contact: [{
                 name: "Blog",
                 icon: "fa-wordpress",
-                link: "https://blog.n0ts.cn/"
+                link: "https://blog.n0ts.top/"
             },
             {
                 name: "Email",
                 icon: "fa-envelope",
-                link: "mailto:mail@n0ts.cn"
+                link: "mailto:mail@n0ts.top"
             },
             {
                 name: "Gitee",
@@ -211,7 +211,7 @@ export default {
                 nb: [
                     "Gitee Issues", "Vue", "Vue", "Linux", "SEO", "CDN"
                 ],
-                url: "https://heng.n0ts.cn/",
+                url: "https://heng.n0ts.top/",
                 img: "./images/heng1.png",
                 content: `<h2>项目类型</h2>
                 <p>练手项目</p>
@@ -377,7 +377,7 @@ export default {
                 nb: [
                     "HTML", "CSS", "Js"
                 ],
-                url: "https://lovexhj.cn/",
+                url: "https://love.n0ts.top/",
                 img: "./images/xhj1.png",
                 content: `<h2>项目类型</h2>
                 <p>练手单页</p>
@@ -439,11 +439,11 @@ export default {
         title: "联系我",
         list: [{
                 name: "博客",
-                context: "blog.n0ts.cn"
+                context: "blog.n0ts.top"
             },
             {
                 name: "邮箱",
-                context: "mail@n0ts.cn"
+                context: "mail@n0ts.top"
             },
             {
                 name: "QQ",

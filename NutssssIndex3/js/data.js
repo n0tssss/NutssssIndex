@@ -4,7 +4,7 @@
  * @LastEditTime: 2023-04-20 13:51:22
  * @Description: 我的第三个个人主页
  * @FilePath: /NutssssIndex3/js/data.js
- * @Mail：mail@n0ts.cn
+ * @Mail：mail@n0ts.top
  */
 
 export default {

@@ -1,10 +1,10 @@
 /*
  * @Author: N0ts
  * @Date: 2020-12-25 10:39:42
- * @LastEditTime: 2023-04-20 17:05:55
+ * @LastEditTime: 2023-04-23 10:54:29
  * @Description: 我的第三个个人主页
  * @FilePath: /NutssssIndex3/js/lovexhj.js
- * @Mail：mail@n0ts.cn
+ * @Mail：mail@n0ts.top
  */
 
 /**
@@ -12,8 +12,6 @@
  */
 import lovexhjData from "./data.js";
 import http from "./request.js";
-
-console.log(http);
 
 /**
  * Vue 实例

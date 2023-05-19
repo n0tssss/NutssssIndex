@@ -4,7 +4,7 @@
  * @LastEditTime: 2021-12-03 10:34:54
  * @Description: main
  * @FilePath: /NutssssIndex2/js/N0ts.js
- * @Mail：mail@n0ts.cn
+ * @Mail：mail@n0ts.top
  */
 
 import c from "./config.js";
