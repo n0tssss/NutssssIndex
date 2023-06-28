@@ -1,0 +1,74 @@
+<!--
+ * @Author: N0ts
+ * @Date: 2023-06-28 11:59:09
+ * @Description: 请我喝咖啡
+ * @FilePath: /SupportMe/index.html
+ * @Mail：mail@n0ts.top
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>☕️支持我 | 请 N0ts 喝杯咖啡</title>
+        <!-- <meta name="description" content="这里是网站介绍" />
+        <meta name="keywords" content="这里是网站关键词" /> -->
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+
+    <body>
+        <div id="main">
+            <div class="introduce">
+                <h1>我是 N0ts 🤪，一名前端开发者 🛠</h1>
+                <p>我一直热衷于开发一些自己感兴趣以及对大家有帮助的玩意 🔨</p>
+                <p>并且坚持开源免费的道路，主打与更多的伙伴互相学习共同提升 ✌</p>
+                <p>目前做过的一些开源小玩意 💻：</p>
+                <div class="projects">
+                    <div v-for="(item, index) in projects" :key="index">
+                        <a :href="item.url" target="_blank">{{ item.name }}</a>
+                        <p class="description">{{ item.description }}</p>
+                        <p class="star">⭐️ {{ item.stargazers_count }}</p>
+                    </div>
+                </div>
+                <p>不过，开源与免费的坚持创作给大家分享页并不轻松 😴</p>
+                <p>除去服务器、域名、CDN 等相关服务付费，更多还是个人时间成本上的付出 🔋</p>
+                <p>
+                    所以，您如果喜欢我开发分享的一些作品并且更愿意支持一下我，请给我的作品点一下 Star
+                    ⭐️，或提出您的宝贵建议与留言 📝，这对我来说很重要！
+                </p>
+                <p>也可以请我喝一杯咖啡，让我睡不着熬夜继续干活~ 🥰☕</p>
+                <div class="dbtn btn" @click="payDialog = true">👉喝！给我继续干活！</div>
+                <div class="list">
+                    <p>请我喝咖啡的小伙伴们：</p>
+                    <div class="friends">
+                        <div v-for="(item, index) in list" :key="index">
+                            <p>{{ item.name }}</p>
+                            <p>{{ item.money }}￥</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pay" :class="{ payShow: payDialog }" @click="payDialog = false">
+                <div class="payBox" :class="{ payBoxShow: payDialog }" @click.stop="payDialog = true">
+                    <p class="title">☕️ 请我喝一杯咖啡吧~</p>
+                    <div class="content">
+                        <p>感谢您的支持，您可以通过以下方式请我喝一杯咖啡，让我更有动力继续创作！</p>
+                        <p>PS：备注留下自己的昵称，方便我记录一下每个支持我的各位</p>
+                        <div class="imgs">
+                            <img src="./images/wechat.jpg" alt="微信" />
+                            <img src="./images/alipay.jpg" alt="支付宝" />
+                            <img src="./images/qq.jpg" alt="QQ" />
+                        </div>
+                    </div>
+                    <div class="dbtn" @click.stop="payDialog = false">关闭</div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.6/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/main.js"></script>
+</html>
