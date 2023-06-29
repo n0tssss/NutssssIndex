@@ -34,6 +34,12 @@
 
     ![](https://n0tssss.oss-cn-shanghai.aliyuncs.com/n0ts/images/support.png)
 
+
+
+## 支持我
+
+[点我点我☕️](https://support.n0ts.top/)
+
 ## QQ 群讨论
 
 [坚果茶馆](https://jq.qq.com/?_wv=1027&k=Mh7ah6Dd)
