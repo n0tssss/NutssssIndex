@@ -27,6 +27,12 @@
     [预览](https://me.n0ts.top/)
     
     ![](https://n0tssss.oss-cn-shanghai.aliyuncs.com/n0ts-blog/uploads/2021/09/1632935364-Snipaste_2021-09-30_01-06-57.png)
+    
+- [支持我页面 | 请我喝杯咖啡](https://gitee.com/n0ts/NutssssIndex/tree/master/SupportMe)
+
+    [预览](https://support.n0ts.top/)
+
+    ![](https://n0tssss.oss-cn-shanghai.aliyuncs.com/n0ts/images/support.png)
 
 ## QQ 群讨论
 
