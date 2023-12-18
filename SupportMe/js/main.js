@@ -41,15 +41,18 @@ createApp({
             document.body.style.overflow = "auto";
         },
         async getProjectKeys() {
-            const projectKeys = await axios.get("https://api.n0ts.top/json", {
-                params: {
-                    key: "giteeProjects"
-                }
-            });
+            const projectKeys =
+                projectData.projectKeys && projectData.projectKeys.length > 0
+                    ? projectData.projectKeys
+                    : await axios.get("https://api.n0ts.top/json", {
+                          params: {
+                              key: "giteeProjects"
+                          }
+                      });
             // console.log("🚀 显示项目 keys | projectKeys:", projectKeys);
             const projects = await axios.post("https://api.n0ts.top/api/gitee", {
                 method: "GET",
-                url: "/users/N0ts/repos",
+                url: `/users/${projectData.giteeName}/repos`,
                 params: {
                     type: "personal",
                     sort: "updated",
@@ -72,11 +75,14 @@ createApp({
             // console.log("🚀 展示项目列表 | projects:", this.projects);
         },
         async getSuppot() {
-            const rs = await axios.get("https://api.n0ts.top/json", {
-                params: {
-                    key: "support"
-                }
-            });
+            const rs =
+                projectData.support && projectData.support.length > 0
+                    ? projectData.support
+                    : await axios.get("https://api.n0ts.top/json", {
+                          params: {
+                              key: "support"
+                          }
+                      });
             this.supportList = rs.reverse().map((r) => {
                 r.coffeeNum = parseInt(r.money / 10);
                 r.img = r.qq
