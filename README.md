@@ -34,7 +34,7 @@
 
     ![](https://n0tssss.oss-cn-shanghai.aliyuncs.com/n0ts/images/support.png)
 
-- [Minecraft 服务器官网](https://gitee.com/n0ts/NutssssIndex/tree/master/SupportMe)
+- [Minecraft 服务器官网](https://gitee.com/n0ts/NutssssIndex/tree/master/Minecraft)
 
     [预览](https://mc.n0ts.top/)
 
