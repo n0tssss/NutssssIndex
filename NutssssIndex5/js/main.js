@@ -1,3 +1,10 @@
+/*
+ * @Author: N0ts
+ * @Date: 2024-06-19 16:40:10
+ * @Description: main
+ * @FilePath: \NutssssIndex\NutssssIndex5\js\main.js
+ * @Mail：mail@n0ts.top
+ */
 const { createApp, ref } = Vue;
 
 const themeKey = "n0ts-me-theme";

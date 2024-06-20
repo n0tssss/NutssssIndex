@@ -1,5 +1,10 @@
 @import "./theme.less";
 
+@font-face {
+    font-family: lovexhj;
+    src: url("../fonts/lovexhj.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +15,18 @@ body,
 #main {
     height: 100%;
     color: var(--font-color);
+    font-family: lovexhj;
+}
+
+body {
+    background: url(../image/bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#main {
+    background-image: linear-gradient(transparent, var(--background) 20%);
+    padding-top: 20%;
+    box-sizing: border-box;
 }
 
 .loading {
@@ -19,4 +36,83 @@ body,
     width: 100%;
     height: 100%;
     background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+
+    > p {
+        position: relative;
+        animation: loading-box 1s infinite ease-in-out;
+
+        @keyframes loading-box {
+            0% {
+                transform: translateY(5px);
+            }
+
+            5% {
+                transform: translateY(0);
+            }
+
+            90% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(5px);
+            }
+        }
+
+        @loadingSize: 30px;
+        @jump: 0.3;
+        @jumpHeight: 100px;
+
+        @keyframes loading {
+            0% {
+                transform: translate(-50%, 10px);
+                height: @loadingSize - @loadingSize * @jump;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            5% {
+                transform: translate(-50%, 0);
+                height: @loadingSize;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            50% {
+                transform: translate(-50%, -@jumpHeight);
+                height: @loadingSize;
+                box-shadow: 0 @jumpHeight 30px rgba(0, 0, 0, 0.1);
+            }
+
+            90% {
+                transform: translate(-50%, 0);
+                height: @loadingSize;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            100% {
+                transform: translate(-50%, 10px);
+                height: @loadingSize - @loadingSize * @jump;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: -(@loadingSize + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            content: "";
+            display: block;
+            width: @loadingSize;
+            height: @loadingSize;
+            border-radius: 50%;
+            background-image: linear-gradient(150deg, var(--theme-color-highlight), var(--theme-color) 40%);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            animation: loading 1s infinite ease-in-out;
+        }
+    }
 }
