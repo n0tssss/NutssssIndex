@@ -831,6 +831,7 @@ h2 {
     min-width: 300px;
     max-height: 500px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .pagesTextBoxImg img:hover {

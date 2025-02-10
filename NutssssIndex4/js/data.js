@@ -206,41 +206,6 @@ export default {
                 <p>4、修复测试人员发现的BUG；</p>`,
             },
             {
-                name: "记仇小本本",
-                text: "简约到极致的日记记录",
-                nb: [
-                    "Gitee Issues", "Vue", "Vue", "Linux", "SEO", "CDN"
-                ],
-                url: "https://heng.n0ts.top/",
-                img: "./images/heng1.png",
-                content: `<h2>项目类型</h2>
-                <p>练手项目</p>
-                <h2>开发周期</h2>
-                <p>1人/2天</p>
-                <h2>开发工具</h2>
-                <p>Visual Code、Git、Postman、Gitee API</p>
-                <h2>项目背景</h2>
-                <p>单纯的记仇小本本，可用于记录日常生活</p>
-                <h2>模块介绍</h2>
-                <p>1、	查看记仇；</p>
-                <p>2、	发布记仇；</p>
-                <h2>项目技术</h2>
-                <p>1、	前端采用Vue + ElementUI制作；</p>
-                <p>2、	数据存储利用了Gitee Issues进行存储；</p>
-                <p>3、	CSS 3D样式模拟书本翻页；</p>
-                <p>4、	CSS 绘制书本样式；</p>
-                <p>5、	懒加载记仇数据，类似于翻页；</p>
-                <p>6、	富文本支持，表情照片视频支持；</p>
-                <p>7、	全端响应式自适应；</p>
-                <p>8、	采用CDN加速网站；</p>
-                <h2>项目预览</h2>
-                <ul>
-                    <li><img src="./images/heng1.png"></li>
-                    <li><img src="./images/heng2.png"></li>
-                    <li><img src="./images/heng3.png"></li>
-                </ul>`,
-            },
-            {
                 name: "IceCreem搜索导航",
                 text: "好看的导航搜索页",
                 nb: [
@@ -369,35 +334,6 @@ export default {
                 <ul>
                     <li><img src="./images/nuts1.png"></li>
                     <li><img src="./images/nuts2.png"></li>
-                </ul>`,
-            },
-            {
-                name: "lovexhj",
-                text: "送给另一半的",
-                nb: [
-                    "HTML", "CSS", "Js"
-                ],
-                url: "https://love.n0ts.top/",
-                img: "./images/xhj1.png",
-                content: `<h2>项目类型</h2>
-                <p>练手单页</p>
-                <h2>开发周期</h2>
-                <p>1人/10天</p>
-                <h2>开发工具</h2>
-                <p>Visual Code、Git</p>
-                <h2>项目背景</h2>
-                <p>第一个练手作品</p>
-                <h2>项目技术</h2>
-                <p>1、	全端响应式自适应；</p>
-                <p>2、	简约风格，与众不同；</p>
-                <p>3、	背景视差滚动；</p>
-                <p>4、	打字机效果；</p>
-                <h2>项目预览</h2>
-                <ul>
-                    <li><img src="./images/xhj1.png"></li>
-                    <li><img src="./images/xhj2.png"></li>
-                    <li><img src="./images/xhj3.png"></li>
-                    <li><img src="./images/xhj4.png"></li>
                 </ul>`,
             },
             {

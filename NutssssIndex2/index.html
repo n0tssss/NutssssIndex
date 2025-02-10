@@ -45,25 +45,22 @@
                         <img src="./favicon.ico" alt="favicon" />
                         <ul class="menuUL">
                             <li>
-                                <a href="https://n0ts.top/" target="_blank">首页(L)</a>
+                                <a href="https://n0ts.top/" target="_blank">首页</a>
                             </li>
                             <li>
-                                <a href="https://blog.n0ts.top/me" target="_blank">关于我(O)</a>
+                                <a href="https://blog.n0ts.top/me" target="_blank">关于我</a>
                             </li>
                             <li>
-                                <a href="https://blog.n0ts.top/category/mywork" target="_blank">我的垃圾项目(V)</a>
+                                <a href="https://blog.n0ts.top/category/mywork" target="_blank">我的垃圾项目</a>
                             </li>
                             <li>
-                                <a href="https://lovexhj.top/" target="_blank">我的爱人(E)</a>
+                                <a href="https://note.n0ts.top/" target="_blank">笔记</a>
                             </li>
                             <li>
-                                <a href="https://note.n0ts.top/" target="_blank">笔记(X)</a>
+                                <a href="https://blog.n0ts.top/" target="_blank">博客</a>
                             </li>
                             <li>
-                                <a href="https://blog.n0ts.top/" target="_blank">博客(H)</a>
-                            </li>
-                            <li>
-                                <a href="https://blog.n0ts.top/msg" target="_blank">留言(J)</a>
+                                <a href="https://blog.n0ts.top/msg" target="_blank">留言</a>
                             </li>
                         </ul>
                         <!-- 标题 -->
@@ -92,7 +89,7 @@
                         </div>
                         <div class="introduction">
                             <h1>N0ts</h1>
-                            <p>大专的咸鱼，爱好计算机、旅行、篮球，以及我公主般的女朋友。</p>
+                            <p>咸鱼一只，爱好计算机、旅行、篮球。</p>
                         </div>
                         <div class="icon">
                             <ul>
@@ -177,17 +174,6 @@
                                 />
                                 <p>Gitee Project.md</p>
                             </div>
-                            <div class="leftBarPagesOptine" @click="changePageIndex(2)">
-                                <img
-                                    src="./images/stuck_out_tongue_winking_eye.png"
-                                    alt="stuck_out_tongue_winking_eye"
-                                />
-                                <p>404.md</p>
-                            </div>
-                            <div class="leftBarPagesOptine" @click="changePageIndex(3)">
-                                <img src="./images/icecream.png" alt="icecream" />
-                                <p>My Life.md</p>
-                            </div>
                         </div>
                     </div>
 
@@ -231,7 +217,6 @@
                                 id="pagesTitle2"
                                 @click="changePageIndex(3)"
                             >
-                                <img src="./images/icecream.png" alt="icecream" />
                                 <p>My Life.md</p>
                             </div>
                         </div>
@@ -240,14 +225,6 @@
                         <div :class="{ pagesText: true, pagesTextShow: pageIndex == 0 }">
                             <div class="pagesTextBox">
                                 <h1>你好，我是N0ts<br />热爱编程，旅游，运动。</h1>
-                                <div class="pagesTextBoxImg">
-                                    <img
-                                        src="./images/lovexhj.jpg"
-                                        alt="lovexhj"
-                                        class="n0tsImg"
-                                    />
-                                    <h6>❤我的小公主写的</h6>
-                                </div>
                                 <p>小时候总是不爱去旅行，但现在却相反；</p>
                                 <p>很喜欢去外面旅行，欣赏风景。</p>
                                 <div class="pagesTextBoxImg">
@@ -256,17 +233,17 @@
                                         alt="me1"
                                         class="n0tsImg"
                                     />
-                                    <h6>旅游被弟弟抓拍</h6>
+                                    <h6>上海当牛马的我</h6>
                                 </div>
                                 <p>用照片记录下某一瞬间的美景，让开心的时刻得以永久保存。</p>
-                                <p>也算是爱好摄影，想给自己留下一个个美好回忆。</p>
+                                <p>也算是爱好拍照，想给自己留下一个个美好回忆。</p>
                                 <div class="pagesTextBoxImg">
                                     <img
                                         src="./images/fj1.jpg"
                                         alt="fj1"
                                         class="n0tsImg"
                                     />
-                                    <h6>某次旅游途中随手抓拍</h6>
+                                    <h6>抓拍豆子与花生</h6>
                                 </div>
                                 <p>当然，我也很爱打篮球。</p>
                                 <p>技术不是很好，但是很热爱，</p>
@@ -319,33 +296,6 @@
                                 <p>没想好放点什么</p>
                             </div>
                         </div>
-                        <div :class="{ pagesText: true, pagesTextShow: pageIndex == 3 }">
-                            <div class="pagesTextBox">
-                                <h1>我与她</h1>
-                                <p>2018-11-19</p>
-                                <p>故事开始</p>
-                                <div class="pagesTextBoxImg">
-                                    <img
-                                        src="./images/love1.jpg"
-                                        alt="love1"
-                                        class="n0tsImg"
-                                    />
-                                    <h6>我们的第一张合影</h6>
-                                </div>
-                                <p>截止现在</p>
-                                <p>{{ timeText }}</p>
-                                <p>有你的每一天都如糖果一样甜</p>
-                                <div class="pagesTextBoxImg">
-                                    <img
-                                        src="./images/love2.jpg"
-                                        alt="love2"
-                                        class="n0tsImg"
-                                    />
-                                    <h6>看电影日常</h6>
-                                </div>
-                                <a href="https://love.n0ts.top" class="aClick" target="_blank">More?</a>
-                            </div>
-                        </div>
                     </div>
 
                     <!-- 页面版块2 -->
@@ -353,7 +303,6 @@
                         <!-- 页面选项卡 -->
                         <div class="pagesTitle">
                             <div class="pagesTitleOption pagesTitleOption-click">
-                                <img src="./images/icecream.png" alt="icecream" />
                                 <p>My Life.md</p>
                             </div>
                         </div>
@@ -361,29 +310,7 @@
                         <!-- 页面 -->
                         <div class="pagesText pagesTextShow">
                             <div class="pagesTextBox pagesTextBox2">
-                                <h1>我与她</h1>
-                                <p>2018-11-19</p>
-                                <p>故事开始</p>
-                                <div class="pagesTextBoxImg">
-                                    <img
-                                        src="./images/love1.jpg"
-                                        alt="love1"
-                                        class="n0tsImg"
-                                    />
-                                    <h6>我们的第一张合影</h6>
-                                </div>
-                                <p>截止现在</p>
-                                <p>{{ timeText }}</p>
-                                <p>有你的每一天都如糖果一样甜</p>
-                                <div class="pagesTextBoxImg">
-                                    <img
-                                        src="./images/love2.jpg"
-                                        alt="love2"
-                                        class="n0tsImg"
-                                    />
-                                    <h6>看电影日常</h6>
-                                </div>
-                                <a href="https://love.n0ts.top" class="aClick" target="_blank">More?</a>
+                                <h1>404 Not Found</h1>
                             </div>
                         </div>
                     </div>

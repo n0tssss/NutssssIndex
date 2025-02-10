@@ -14,29 +14,6 @@ window.onload = function () {
     document.querySelector(".Box").classList.add("BoxLoad");
 };
 
-let seconds = 1000;
-let minutes = seconds * 60;
-let hours = minutes * 60;
-let days = hours * 24;
-let years = days * 365;
-let today = new Date();
-let todayYear = today.getFullYear();
-let todayMonth = today.getMonth() + 1;
-let todayDate = today.getDate();
-let todayHour = today.getHours();
-let todayMinute = today.getMinutes();
-let todaySecond = today.getSeconds();
-let t1 = c.loveTime;
-let t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-let diff = t2 - t1;
-let diffYears = Math.floor(diff / years);
-let diffDays = Math.floor(diff / days - diffYears * 365);
-let diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-let diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-let diffSeconds = Math.floor(
-    (diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds
-);
-
 new Vue({
     el: "#app",
     data: {
@@ -104,21 +81,26 @@ new Vue({
          * 时差计算
          */
         lovetime() {
-            today = new Date();
-            todayYear = today.getFullYear();
-            todayMonth = today.getMonth() + 1;
-            todayDate = today.getDate();
-            todayHour = today.getHours();
-            todayMinute = today.getMinutes();
-            todaySecond = today.getSeconds();
-            t1 = c.loveTime;
-            t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-            diff = t2 - t1;
-            diffYears = Math.floor(diff / years);
-            diffDays = Math.floor(diff / days - diffYears * 365);
-            diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-            diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-            diffSeconds = Math.floor(
+            let seconds = 1000;
+            let minutes = seconds * 60;
+            let hours = minutes * 60;
+            let days = hours * 24;
+            let years = days * 365;
+            const today = new Date();
+            const todayYear = today.getFullYear();
+            const todayMonth = today.getMonth() + 1;
+            const todayDate = today.getDate();
+            const todayHour = today.getHours();
+            const todayMinute = today.getMinutes();
+            const todaySecond = today.getSeconds();
+            const t1 = c.loveTime;
+            const t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+            const diff = t2 - t1;
+            const diffYears = Math.floor(diff / years);
+            const diffDays = Math.floor(diff / days - diffYears * 365);
+            const diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+            const diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+            const diffSeconds = Math.floor(
                 (diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds
             );
             this.timeText = `我们已经在一起 ${diffYears} 年 ${diffDays} 天 ${diffHours} 小时 ${diffMinutes} 分钟 ${diffSeconds} 秒啦！`;
