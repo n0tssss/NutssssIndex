@@ -1,20 +1,11 @@
 /*
  * @Author: N0ts
  * @Date: 2023-06-28 15:20:09
- * @Description: main
+ * @Description: main - 纯本地数据版本，无远程请求
  * @FilePath: /SupportMe/js/main.js
  * @Mail：mail@n0ts.cn
  */
 const { createApp } = Vue;
-
-axios.interceptors.response.use(
-    function (response) {
-        return response.data;
-    },
-    function (error) {
-        return Promise.reject(error);
-    }
-);
 
 createApp({
     created() {
@@ -26,74 +17,46 @@ createApp({
     data() {
         return {
             projects: [],
+            projectsExpanded: false,
             payDialog: false,
             supportList: [],
             coffeeShow: false,
             friendShow: null,
-            loading: true
+            loading: true,
+            viewingImage: null
         };
     },
     methods: {
-        async init() {
-            await this.getSuppot();
-            await this.getProjectKeys();
-            this.loading = false;
-            document.body.style.overflow = "auto";
+        init() {
+            // 直接从本地数据加载
+            this.loadProjects();
+            this.loadSupport();
+            // 短暂延迟后关闭加载动画，让入场动画更流畅
+            setTimeout(() => {
+                this.loading = false;
+                document.body.style.overflow = "auto";
+            }, 300);
         },
-        async getProjectKeys() {
-            const projectKeys =
-                projectData.projectKeys && projectData.projectKeys.length > 0
-                    ? projectData.projectKeys
-                    : await axios.get("https://api.n0ts.top/json", {
-                          params: {
-                              key: "giteeProjects"
-                          }
-                      });
-            // console.log("🚀 显示项目 keys | projectKeys:", projectKeys);
-            const projects = await axios.post("https://api.n0ts.top/api/gitee", {
-                method: "GET",
-                url: `/users/${projectData.giteeName}/repos`,
-                params: {
-                    type: "personal",
-                    sort: "updated",
-                    page: 1,
-                    per_page: 100
-                }
-            });
-            let giteeProjects = {};
-            projects.data.forEach((p) => {
-                giteeProjects[p.name] = p;
-            });
-            // console.log("🚀 Gitee 公开项目 | giteeProjects:", giteeProjects);
-
-            projectKeys.forEach((p) => {
-                if (giteeProjects[p]) {
-                    this.projects.push(giteeProjects[p]);
-                }
-            });
-
-            // console.log("🚀 展示项目列表 | projects:", this.projects);
+        loadProjects() {
+            // 直接使用本地配置的项目数据
+            this.projects = projectData.projects || [];
         },
-        async getSuppot() {
-            const rs =
-                projectData.support && projectData.support.length > 0
-                    ? projectData.support
-                    : await axios.get("https://api.n0ts.top/json", {
-                          params: {
-                              key: "support"
-                          }
-                      });
-            this.supportList = rs.reverse().map((r) => {
-                r.coffeeNum = parseInt(r.money / 10);
+        loadSupport() {
+            // 直接使用本地配置的支持者数据
+            const supportList = projectData.support || [];
+            this.supportList = supportList.reverse().map((r) => {
+                r.coffeeNum = parseInt(r.money / 10) || 0;
                 r.img = r.qq
                     ? `https://q1.qlogo.cn/g?b=qq&nk=${r.qq}&s=100`
                     : `https://sdn.geekzu.org/avatar/${md5(r.name)}?d=robohash`;
                 return r;
             });
-            // console.log("🚀 请我喝咖啡的各位 | supportList:", this.supportList);
         },
         selectFriend(friend) {
             this.friendShow = friend;
+        },
+        viewImage(src) {
+            this.viewingImage = src;
         },
         QButtonInit() {
             let move = true;

@@ -1,39 +1,73 @@
 /*
- * @Author: N0ts
- * @Date: 2023-07-09 14:37:56
- * @Description: 本地数据，无需 api
- * @FilePath: /SupportMe/js/data.js
- * @Mail：mail@n0ts.top
+ * @Description: 本地数据配置文件 - 由 update-data.js 自动生成
+ * @LastUpdate: 2026/1/21 13:01:03
  */
 
 const projectData = {
-    // 码云账号（获取自己公开仓库用）
-    giteeName: "n0ts",
-    // 码云项目名字（因为公开项目也有很多可能不需要展示，所以这里的意义就是写上名字则渲染）
-    projectKeys: [
-        "NutssssIndex",
-        "N0tsChat",
-        "IceCreamSearch",
-        "lovexhjTo520",
-        "heng",
-        "EazyGiteeNote",
-        "node api tools",
-        "美和易思的小玩意",
-        "AggregateSearch"
-    ],
-    // 请我喝咖啡的各位
-    support: [
+    /**
+     * 开源项目列表（自动从 GitHub 获取）
+     */
+    projects: [
         {
-            name: "N0ts的🐷",
-            money: "∞",
-            msg: "你可知道你的名字解释了我的一生",
-            qq: "1656071287"
+                "name": "NutssssIndex",
+                "description": "原创个人极简风格单页模板！个人主页系列、个人简历等",
+                "html_url": "https://github.com/n0tssss/NutssssIndex",
+                "stargazers_count": 100,
+                "owner": "n0tssss"
         },
         {
-            name: "小明",
-            money: 900,
-            msg: "",
-            qq: ""
+                "name": "IceCreamSearch",
+                "description": "一个极致简约的导航页。快捷搜索、一言、天气展示、自定义配置等等...",
+                "html_url": "https://github.com/n0tssss/IceCreamSearch",
+                "stargazers_count": 5,
+                "owner": "n0tssss"
+        },
+        {
+                "name": "AnyRead",
+                "description": "读取任意文件格式 - Excel、CSV、Word、图片、PDF，本地解析 + AI 识别，支持并发",
+                "html_url": "https://github.com/n0tssss/AnyRead",
+                "stargazers_count": 0,
+                "owner": "n0tssss"
+        },
+        {
+                "name": "EazyGiteeNote",
+                "description": "做一个简约实用，基于Gitee的学习笔记吧！",
+                "html_url": "https://github.com/n0tssss/EazyGiteeNote",
+                "stargazers_count": 0,
+                "owner": "n0tssss"
+        },
+        {
+                "name": "MCPLink",
+                "description": "完整的 AI Agent 解决方案，支持 MCP 协议",
+                "html_url": "https://github.com/N0tsLabs/MCPLink",
+                "stargazers_count": 0,
+                "owner": "N0tsLabs"
+        },
+        {
+                "name": "AIAuto",
+                "description": "基于 Node.js 的 AI 自动化任务执行系统，通过自然语言描述任务，自动截图分析屏幕并执行操作。",
+                "html_url": "https://github.com/N0tsLabs/AIAuto",
+                "stargazers_count": 0,
+                "owner": "N0tsLabs"
+        },
+        {
+                "name": "N0tsLabs.github.io",
+                "description": "暂无描述",
+                "html_url": "https://github.com/N0tsLabs/N0tsLabs.github.io",
+                "stargazers_count": 0,
+                "owner": "N0tsLabs"
+        },
+        {
+                "name": "TaskStation",
+                "description": "轻量级的任务进度中心，用于记录、更新、查看任务的执行进度。",
+                "html_url": "https://github.com/N0tsLabs/TaskStation",
+                "stargazers_count": 0,
+                "owner": "N0tsLabs"
         }
-    ]
+],
+
+    /**
+     * 请我喝咖啡的支持者列表（手动维护）
+     */
+    support: []
 };

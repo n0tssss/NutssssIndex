@@ -8,32 +8,38 @@
  */
 
 /**
- * 一些引用
+ * 引用配置数据
  */
-import lovexhjData from "./data.js";
-import http from "./request.js";
+import siteData from "./data.js";
 
 /**
  * Vue 实例
  */
 new Vue({
-    el: "#lovexhj",
+    el: "#app",
+
     /**
-     * 组件创建时
+     * 初始化数据
      */
-    created() {},
+    data: {
+        siteData, // 网站配置数据
+        meImgShow: false, // 关于我照片是否展开
+        giteeData: [], // Gitee 项目数据
+        showBackTop: false // 是否显示回到顶部按钮
+    },
 
     /**
      * 当模板被挂载
      */
     mounted() {
-        window.lovexhj = this;
+        window.app = this;
         // 太阳&&月亮&&山峰&&云&&房子生成
-        this.lovexhj1DomCreate();
+        this.createHomeElements();
         // 注册滚动事件
-        document.addEventListener("scroll", this.lovexhj1Animation, true);
+        document.addEventListener("scroll", this.handleScroll, true);
         // 主题修改
         this.changeTheme();
+        // 获取 Gitee 项目数据
         this.getGiteeData();
     },
 
@@ -42,15 +48,7 @@ new Vue({
      */
     beforeDestroy() {
         // 销毁滚动事件
-        document.removeEventListener("scroll", this.lovexhj1Animation);
-    },
-
-    /**
-     * 初始化数据
-     */
-    data: {
-        lovexhjData, // 网站数据
-        meImgShow: false // 板块 2 照片是否展开
+        document.removeEventListener("scroll", this.handleScroll);
     },
 
     /**
@@ -60,54 +58,53 @@ new Vue({
         /**
          * 太阳 && 月亮 && 山峰 && 云 && 房子生成
          */
-        lovexhj1DomCreate() {
+        createHomeElements() {
             // 获取元素
-            let lovexhj1 = this.$refs.lovexhj1;
+            let sectionHome = this.$refs.sectionHome;
             let sun = this.$refs.sun;
-            let Moon = this.$refs.Moon;
-            let hill1 = this.$refs.hill1;
-            let hill2 = this.$refs.hill2;
-            let earth = this.$refs.earth;
+            let moon = this.$refs.moon;
+            let hillBack = this.$refs.hillBack;
+            let hillFront = this.$refs.hillFront;
+            let ground = this.$refs.ground;
             let house = this.$refs.house;
 
             // 生成 4 个 div
             for (let i = 0; i < 4; i++) {
                 sun.appendChild(document.createElement("div"));
-                Moon.appendChild(document.createElement("div"));
-                hill1.appendChild(document.createElement("div"));
-                hill2.appendChild(document.createElement("div"));
-                earth.appendChild(document.createElement("div"));
-                lovexhj1.appendChild(document.createElement("div"));
+                moon.appendChild(document.createElement("div"));
+                hillBack.appendChild(document.createElement("div"));
+                hillFront.appendChild(document.createElement("div"));
+                ground.appendChild(document.createElement("div"));
+                sectionHome.appendChild(document.createElement("div"));
             }
 
-            // 生成 10 个 div
+            // 生成 10 个 div（烟囱烟雾）
             for (let i = 0; i < 10; i++) {
                 house.appendChild(document.createElement("div"));
             }
         },
 
         /**
-         * 首页动画
+         * 滚动事件处理
          */
-        lovexhj1Animation() {
+        handleScroll() {
             // 获取元素
             let sun = this.$refs.sun;
-            let Moon = this.$refs.Moon;
-            // let hill1 = this.$refs.hill1;
-            // let hill2 = this.$refs.hill2;
-            // let earth = this.$refs.earth;
+            let moon = this.$refs.moon;
 
             // 当前滚动高度
-            let Y = window.scrollY;
+            let scrollY = window.scrollY;
 
-            // 修改位置
-            sun.style.top = 25 - Y * 0.05 + "%";
-            Moon.style.top = 25 - Y * 0.05 + "%";
-            sun.style.right = 30 + Y * 0.08 + "%";
-            Moon.style.right = 30 + Y * 0.08 + "%";
-            // hill1.style.bottom = -500 + Y * 0.6 + 'px';
-            // hill2.style.bottom = -450 + Y * 0.6 + 'px';
-            // earth.style.height = 20 + Y * 0.05 + '%';
+            // 修改太阳/月亮位置（视差效果）
+            if (sun && moon) {
+                sun.style.top = 25 - scrollY * 0.05 + "%";
+                moon.style.top = 25 - scrollY * 0.05 + "%";
+                sun.style.right = 30 + scrollY * 0.08 + "%";
+                moon.style.right = 30 + scrollY * 0.08 + "%";
+            }
+
+            // 显示/隐藏回到顶部按钮
+            this.showBackTop = scrollY > 300;
         },
 
         /**
@@ -123,36 +120,46 @@ new Vue({
                 return this.changeTheme();
             }
 
-            // 图标修改
-            this.lovexhjData.themeSelect = theme;
+            // 更新数据
+            this.siteData.themeSelect = theme;
 
+            // 设置 HTML 属性
             document.documentElement.setAttribute("theme", theme);
-
-            // // 循环修改配色
-            // console.log(this.lovexhjData.themes[theme]);
-            // this.lovexhjData.themes[theme].forEach(item => {
-            //     document.documentElement.style.setProperty(item[0], item[1]);
-            // });
         },
 
         /**
          * 点击切换主题
          */
         clickChangeTheme() {
-            window.localStorage.setItem("theme", window.localStorage.getItem("theme") == "white" ? "dark" : "white");
+            const currentTheme = window.localStorage.getItem("theme");
+            const newTheme = currentTheme === "white" ? "dark" : "white";
+            window.localStorage.setItem("theme", newTheme);
             this.changeTheme();
         },
 
         /**
-         * 获取码云数据
+         * 回到顶部
+         */
+        scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        },
+
+        /**
+         * 获取 Gitee 项目数据
          */
         getGiteeData() {
-            http({
-                url: "https://gitee.com/api/v5/users/n0ts/repos?type=personal&sort=updated&page=1&per_page=100",
-                method: "get"
-            }).then((res) => {
-                console.log(res);
-            });
+            const giteeName = this.siteData.giteeName;
+            axios
+                .get(`https://gitee.com/api/v5/users/${giteeName}/repos?type=personal&sort=updated&page=1&per_page=12`)
+                .then((res) => {
+                    this.giteeData = res.data;
+                })
+                .catch((err) => {
+                    console.error("获取 Gitee 数据失败:", err);
+                });
         }
     }
 });

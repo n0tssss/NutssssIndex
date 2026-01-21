@@ -20,39 +20,44 @@
     </head>
 
     <body>
-        <div id="lovexhj" v-clock>
+        <div id="app" v-cloak>
             <!-- 侧栏按钮 -->
             <div class="sidebar">
                 <!-- 主题切换 -->
                 <div @click="clickChangeTheme">
-                    <i class="fa fa-moon-o" v-if="lovexhjData.themeSelect == 'white'"></i>
+                    <i class="fa fa-moon-o" v-if="siteData.themeSelect == 'white'"></i>
                     <i class="fa fa-sun-o" v-else></i>
-                    <span v-if="lovexhjData.themeSelect == 'white'">切换<b class="sidebarDarkText">暗</b>色</span>
-                    <span v-else>切换<b class="sidebarWhiteText">亮</b>色</span>
+                    <span v-if="siteData.themeSelect == 'white'">切换<b class="sidebar-dark-text">暗</b>色</span>
+                    <span v-else>切换<b class="sidebar-light-text">亮</b>色</span>
+                </div>
+                <!-- 回到顶部 -->
+                <div @click="scrollToTop" v-show="showBackTop">
+                    <i class="fa fa-arrow-up"></i>
+                    <span>回到顶部</span>
                 </div>
             </div>
 
             <!-- 首页 -->
-            <div class="lovexhj1" v-if="lovexhjData" ref="lovexhj1">
-                <div class="lovexhj1Box">
+            <div class="section-home" v-if="siteData" ref="sectionHome">
+                <div class="home-container">
                     <div
-                        :class="{'sunlightOrMoon': true, 'sun': true, 'sunOrMoonHide': lovexhjData.themeSelect == 'dark'}"
+                        :class="{'celestial': true, 'sun': true, 'celestial-hide': siteData.themeSelect == 'dark'}"
                         ref="sun"
                     ></div>
                     <div
-                        :class="{'sunlightOrMoon': true, 'moon': true, 'sunOrMoonHide': lovexhjData.themeSelect == 'white'}"
-                        ref="Moon"
+                        :class="{'celestial': true, 'moon': true, 'celestial-hide': siteData.themeSelect == 'white'}"
+                        ref="moon"
                     ></div>
-                    <div class="hill1" ref="hill1"></div>
-                    <div class="hill2" ref="hill2"></div>
-                    <div class="earth" ref="earth">
+                    <div class="hill-back" ref="hillBack"></div>
+                    <div class="hill-front" ref="hillFront"></div>
+                    <div class="ground" ref="ground">
                         <div class="house" ref="house"></div>
                     </div>
-                    <div class="lovexhj1Text">
-                        <p>{{ lovexhjData.lovexhj1.title }}</p>
-                        <p>{{ lovexhjData.lovexhj1.subTitle }}</p>
+                    <div class="home-text">
+                        <p>{{ siteData.home.title }}</p>
+                        <p>{{ siteData.home.subTitle }}</p>
                         <ul>
-                            <li v-for="(item, index) in lovexhjData.lovexhj1.menu" :key="index">
+                            <li v-for="(item, index) in siteData.home.menu" :key="index">
                                 <a :href="item.link" target="_blank">
                                     <i :class="'fa ' + item.icon"></i>
                                     <span>{{ item.name }}</span>
@@ -62,29 +67,166 @@
                     </div>
                 </div>
             </div>
-            <!-- 介绍 -->
-            <div class="lovexhj2">
-                <!-- 介绍 - 文案 -->
-                <div class="lovexhj2TextBox" v-html="lovexhjData.lovexhj2.content"></div>
-                <!-- 介绍 - 图片 -->
-                <div class="lovexhj2Img" :class="{ lovexhj2ImgAction : meImgShow }" @click="meImgShow = !meImgShow">
-                    <img :src="lovexhjData.lovexhj2.img" :alt="lovexhjData.lovexhj2.img" />
+
+            <!-- 关于我 - 森林场景 -->
+            <div class="section-about">
+                <!-- 森林场景 -->
+                <div class="forest-scene">
+                    <!-- 太阳/月亮 -->
+                    <div :class="{'scene-celestial': true, 'scene-sun': true, 'scene-celestial-hide': siteData.themeSelect == 'dark'}">
+                        <div></div><div></div><div></div><div></div>
+                    </div>
+                    <div :class="{'scene-celestial': true, 'scene-moon': true, 'scene-celestial-hide': siteData.themeSelect == 'white'}">
+                        <div></div><div></div><div></div><div></div>
+                    </div>
+                    <!-- 树木 -->
+                    <div class="tree tree-1"></div>
+                    <div class="tree tree-2"></div>
+                    <div class="tree tree-3"></div>
+                    <div class="tree tree-4"></div>
+                    <div class="tree tree-5"></div>
+                    <!-- 小屋 -->
+                    <div class="cabin">
+                        <div class="cabin-body"></div>
+                        <div class="cabin-roof"></div>
+                        <div class="cabin-door"></div>
+                        <div class="cabin-window"></div>
+                        <div class="cabin-chimney"></div>
+                        <div class="cabin-smoke smoke-1"></div>
+                        <div class="cabin-smoke smoke-2"></div>
+                        <div class="cabin-smoke smoke-3"></div>
+                    </div>
+                    <!-- 篝火 -->
+                    <div class="campfire">
+                        <div class="fire"></div>
+                        <div class="fire-glow"></div>
+                        <div class="logs"></div>
+                    </div>
+                    <!-- 飞鸟 -->
+                    <div class="bird bird-1"></div>
+                    <div class="bird bird-2"></div>
+                    <div class="bird bird-3"></div>
+                    <!-- 蝴蝶 -->
+                    <div class="butterfly butterfly-1"></div>
+                    <div class="butterfly butterfly-2"></div>
+                    <!-- 草丛 -->
+                    <div class="grass grass-1"></div>
+                    <div class="grass grass-2"></div>
+                    <div class="grass grass-3"></div>
+                </div>
+                <!-- 内容区域 -->
+                <div class="about-wrapper">
+                    <!-- 介绍 - 文案 -->
+                    <div class="about-content" v-html="siteData.about.content"></div>
+                    <!-- 介绍 - 图片 -->
+                    <div class="about-image" :class="{ 'about-image-active' : meImgShow }" @click="meImgShow = !meImgShow">
+                        <img :src="siteData.about.img" :alt="siteData.about.img" />
+                    </div>
                 </div>
                 <!-- 图片打开时遮罩 -->
                 <div
-                    class="lovexhj2ImgBg"
-                    :class="{ lovexhj2ImgShowBg : meImgShow }"
+                    class="about-image-overlay"
+                    :class="{ 'about-image-overlay-show' : meImgShow }"
                     @click="meImgShow = !meImgShow"
                 ></div>
             </div>
-            <!--  -->
-            <div class="lovexhj3">123</div>
+
+            <!-- 我的项目 - 沙漠场景 -->
+            <div class="section-projects">
+                <!-- 沙漠场景 -->
+                <div class="desert-scene">
+                    <!-- 太阳/月亮 -->
+                    <div :class="{'scene-celestial': true, 'scene-sun': true, 'desert-celestial': true, 'scene-celestial-hide': siteData.themeSelect == 'dark'}">
+                        <div></div><div></div><div></div><div></div>
+                    </div>
+                    <div :class="{'scene-celestial': true, 'scene-moon': true, 'desert-celestial': true, 'scene-celestial-hide': siteData.themeSelect == 'white'}">
+                        <div></div><div></div><div></div><div></div>
+                    </div>
+                    <!-- 沙丘 -->
+                    <div class="dune dune-1"></div>
+                    <div class="dune dune-2"></div>
+                    <div class="dune dune-3"></div>
+                    <!-- 仙人掌 -->
+                    <div class="cactus cactus-1"></div>
+                    <div class="cactus cactus-2"></div>
+                    <div class="cactus cactus-3"></div>
+                    <!-- 骆驼 -->
+                    <div class="camel"></div>
+                </div>
+                <!-- 内容区域 -->
+                <div class="projects-wrapper">
+                    <div class="projects-content">
+                        <h1>Projects</h1>
+                        <h2>{{ siteData.projects.title }}</h2>
+                        <p class="projects-subtitle">{{ siteData.projects.subTitle }}</p>
+                        <div class="projects-list">
+                            <a class="project-item" v-for="(item, index) in giteeData" :key="index" :href="item.html_url" target="_blank">
+                                <b>{{ item.name }}</b>
+                                <span>{{ item.description || '暂无描述' }}</span>
+                                <em><i class="fa fa-star"></i> {{ item.stargazers_count }}</em>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 我的网站 - 海洋场景 -->
+            <div class="section-links">
+                <!-- 海洋场景 -->
+                <div class="ocean-scene">
+                    <!-- 太阳/月亮 -->
+                    <div :class="{'scene-celestial': true, 'scene-sun': true, 'ocean-celestial': true, 'scene-celestial-hide': siteData.themeSelect == 'dark'}">
+                        <div></div><div></div><div></div><div></div>
+                    </div>
+                    <div :class="{'scene-celestial': true, 'scene-moon': true, 'ocean-celestial': true, 'scene-celestial-hide': siteData.themeSelect == 'white'}">
+                        <div></div><div></div><div></div><div></div>
+                    </div>
+                    <!-- 云朵 -->
+                    <div class="ocean-cloud ocean-cloud-1"></div>
+                    <div class="ocean-cloud ocean-cloud-2"></div>
+                    <!-- 海鸥 -->
+                    <div class="seagull seagull-1"></div>
+                    <div class="seagull seagull-2"></div>
+                    <div class="seagull seagull-3"></div>
+                    <!-- 灯塔 -->
+                    <div class="lighthouse"></div>
+                    <!-- 小船 -->
+                    <div class="boat">
+                        <div class="sail"></div>
+                    </div>
+                    <!-- 波浪 -->
+                    <div class="wave wave-1"></div>
+                    <div class="wave wave-2"></div>
+                    <div class="wave wave-3"></div>
+                </div>
+                <!-- 内容区域 -->
+                <div class="links-wrapper">
+                    <div class="section-title">
+                        <h2>{{ siteData.links.title }}</h2>
+                        <p>{{ siteData.links.subTitle }}</p>
+                    </div>
+                    <div class="links-grid">
+                        <a class="link-card" v-for="(item, index) in siteData.links.list" :key="index" :href="item.url" target="_blank">
+                            <div class="link-icon">
+                                <i :class="'fa ' + item.icon"></i>
+                            </div>
+                            <div class="link-info">
+                                <h3>{{ item.name }}</h3>
+                                <p>{{ item.desc }}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- 底部版权 -->
+                <footer class="footer">
+                    <p>&copy; {{ new Date().getFullYear() }} {{ siteData.footer.author }} | Theme by <a :href="siteData.footer.themeLink" target="_blank">{{ siteData.footer.themeName }}</a></p>
+                </footer>
+            </div>
         </div>
 
         <!-- js 引用 -->
         <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.9/vue.min.js"></script>
         <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.0/axios.min.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
         <script src="./js/lovexhj.js" type="module"></script>
     </body>
 </html>
