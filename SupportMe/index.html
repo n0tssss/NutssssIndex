@@ -32,28 +32,46 @@
                 <!-- 左侧：个人介绍 -->
                 <aside class="sidebar animate-in">
                     <div class="profile-card">
-                        <h1>N0ts 🤪</h1>
-                        <p class="role">前端开发者 🛠</p>
+                        <h1>{{ site.name }}</h1>
+                        <p class="role">{{ site.role }}</p>
                         <div class="bio">
-                            <p>我一直热衷于开发一些自己感兴趣以及对大家有帮助的玩意 🔨</p>
-                            <p>并且坚持开源免费的道路，主打与更多的伙伴互相学习共同提升 ✌</p>
+                            <p v-for="(text, i) in site.bio" :key="i">{{ text }}</p>
                         </div>
                         <div class="divider"></div>
                         <div class="appeal">
-                            <p>如果喜欢我的作品，请给我点个 Star ⭐️</p>
-                            <p>或提出您的宝贵建议 📝</p>
-                            <p>也可以请我喝杯咖啡 ☕️</p>
+                            <p v-for="(text, i) in site.appeal" :key="i">{{ text }}</p>
                         </div>
-                        <div class="dbtn" @click="payDialog = true">👉 请我喝咖啡</div>
+                        <a class="dbtn" :href="afdianUrl" target="_blank">{{ site.supportBtn }}</a>
                     </div>
                 </aside>
 
                 <!-- 右侧：项目和支持者 -->
                 <main class="content">
-                    <!-- 项目列表 -->
-                    <section class="section animate-in delay-1">
-                        <h2 class="section-title">开源项目 💻</h2>
-                        <div class="projects-wrapper">
+                    <!-- 作品列表 -->
+                    <section class="section animate-in delay-1" v-if="works.length > 0">
+                        <h2 class="section-title">{{ site.sectionTitles.works }}</h2>
+                        <div class="projects">
+                            <a 
+                                v-for="(item, index) in works" 
+                                :key="index" 
+                                :href="item.url" 
+                                target="_blank"
+                            >
+                                <p class="name">{{ item.name }}</p>
+                                <p class="description">{{ item.description }}</p>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- 开源项目列表 -->
+                    <section class="section animate-in delay-1" v-if="projects.length > 0">
+                        <h2 class="section-title">
+                            <span>{{ site.sectionTitles.projects }}</span>
+                            <span class="toggle-btn" @click="showProjects = !showProjects">
+                                {{ showProjects ? '收起' : '展开' }}
+                            </span>
+                        </h2>
+                        <div class="projects-wrapper" v-show="showProjects">
                             <div class="projects" :class="{ collapsed: !projectsExpanded }">
                                 <a 
                                     v-for="(item, index) in projects" 
@@ -79,8 +97,8 @@
 
                     <!-- 支持者列表 -->
                     <section class="section animate-in delay-2">
-                        <h2 class="section-title">支持者 ☕️</h2>
-                        <p class="section-desc">请我喝过咖啡的小伙伴们（喜欢喝冰美式，10￥一杯）</p>
+                        <h2 class="section-title">{{ site.sectionTitles.supporters }}</h2>
+                        <p class="section-desc">{{ site.supporterDesc }}</p>
                         <div class="checkView">
                             <!-- 点不开的按钮彩蛋 -->
                             <div id="QButton">
@@ -121,36 +139,10 @@
                             </div>
                         </div>
                         <div class="empty-tip" v-if="supportList.length === 0">
-                            暂时还没有小伙伴支持，成为第一个吧~
+                            {{ site.emptyTip }}
                         </div>
                     </section>
                 </main>
-            </div>
-
-            <!-- 支付弹窗 -->
-            <div class="pay" :class="{ payShow: payDialog }" @click="payDialog = false">
-                <div class="payBox" :class="{ payBoxShow: payDialog }" @click.stop="payDialog = true">
-                    <p class="title">☕️ 请我喝一杯咖啡吧~</p>
-                    <div class="content">
-                        <p>感谢您的支持，您可以通过以下方式请我喝一杯咖啡，让我更有动力继续创作！</p>
-                        <p>PS：留下自己的昵称与一句话，让我记住各位~</p>
-                        <div class="pay-methods">
-                            <div class="pay-item" @click.stop="viewImage('./images/wechat.jpg')">
-                                <span class="pay-icon">💚</span>
-                                <span>微信支付</span>
-                            </div>
-                            <div class="pay-item" @click.stop="viewImage('./images/alipay.jpg')">
-                                <span class="pay-icon">💙</span>
-                                <span>支付宝</span>
-                            </div>
-                            <div class="pay-item" @click.stop="viewImage('./images/qq.jpg')">
-                                <span class="pay-icon">🐧</span>
-                                <span>QQ支付</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dbtn" @click.stop="payDialog = false">关闭</div>
-                </div>
             </div>
 
             <!-- 图片查看器 -->
@@ -182,6 +174,7 @@
 
     <script src="./js/vue.global.min.js"></script>
     <script src="./js/md5.min.js"></script>
+    <script src="./js/config.js"></script>
     <script src="./js/data.js"></script>
     <script src="./js/main.js"></script>
 </html>

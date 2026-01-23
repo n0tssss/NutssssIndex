@@ -209,6 +209,26 @@ a:hover {
     margin-bottom: 16px;
     padding-bottom: 12px;
     border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title .toggle-btn {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.section-title .toggle-btn:hover {
+    color: var(--link-color);
+    border-color: var(--link-color);
 }
 
 .section-desc {
@@ -330,6 +350,8 @@ a:hover {
     user-select: none;
     transition: all 0.2s ease;
     border: 1px solid var(--border-color);
+    text-decoration: none;
+    text-align: center;
 }
 
 .dbtn:hover {
@@ -417,19 +439,22 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    padding: 16px 24px;
+    padding: 16px 32px;
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
-    min-width: 100px;
+    min-width: 120px;
+    text-decoration: none;
+    color: inherit;
 }
 
 .pay-item:hover {
     background: var(--bg-hover);
     border-color: var(--link-color);
     transform: translateY(-2px);
+    color: var(--link-color);
 }
 
 .pay-item .pay-icon {
@@ -870,6 +895,11 @@ a:hover {
 
     body {
         overflow-y: auto;
+    }
+
+    #main {
+        height: auto;
+        overflow: visible;
     }
 }
 

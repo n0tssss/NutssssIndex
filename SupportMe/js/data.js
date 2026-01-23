@@ -1,9 +1,11 @@
 /*
- * @Description: 本地数据配置文件 - 由 update-data.js 自动生成
- * @LastUpdate: 2026/1/21 13:01:03
+ * @Description: 动态数据文件 - 由 update-data.js 自动生成，请勿手动修改
+ * @LastUpdate: 2026/1/23 15:04:06
+ * 
+ * 静态配置请修改 config.js
  */
 
-const projectData = {
+const dynamicData = {
     /**
      * 开源项目列表（自动从 GitHub 获取）
      */
@@ -17,7 +19,7 @@ const projectData = {
         },
         {
                 "name": "IceCreamSearch",
-                "description": "一个极致简约的导航页。快捷搜索、一言、天气展示、自定义配置等等...",
+                "description": "一个极致简约的导航页。快捷搜索、一言、天气展示���自定义配置等等...",
                 "html_url": "https://github.com/n0tssss/IceCreamSearch",
                 "stargazers_count": 5,
                 "owner": "n0tssss"
@@ -51,13 +53,6 @@ const projectData = {
                 "owner": "N0tsLabs"
         },
         {
-                "name": "N0tsLabs.github.io",
-                "description": "暂无描述",
-                "html_url": "https://github.com/N0tsLabs/N0tsLabs.github.io",
-                "stargazers_count": 0,
-                "owner": "N0tsLabs"
-        },
-        {
                 "name": "TaskStation",
                 "description": "轻量级的任务进度中心，用于记录、更新、查看任务的执行进度。",
                 "html_url": "https://github.com/N0tsLabs/TaskStation",
@@ -67,7 +62,16 @@ const projectData = {
 ],
 
     /**
-     * 请我喝咖啡的支持者列表（手动维护）
+     * 支持者列表（自动从爱发电获取）
+     * 数据来源: 爱发电 API
      */
-    support: []
+    support: [
+        {
+                "name": "N0tssss",
+                "money": 10,
+                "msg": "最近赞助: 2026/1/23",
+                "avatar": "https://pic1.afdiancdn.com/default/avatar/avatar-purple.png",
+                "_source": "afdian"
+        }
+]
 };

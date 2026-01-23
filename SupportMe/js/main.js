@@ -15,21 +15,39 @@ createApp({
         this.QButtonInit();
     },
     data() {
+        // 从 config.js 读取静态配置
+        const cfg = typeof siteConfig !== 'undefined' ? siteConfig : {};
+        // 从 data.js 读取动态数据（兼容新旧两种变量名）
+        const data = typeof dynamicData !== 'undefined' ? dynamicData : 
+                     (typeof projectData !== 'undefined' ? projectData : {});
+        
         return {
-            projects: [],
+            // 网站配置（静态）
+            site: cfg.site || {},
+            // 作品列表（静态）
+            works: cfg.works || [],
+            // 开源项目（动态）
+            projects: data.projects || [],
             projectsExpanded: false,
-            payDialog: false,
+            showProjects: !(cfg.projectsCollapsed || false),
+            // 支持者（动态）
             supportList: [],
+            _rawSupport: data.support || [],
             coffeeShow: false,
             friendShow: null,
             loading: true,
-            viewingImage: null
+            viewingImage: null,
+            // 爱发电链接（静态配置）
+            afdianUrl: cfg.afdianUsername ? `https://afdian.com/a/${cfg.afdianUsername}` : ''
         };
     },
     methods: {
         init() {
-            // 直接从本地数据加载
-            this.loadProjects();
+            // 设置页面标题
+            if (this.site.title) {
+                document.title = this.site.title;
+            }
+            // 处理支持者数据
             this.loadSupport();
             // 短暂延迟后关闭加载动画，让入场动画更流畅
             setTimeout(() => {
@@ -37,18 +55,18 @@ createApp({
                 document.body.style.overflow = "auto";
             }, 300);
         },
-        loadProjects() {
-            // 直接使用本地配置的项目数据
-            this.projects = projectData.projects || [];
-        },
         loadSupport() {
-            // 直接使用本地配置的支持者数据
-            const supportList = projectData.support || [];
-            this.supportList = supportList.reverse().map((r) => {
+            // 处理支持者数据（添加头像等）
+            this.supportList = [...this._rawSupport].reverse().map((r) => {
                 r.coffeeNum = parseInt(r.money / 10) || 0;
-                r.img = r.qq
-                    ? `https://q1.qlogo.cn/g?b=qq&nk=${r.qq}&s=100`
-                    : `https://sdn.geekzu.org/avatar/${md5(r.name)}?d=robohash`;
+                // 优先使用爱发电头像，其次QQ头像，最后生成随机头像
+                if (r.avatar) {
+                    r.img = r.avatar;
+                } else if (r.qq) {
+                    r.img = `https://q1.qlogo.cn/g?b=qq&nk=${r.qq}&s=100`;
+                } else {
+                    r.img = `https://sdn.geekzu.org/avatar/${md5(r.name)}?d=robohash`;
+                }
                 return r;
             });
         },
