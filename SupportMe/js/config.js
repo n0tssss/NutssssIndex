@@ -41,7 +41,7 @@ const siteConfig = {
 
     // ========== 爱发电配置 ==========
     // 爱发电用户名（用于跳转链接，如 https://afdian.com/a/n0ts）
-    afdianUsername: 'n0ts',
+    afdianUsername: 'n0tssss',
 
     // ========== 作品配置 ==========
     // 格式：{ name: '名称', url: '链接', description: '介绍' }
